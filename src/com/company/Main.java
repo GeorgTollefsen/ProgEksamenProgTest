@@ -27,6 +27,9 @@ public class Main {
         Person thea = new Person("Thea", spinning, 1, spinningProgram);
         Person aina = new Person("Aina" ,spinning, 4, spinningProgram);
         Person andrea = new Person("Andrea" ,spinning, 1, spinningProgram);
+        Person rick = new Person("Rick" ,spinning, 4, spinningProgram);
+        Person morty = new Person("Morty" ,spinning, 1, spinningProgram);
+
 
         personer.add(georg);
         personer.add(pernille);
@@ -34,6 +37,8 @@ public class Main {
         personer.add(thea);
         personer.add(aina);
         personer.add(andrea);
+        personer.add(morty);
+        personer.add(rick);
 
         callMenu();
 
