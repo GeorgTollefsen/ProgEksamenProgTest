@@ -18,6 +18,13 @@ public class Main {
         Exercise burpees = new EnduranceExercise("Burpees", 20, 10, 3, 1, "None");
         Exercise mountainClimber = new EnduranceExercise("Mountain climber", 20, 10, 3, "None");
         Exercise jumpRope = new EnduranceExercise("Jump rope", 30,0 ,3,1, "Rope");
+        Exercise highKnees = new EnduranceExercise("High knees", 30, 0, 3,2, "None");
+
+        //Level 1 - Easy Strenght Exercise
+        Exercise squats = new StrenghtExercise("Squats", 20, 20,3,1, "None");
+        Exercise sitUps = new StrenghtExercise("Sit-ups", 0, 20, 3,1, "None");
+        Exercise backExtention = new StrenghtExercise("Back Extention", 0, 20,3,1,"None");
+        Exercise pushUps = new StrenghtExercise("Push ups",0,10,3,1,"None");
 
         spinningprogramExercise.add(spinning);
         spinningprogramExercise.add(spinning);
