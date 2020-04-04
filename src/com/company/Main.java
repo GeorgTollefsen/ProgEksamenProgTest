@@ -12,8 +12,13 @@ public class Main {
     public static ArrayList<Program> programs = new ArrayList<Program>();
 
     public static void main(String[] args) {
-        System.out.println("Good day to you sir! Check out our awsome menu for home workout");
+        System.out.println("Good day to you sir! Check out our awesome menu for home workout");
         Exercise spinning = new EnduranceExercise("Spinning", 20, 1, 1, 3, "Spinning Cycle");
+        Exercise jumpingJack = new EnduranceExercise("Jumping Jacks", 20, 10, 3, 1, "None");
+        Exercise burpees = new EnduranceExercise("Burpees", 20, 10, 3, 1, "None");
+        Exercise mountainClimber = new EnduranceExercise("Mountain climber", 20, 10, 3, "None");
+        Exercise jumpRope = new EnduranceExercise("Jump rope", 30,0 ,3,1, "Rope");
+
         spinningprogramExercise.add(spinning);
         spinningprogramExercise.add(spinning);
         spinningprogramExercise.add(spinning);
