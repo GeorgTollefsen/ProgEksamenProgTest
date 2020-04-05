@@ -16,7 +16,7 @@ public class Main {
         Exercise spinning = new EnduranceExercise("Spinning", 20, 1, 1, 3, "Spinning Cycle");
         Exercise jumpingJack = new EnduranceExercise("Jumping Jacks", 20, 10, 3, 1, "None");
         Exercise burpees = new EnduranceExercise("Burpees", 20, 10, 3, 1, "None");
-        Exercise mountainClimber = new EnduranceExercise("Mountain climber", 20, 10, 3, "None");
+        Exercise mountainClimber = new EnduranceExercise("Mountain climber", 20, 10, 3, 1,"None");
         Exercise jumpRope = new EnduranceExercise("Jump rope", 30,0 ,3,1, "Rope");
         Exercise highKnees = new EnduranceExercise("High knees", 30, 0, 3,2, "None");
 
