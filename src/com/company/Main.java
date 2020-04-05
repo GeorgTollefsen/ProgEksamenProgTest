@@ -21,10 +21,10 @@ public class Main {
         Exercise highKnees = new EnduranceExercise("High knees", 30, 0, 3,2, "None");
 
         //Level 1 - Easy Strenght Exercise
-        Exercise squats = new StrenghtExercise("Squats", 20, 20,3,1, "None");
-        Exercise sitUps = new StrenghtExercise("Sit-ups", 0, 20, 3,1, "None");
-        Exercise backExtention = new StrenghtExercise("Back Extention", 0, 20,3,1,"None");
-        Exercise pushUps = new StrenghtExercise("Push ups",0,10,3,1,"None");
+        Exercise squats = new StrenghtExercise("Squats", 20, 20,3,1, 0,"None");
+        Exercise sitUps = new StrenghtExercise("Sit-ups", 0, 20, 3,1, 0, "None");
+        Exercise backExtention = new StrenghtExercise("Back Extention", 0, 20,3,1,0, "None");
+        Exercise pushUps = new StrenghtExercise("Push ups",0,10,3,1,0, "none");
 
         spinningprogramExercise.add(spinning);
         spinningprogramExercise.add(spinning);
