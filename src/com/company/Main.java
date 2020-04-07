@@ -12,8 +12,20 @@ public class Main {
     public static ArrayList<Program> programs = new ArrayList<Program>();
 
     public static void main(String[] args) {
-        System.out.println("Good day to you sir! Check out our awsome menu for home workout");
+        System.out.println("Good day to you sir! Check out our awesome menu for home workout");
         Exercise spinning = new EnduranceExercise("Spinning", 20, 1, 1, 3, "Spinning Cycle");
+        Exercise jumpingJack = new EnduranceExercise("Jumping Jacks", 20, 10, 3, 1, "None");
+        Exercise burpees = new EnduranceExercise("Burpees", 20, 10, 3, 1, "None");
+        Exercise mountainClimber = new EnduranceExercise("Mountain climber", 20, 10, 3, 1,"None");
+        Exercise jumpRope = new EnduranceExercise("Jump rope", 30,0 ,3,1, "Rope");
+        Exercise highKnees = new EnduranceExercise("High knees", 30, 0, 3,2, "None");
+
+        //Level 1 - Easy Strenght Exercise
+        Exercise squats = new StrenghtExercise("Squats", 20, 20,3,1, 0,"None");
+        Exercise sitUps = new StrenghtExercise("Sit-ups", 0, 20, 3,1, 0, "None");
+        Exercise backExtention = new StrenghtExercise("Back Extention", 0, 20,3,1,0, "None");
+        Exercise pushUps = new StrenghtExercise("Push ups",0,10,3,1,0, "none");
+
         spinningprogramExercise.add(spinning);
         spinningprogramExercise.add(spinning);
         spinningprogramExercise.add(spinning);
@@ -28,7 +40,7 @@ public class Main {
         Person aina = new Person("Aina" ,spinning, 4, spinningProgram);
         Person andrea = new Person("Andrea" ,spinning, 1, spinningProgram);
         Person rick = new Person("Rick" ,spinning, 4, spinningProgram);
-        Person morty = new Person("Morty" ,spinning, 1, spinningProgram);
+        Person david = new Person("David" ,spinning, 1, spinningProgram);
 
 
         personer.add(georg);
@@ -37,7 +49,7 @@ public class Main {
         personer.add(thea);
         personer.add(aina);
         personer.add(andrea);
-        personer.add(morty);
+        personer.add(david);
         personer.add(rick);
 
         callMenu();
