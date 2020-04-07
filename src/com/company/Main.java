@@ -13,7 +13,7 @@ public class Main {
 
     public static void main(String[] args) {
         System.out.println("Good day to you sir! Check out our awesome menu for home workout");
-        System.out.println("Good day to you miss! Check out our awesome menu for home workout");
+        System.out.println("Good day, miss! Check out our awesome menu for home workout");
         Exercise spinning = new EnduranceExercise("Spinning", 20, 1, 1, 3, "Spinning Cycle");
         Exercise jumpingJack = new EnduranceExercise("Jumping Jacks", 20, 10, 3, 1, "None");
         Exercise burpees = new EnduranceExercise("Burpees", 20, 10, 3, 1, "None");
