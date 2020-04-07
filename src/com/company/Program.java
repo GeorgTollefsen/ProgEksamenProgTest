@@ -3,11 +3,11 @@ package com.company;
 import java.util.ArrayList;
 
 public class Program {
-    public static ArrayList<Exercise> exercises = new ArrayList<Exercise>();
+    public ArrayList<Exercise> exercises = new ArrayList<Exercise>();
     public String name; //we needed a name to sort them out
     public int duration;
     public double intensityLevel;
-    public static boolean isBalanced;
+    public boolean isBalanced;
 
     public Program(ArrayList<Exercise> exercises, String name) {
         this.exercises = exercises;
@@ -19,12 +19,12 @@ public class Program {
     }
 
     //sorts the program in intensity levels
-    public static void sortProgram(){
+    public void sortProgram(){
 
     }
 
     //calculates the duration of the whole exercise
-    public static int calculateDuration(){
+    public int calculateDuration(){
         int result = 0;
         for(int i=0; i<exercises.size(); i++){
             result += exercises.get(i).duration;
@@ -33,7 +33,7 @@ public class Program {
     }
 
     //Sets the program intensity based on the highest intensity among the exercises in the program
-    public static double calculateIntensity(){
+    public double calculateIntensity(){
         double result = 0;
         for(int i=0; i<exercises.size(); i++){
             if(exercises.get(i).intensity>=result){
@@ -44,7 +44,7 @@ public class Program {
     }
 
     //checks if the program is balanced by turning the flags true, if all flags are true, the program is balanced.
-    public static boolean checkBalance(){
+    public boolean checkBalance(){
         boolean flagStrength = false;
         boolean flagEndurance = false;
         boolean flagBalance = false;

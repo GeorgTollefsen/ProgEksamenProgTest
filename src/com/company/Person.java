@@ -13,7 +13,8 @@ public class Person {
         this.currentProgram = currentProgram;
     }
 
-    public static void acceptableProgram(Program p){
+    public boolean acceptableProgram(Program program){
+        return program.intensityLevel * 0.9 < this.acceptableIntensity && this.acceptableIntensity < program.intensityLevel * 1.1;
 
     }
     public static void selectPreferred(Program[] programs){
