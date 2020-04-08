@@ -26,6 +26,10 @@ public class Main {
         Exercise backExtention = new StrenghtExercise("Back Extention", 0, 20,3,1,0, "None");
         Exercise pushUps = new StrenghtExercise("Push ups",0,10,3,1,0, "none");
 
+        // Level 2 - Medium Strenght Exercise
+        Exercise Dips = new StrenghtExercise("Dips", 20, 10, 3, 2,0,"Chair");
+
+        
         spinningprogramExercise.add(spinning);
         spinningprogramExercise.add(spinning);
         spinningprogramExercise.add(spinning);
