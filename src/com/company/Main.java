@@ -53,6 +53,9 @@ public class Main {
         Exercise boat = new StrenghtExercise("Boat",10,30,3,3,0,"Water bottle");
 
         //Level 1 - Easy Flexibility Exercises
+        Exercise catCow = new FlexibilityExercise("Cat-cow", 10,10,3,1,"None");
+        Exercise standingHamstring = new FlexibilityExercise("Standing handstring Stretch", 10,10,3,1,"None");
+
         //Level 2 - Medium Flexibility Exercises
         //Level 3 - Hard Flexibility Exercises
 
