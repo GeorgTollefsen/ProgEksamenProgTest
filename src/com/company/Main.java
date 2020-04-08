@@ -14,22 +14,49 @@ public class Main {
     public static void main(String[] args) {
         System.out.println("Good day to you sir! Check out our awesome menu for home workout");
         Exercise spinning = new EnduranceExercise("Spinning", 20, 1, 1, 3, "Spinning Cycle");
+
+        //Level 1 - Easy Endurance Exercise
         Exercise jumpingJack = new EnduranceExercise("Jumping Jacks", 20, 10, 3, 1, "None");
-        Exercise burpees = new EnduranceExercise("Burpees", 20, 10, 3, 1, "None");
-        Exercise mountainClimber = new EnduranceExercise("Mountain climber", 20, 10, 3, 1,"None");
-        Exercise jumpRope = new EnduranceExercise("Jump rope", 30,0 ,3,1, "Rope");
-        Exercise highKnees = new EnduranceExercise("High knees", 30, 0, 3,2, "None");
+        Exercise jumpRope = new EnduranceExercise("Jump rope", 30,30 ,3,1, "Rope");
+        Exercise highKnees = new EnduranceExercise("High knees", 30, 30, 3,2, "None");
+        Exercise jogInPlace = new EnduranceExercise("Jog in Place", 10,1,3,1,"None");
+
+        //Level 2 - Medium Endurance Exercise
+        Exercise squatsJump = new EnduranceExercise("Squats Jump",10,15,3,2,"None");
+        Exercise beerCrawl = new EnduranceExercise("Bear crawl push ups", 15, 15,3,2,"Yoga mat");
+
+        // Level 3 - Hard Endurance Exercise
+        Exercise burpees = new EnduranceExercise("Burpees", 20, 20, 3, 3, "None");
+        Exercise mountainClimber = new EnduranceExercise("Mountain climber", 10, 10, 3, 3,"None");
+        Exercise bearCrawl = new EnduranceExercise("Bear crawl push ups", 15, 15,3);
+        Exercise kickBoxing = new EnduranceExercise("Kickboxing",15,15,3,2,"None");
 
         //Level 1 - Easy Strenght Exercise
         Exercise squats = new StrenghtExercise("Squats", 20, 20,3,1, 0,"None");
         Exercise sitUps = new StrenghtExercise("Sit-ups", 0, 20, 3,1, 0, "None");
         Exercise backExtention = new StrenghtExercise("Back Extention", 0, 20,3,1,0, "None");
-        Exercise pushUps = new StrenghtExercise("Push ups",0,10,3,1,0, "none");
+        Exercise pushUpsOnKnees = new StrenghtExercise("Push ups on knees",0,10,3,1,0, "none");
 
         // Level 2 - Medium Strenght Exercise
-        Exercise Dips = new StrenghtExercise("Dips", 20, 10, 3, 2,0,"Chair");
+        Exercise dips = new StrenghtExercise("Dips", 20, 10, 3, 2,0,"Chair");
+        Exercise lunges = new StrenghtExercise("Lunges", 10,12,3,2,1,"Water bottles");
+        Exercise facePull = new StrenghtExercise("Face Pull", 10, 10,3,2,0,"Rubber band");
+        Exercise plank = new StrenghtExercise("Plank with leg to the side", 10,15,3,2,0,"None");
 
-        
+        //Level 3 - Hard Strenght Exercises
+        Exercise pistolSquats = new StrenghtExercise("Pistol squats", 20,10,3,3,0,"None");
+        Exercise supermann = new StrenghtExercise("Supermann", 20,10,3,3,0,"Woolen sock");
+        Exercise pushUps = new StrenghtExercise("Push ups",15,12,3,3,0,"None");
+        Exercise boat = new StrenghtExercise("Boat",10,30,3,3,0,"Water bottle");
+
+        //Level 1 - Easy Flexibility Exercises
+        //Level 2 - Medium Flexibility Exercises
+        //Level 3 - Hard Flexibility Exercises
+
+        //Level 1 - Easy Balance Exercises
+        //Level 2 - Hard Balance Exercises
+        //Level 3 - Hard Balance Exercises
+
         spinningprogramExercise.add(spinning);
         spinningprogramExercise.add(spinning);
         spinningprogramExercise.add(spinning);
