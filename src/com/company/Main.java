@@ -23,13 +23,13 @@ public class Main {
 
         //Level 2 - Medium Endurance Exercise
         Exercise squatsJump = new EnduranceExercise("Squats Jump",10,15,3,2,"None");
-        Exercise beerCrawl = new EnduranceExercise("Bear crawl push ups", 15, 15,3,2,"Yoga mat");
+        Exercise kickBoxing = new EnduranceExercise("Kickboxing",15,15,3,2,"None");
 
         // Level 3 - Hard Endurance Exercise
         Exercise burpees = new EnduranceExercise("Burpees", 20, 20, 3, 3, "None");
         Exercise mountainClimber = new EnduranceExercise("Mountain climber", 10, 10, 3, 3,"None");
-        Exercise bearCrawl = new EnduranceExercise("Bear crawl push ups", 15, 15,3);
-        Exercise kickBoxing = new EnduranceExercise("Kickboxing",15,15,3,2,"None");
+        Exercise beerCrawlPushUps = new EnduranceExercise("Bear crawl push ups", 15, 15,3,2,"Yoga mat");
+
 
         //Level 1 - Easy Strenght Exercise
         Exercise squats = new StrenghtExercise("Squats", 20, 20,3,1, 0,"None");
