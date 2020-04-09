@@ -78,10 +78,16 @@ public class Main {
         Exercise treePose = new BalanceExercise("Tree pose", 10,6,3,1,"");
 
         //Level 2 - Medium Balance Exercises
-
+        Exercise balanceStar = new BalanceExercise("Balance star",10,3,2,2,"");
+        Exercise treePoseWithArmsUps = new BalanceExercise("Tree pose with arms up",10,5,2,2,"");
+        Exercise airborneLunges = new BalanceExercise("Airborne Lunges", 10,10,3,2,"");
+        Exercise stepDown = new BalanceExercise("Step down", 15,10,3,2,"Chair");
 
         //Level 3 - Hard Balance Exercises
-
+        Exercise treePoseEyesClosed = new BalanceExercise("Tree pose eyes closed", 10,6,3,3,"");
+        Exercise balanceStarEyesClosed = new BalanceExercise("Balance star eyes closed",10,3,2,3,"");
+        Exercise warriorEyesClosed = new BalanceExercise("Warrior eyes closed", 15,5,3,3,"");
+        Exercise skaterHops = new BalanceExercise("Skater hops with reach", 15,15,3,3,"");
         spinningprogramExercise.add(spinning);
         spinningprogramExercise.add(spinning);
         spinningprogramExercise.add(spinning);
