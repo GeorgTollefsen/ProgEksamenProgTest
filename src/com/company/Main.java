@@ -75,8 +75,11 @@ public class Main {
         Exercise quadrupedElbowToKnee = new BalanceExercise("Quadruped elbow to knee", 10,10,3,1,"");
         Exercise singelLegBalance = new BalanceExercise("Single leg balance",15,10,3,1,"");
         Exercise warrior = new BalanceExercise("Warrior", 15,5,3,1,"");
-        Exercise treePose = new BalanceExercise();
-        //Level 2 - Hard Balance Exercises
+        Exercise treePose = new BalanceExercise("Tree pose", 10,6,3,1,"");
+
+        //Level 2 - Medium Balance Exercises
+
+
         //Level 3 - Hard Balance Exercises
 
         spinningprogramExercise.add(spinning);
