@@ -1,5 +1,6 @@
 package com.company;
 
+import javax.swing.*;
 import javax.xml.namespace.QName;
 import java.util.ArrayList;
 import java.util.Scanner;
@@ -62,14 +63,19 @@ public class Main {
         Exercise piriformisStretch = new FlexibilityExercise("Piriformis Stretch", 10,10,3,2,"None");
         Exercise tricepsStretch = new FlexibilityExercise("Triceps Stretch", 10,10,3,2,"None");
         Exercise spidermanLungs = new FlexibilityExercise("Spiderman lunge with reach",10,10,3,2,"20 sec on each leg");
-
+        Exercise seatedShoulderSqueeze = new FlexibilityExercise("Seated Shoulder Squeeze", 10,5,3,2,"Hold for 20 sec");
 
         //Level 3 - Hard Flexibility Exercises
         Exercise lowLungsOverArms = new FlexibilityExercise("Low lungs over arms",10,10,3,3,"None");
         Exercise lungeWithSpinalTwist = new FlexibilityExercise("Lunge with spinal twist",10,10,3,3,"");
         Exercise backBridge = new FlexibilityExercise("Back bridge", 10,5,3,3,"Hold for 20 sec");
         Exercise pigeonStretch = new FlexibilityExercise("Piegon stretch", 10,5,2, 3,"Hold 30 sec on each leg");
+
         //Level 1 - Easy Balance Exercises
+        Exercise quadrupedElbowToKnee = new BalanceExercise("Quadruped elbow to knee", 10,10,3,1,"");
+        Exercise singelLegBalance = new BalanceExercise("Single leg balance",15,10,3,1,"");
+        Exercise warrior = new BalanceExercise("Warrior", 15,5,3,1,"");
+        Exercise treePose = new BalanceExercise();
         //Level 2 - Hard Balance Exercises
         //Level 3 - Hard Balance Exercises
 
