@@ -36,7 +36,7 @@ public class Program {
     public double calculateIntensity(){
         double result = 0;
         for(int i=0; i<exercises.size(); i++){
-            if(exercises.get(i).intensity>=result){
+            if(exercises.get(i).intensity >= result){
                 result = exercises.get(i).intensity;
             }
         }
