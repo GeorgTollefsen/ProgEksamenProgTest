@@ -241,7 +241,7 @@ public class Main {
         selectedPerson = personer.get(valg);
         System.out.println("Choose Program");
         for(int i=0; i<programs.size(); i++){
-            System.out.println(programs.get(i).name);
+            System.out.println(i+1+". "+programs.get(i).name);
         }
         valg = scan.nextInt();
         scan.nextLine();
@@ -249,6 +249,25 @@ public class Main {
 
     }
     public static void buildProgram(){
+        System.out.println("Welcome to the program builder\n What would you like to call your new program?");
+        String name = scan.nextLine();
+        System.out.println("Here is a list of the exercises you can add. Enter 99 to quit");
+        ArrayList<Exercise> exercisesChosen = new ArrayList<Exercise>();
+        for(int i=0; i<exercises.size(); i++){
+            System.out.println(i+1+". "+exercises.get(i));
+        }
+        boolean flag = true;
+        while(flag){
+            int valg = scan.nextInt()+1;
+            scan.nextLine();
+            switch (valg){
+                case 99:
+                    flag=false;
+                    break;
+                default:
+                    exercisesChosen.add(exercises.get(valg));
+            }
+        }
 
     }
     public static void recommendProgram(){
