@@ -14,6 +14,7 @@ public class Main {
     public static Program selectedProgram;
     public static ArrayList<Exercise> exercises = new ArrayList<>();
 
+
     public static void main(String[] args) {
         System.out.println("Good day to you! Check out our awesome menu for home workout");
         Exercise spinning = new EnduranceExercise("Spinning", 20, 1, 1, 3, "Spinning Cycle");
@@ -214,11 +215,12 @@ public class Main {
         }
     }
     public static void exerciseManager(){
-        System.out.println("Welcome to the Exercise Manager. Theese are your options:\n " +
+        System.out.println("Welcome to the Exercise Manager. Theese are your options:\n" +
                 "1. Check if a program is appropiate for a person\n" +
                 "2. Build a new program\n" +
-                "3. Recommend a program for a sepcific person");
-        int valg = scan.nextInt()+1;
+                "3. Recommend a program for a sepcific person\n" +
+                "4. Back to main menu");
+        int valg = scan.nextInt();
         scan.nextLine();
         switch (valg){
             case 1:
@@ -228,7 +230,11 @@ public class Main {
             case 3:
                 recommendProgram();
             case 4:
-
+                callMenu();
+            default:
+                System.out.println("wrong answer try again");
+                exerciseManager();
+                break;
         }
     }
     public static void checkProgramPerson(){
@@ -254,21 +260,23 @@ public class Main {
         System.out.println("Here is a list of the exercises you can add. Enter 99 to quit");
         ArrayList<Exercise> exercisesChosen = new ArrayList<Exercise>();
         for(int i=0; i<exercises.size(); i++){
-            System.out.println(i+1+". "+exercises.get(i));
+            System.out.println(i+1+". "+exercises.get(i).name);
         }
         boolean flag = true;
         while(flag){
             int valg = scan.nextInt()+1;
             scan.nextLine();
             switch (valg){
-                case 99:
+                case 100:
                     flag=false;
                     break;
                 default:
                     exercisesChosen.add(exercises.get(valg));
             }
+
         }
 
+        exerciseManager();
     }
     public static void recommendProgram(){
 
