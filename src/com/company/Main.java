@@ -63,48 +63,80 @@ public class Main {
         Exercise lunges = new StrenghtExercise("Lunges", 10,12,3,80,1,"Water bottles");
         Exercise facePull = new StrenghtExercise("Face Pull", 10, 10,3,60,0,"Rubber band");
         Exercise plank = new StrenghtExercise("Plank with leg to the side", 10,15,3,20,0,"None");
+        exercises.add(dips);
+        exercises.add(lunges);
+        exercises.add(facePull);
+        exercises.add(plank);
 
         //Level 3 - Hard Strenght Exercises
         Exercise pistolSquats = new StrenghtExercise("Pistol squats", 20,10,3,30,0,"None");
         Exercise supermann = new StrenghtExercise("Supermann", 20,10,3,55,0,"Woolen sock");
         Exercise pushUps = new StrenghtExercise("Push ups",15,12,3,80,0,"None");
         Exercise boat = new StrenghtExercise("Boat",10,30,3,45,0,"Water bottle");
+        exercises.add(pistolSquats);
+        exercises.add(supermann);
+        exercises.add(pushUps);
+        exercises.add(boat);
 
         //Level 1 - Easy Flexibility Exercises
         Exercise catCow = new FlexibilityExercise("Cat-cow", 10,10,3,10,"None");
         Exercise standingHamstring = new FlexibilityExercise("Standing handstring Stretch", 10,10,3,45,"None");
         Exercise shoulderCircles = new FlexibilityExercise("Shoulder Circles",5,5,2,50,"None");
         Exercise butterflyStretch = new FlexibilityExercise("Butterfly Stretch", 10, 5,2,20,"");
+        exercises.add(catCow);
+        exercises.add(standingHamstring);
+        exercises.add(shoulderCircles);
+        exercises.add(butterflyStretch);
 
         //Level 2 - Medium Flexibility Exercises
         Exercise piriformisStretch = new FlexibilityExercise("Piriformis Stretch", 10,10,3,35,"None");
         Exercise tricepsStretch = new FlexibilityExercise("Triceps Stretch", 10,10,3,45,"None");
         Exercise spidermanLungs = new FlexibilityExercise("Spiderman lunge with reach",10,10,3,50,"20 sec on each leg");
         Exercise seatedShoulderSqueeze = new FlexibilityExercise("Seated Shoulder Squeeze", 10,5,3,56,"Hold for 20 sec");
+        exercises.add(piriformisStretch);
+        exercises.add(tricepsStretch);
+        exercises.add(spidermanLungs);
+        exercises.add(seatedShoulderSqueeze);
 
         //Level 3 - Hard Flexibility Exercises
         Exercise lowLungsOverArms = new FlexibilityExercise("Low lungs over arms",10,10,3,30,"None");
         Exercise lungeWithSpinalTwist = new FlexibilityExercise("Lunge with spinal twist",10,10,70,3,"");
         Exercise backBridge = new FlexibilityExercise("Back bridge", 10,5,3,75,"Hold for 20 sec");
         Exercise pigeonStretch = new FlexibilityExercise("Piegon stretch", 10,5,2, 36,"Hold 30 sec on each leg");
+        exercises.add(lowLungsOverArms);
+        exercises.add(lungeWithSpinalTwist);
+        exercises.add(backBridge);
+        exercises.add(pigeonStretch);
 
         //Level 1 - Easy Balance Exercises
         Exercise quadrupedElbowToKnee = new BalanceExercise("Quadruped elbow to knee", 10,10,3,15,"");
         Exercise singelLegBalance = new BalanceExercise("Single leg balance",15,10,3,30,"");
         Exercise warrior = new BalanceExercise("Warrior", 15,5,3,60,"");
         Exercise treePose = new BalanceExercise("Tree pose", 10,6,3,50,"");
+        exercises.add(quadrupedElbowToKnee);
+        exercises.add(singelLegBalance);
+        exercises.add(warrior);
+        exercises.add(treePose);
 
         //Level 2 - Medium Balance Exercises
         Exercise balanceStar = new BalanceExercise("Balance star",10,3,2,20,"");
         Exercise treePoseWithArmsUps = new BalanceExercise("Tree pose with arms up",10,5,2,35,"");
         Exercise airborneLunges = new BalanceExercise("Airborne Lunges", 10,10,3,45,"");
         Exercise stepDown = new BalanceExercise("Step down", 15,10,3,65,"Chair");
+        exercises.add(balanceStar);
+        exercises.add(treePoseWithArmsUps);
+        exercises.add(airborneLunges);
+        exercises.add(stepDown);
 
         //Level 3 - Hard Balance Exercises
         Exercise treePoseEyesClosed = new BalanceExercise("Tree pose eyes closed", 10,6,3,12,"");
         Exercise balanceStarEyesClosed = new BalanceExercise("Balance star eyes closed",10,3,2,90,"");
         Exercise warriorEyesClosed = new BalanceExercise("Warrior eyes closed", 15,5,3,45,"");
         Exercise skaterHops = new BalanceExercise("Skater hops with reach", 15,15,3,80,"");
+        exercises.add(treePoseEyesClosed);
+        exercises.add(balanceStarEyesClosed);
+        exercises.add(warriorEyesClosed);
+        exercises.add(skaterHops);
 
         spinningprogramExercise.add(spinning);
         spinningprogramExercise.add(spinning);
