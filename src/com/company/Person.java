@@ -14,7 +14,8 @@ public class Person {
     }
 
     public boolean acceptableProgram(Program program){
-        return program.intensityLevel * 0.9 < this.acceptableIntensity && this.acceptableIntensity < program.intensityLevel * 1.1;
+        return program.intensityLevel <= this.acceptableIntensity * 0.9
+                || program.intensityLevel <= this.acceptableIntensity * 1.1;
 
     }
     public static void selectPreferred(Program[] programs){
