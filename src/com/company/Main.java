@@ -275,7 +275,8 @@ public class Main {
             }
 
         }
-
+        Program selfMadeProgram = new Program(exercisesChosen, name);
+        programs.add(selfMadeProgram);
         exerciseManager();
     }
     public static void recommendProgram(){
