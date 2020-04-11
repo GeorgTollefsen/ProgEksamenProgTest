@@ -164,6 +164,19 @@ public class Main {
         }
     }
     public static void exerciseManager(){
-
+        System.out.println("Welcome to the Exercise Manager. Theese are your options:\n " +
+                "1. Check if a program is appropiate for a person\n" +
+                "2. Build a new program\n" +
+                "3. Recommend a program for a sepcific person");
+        int valg = scan.nextInt()+1;
+        scan.nextLine();
+        switch (valg){
+            case 1:
+                checkProgramPerson();
+            case 2:
+                buildProgram();
+            case 3:
+                reccomendProgram();
+        }
     }
 }
