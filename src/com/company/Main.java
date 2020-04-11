@@ -11,6 +11,8 @@ public class Main {
     public static ArrayList<Person> personer = new ArrayList<>();
     public static Person selectedPerson;
     public static ArrayList<Program> programs = new ArrayList<Program>();
+    public static Program selectedProgram;
+    public static ArrayList<Exercise> exercises = new ArrayList<>();
 
     public static void main(String[] args) {
         System.out.println("Good day to you! Check out our awesome menu for home workout");
@@ -21,25 +23,40 @@ public class Main {
         Exercise jumpRope = new EnduranceExercise("Jump rope", 10,30 ,3,30, "Rope");
         Exercise highKnees = new EnduranceExercise("High knees", 10, 30, 3,30, "None");
         Exercise jogInPlace = new EnduranceExercise("Jog in Place", 10,30,3,20,"None");
+        exercises.add(jumpingJack);
+        exercises.add(jumpRope);
+        exercises.add(highKnees);
+        exercises.add(jogInPlace);
 
         //Level 2 - Medium Endurance Exercise
         Exercise squatsJump = new EnduranceExercise("Squats Jump",10,15,3,60,"None");
         Exercise kickBoxing = new EnduranceExercise("Kickboxing",15,15,3,30,"None");
         Exercise lungesWithJump = new EnduranceExercise("Lunges with jump",15,15,3,60,"None");
         Exercise squatsPunches = new EnduranceExercise("Squats with punches", 10, 15,3,40,"None");
+        exercises.add(squatsJump);
+        exercises.add(kickBoxing);
+        exercises.add(lungesWithJump);
+        exercises.add(squatsPunches);
 
         // Level 3 - Hard Endurance Exercise
         Exercise burpees = new EnduranceExercise("Burpees", 15, 30, 4, 100, "None");
         Exercise mountainClimber = new EnduranceExercise("Mountain climber", 10, 30, 3, 90,"None");
         Exercise beerCrawlPushUps = new EnduranceExercise("Bear crawl push ups", 15, 15,3,90,"Yoga mat");
         Exercise jumpToTheSide  = new EnduranceExercise("Jump to the side", 10,15,3,75,"None");
-
+        exercises.add(burpees);
+        exercises.add(mountainClimber);
+        exercises.add(beerCrawlPushUps);
+        exercises.add(jumpToTheSide);
 
         //Level 1 - Easy Strenght Exercise
         Exercise squats = new StrenghtExercise("Squats", 20, 20,3,90, 0,"None");
         Exercise sitUps = new StrenghtExercise("Sit-ups", 0, 20, 3,20, 0, "None");
         Exercise backExtention = new StrenghtExercise("Back Extention", 0, 20,3,10,0, "None");
         Exercise pushUpsOnKnees = new StrenghtExercise("Push ups on knees",0,10,3,35,0, "none");
+        exercises.add(squats);
+        exercises.add(sitUps);
+        exercises.add(backExtention);
+        exercises.add(pushUpsOnKnees);
 
         // Level 2 - Medium Strenght Exercise
         Exercise dips = new StrenghtExercise("Dips", 20, 10, 3, 20,0,"Chair");
@@ -88,6 +105,7 @@ public class Main {
         Exercise balanceStarEyesClosed = new BalanceExercise("Balance star eyes closed",10,3,2,90,"");
         Exercise warriorEyesClosed = new BalanceExercise("Warrior eyes closed", 15,5,3,45,"");
         Exercise skaterHops = new BalanceExercise("Skater hops with reach", 15,15,3,80,"");
+
         spinningprogramExercise.add(spinning);
         spinningprogramExercise.add(spinning);
         spinningprogramExercise.add(spinning);
@@ -176,7 +194,32 @@ public class Main {
             case 2:
                 buildProgram();
             case 3:
-                reccomendProgram();
+                recommendProgram();
+            case 4:
+
         }
+    }
+    public static void checkProgramPerson(){
+        System.out.println("Choose person");
+        for (Person person : personer) {
+            System.out.println(person.name);
+        }
+        int valg = scan.nextInt()+1;
+        scan.nextLine();
+        selectedPerson = personer.get(valg);
+        System.out.println("Choose Program");
+        for(int i=0; i<programs.size(); i++){
+            System.out.println(programs.get(i).name);
+        }
+        valg = scan.nextInt();
+        scan.nextLine();
+        // her skal funksjonen som avgjør om et program er akseptabelt eller ikke
+
+    }
+    public static void buildProgram(){
+
+    }
+    public static void recommendProgram(){
+
     }
 }
