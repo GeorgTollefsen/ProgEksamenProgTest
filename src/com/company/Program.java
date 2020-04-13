@@ -20,6 +20,15 @@ public class Program {
 
     //sorts the program in intensity levels
     public void sortProgram(){
+        this.exercises.sort((e1, e2) -> {
+            if (e1.intensity == e2.intensity) {
+                return 0;
+            } else if (e1.intensity < e2.intensity) {
+                return -1;
+            } else {
+                return 1;
+            }
+        });
 
     }
 

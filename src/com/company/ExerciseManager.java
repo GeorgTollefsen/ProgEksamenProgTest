@@ -9,12 +9,12 @@ public class ExerciseManager {
         this.exercises = exercises;
     }
 
-    //acceptableProgram is testing which program is acceptable for a person in Tester
+    //acceptableProgram is testing which program is acceptable for a person (3.a)
     public static boolean acceptableProgam(Person person, Program program) {
         return person.acceptableProgram(program);
     }
 
-    //Generates suitable program for given person, including all the exercise types
+    //Generates suitable program for given person, including all the exercise types (3.b)
     public Program generateProgram(Person person, String projectName) {
         ArrayList<Exercise> exercisesForProgram = new ArrayList<>();
         exercisesForProgram.add(findExerciseByType(person, StrenghtExercise.class));
