@@ -58,17 +58,17 @@ public class Program {
         boolean flagEndurance = false;
         boolean flagBalance = false;
         boolean flagFlexibility = false;
-        for(int i=0; i<exercises.size();i++){
-            if(exercises.get(i) instanceof StrenghtExercise){
+        for (Exercise exercise : exercises) {
+            if (exercise instanceof StrenghtExercise) {
                 flagStrength = true;
             }
-            if(exercises.get(i) instanceof EnduranceExercise){
+            if (exercise instanceof EnduranceExercise) {
                 flagEndurance = true;
             }
-            if(exercises.get(i) instanceof FlexibilityExercise){
+            if (exercise instanceof FlexibilityExercise) {
                 flagFlexibility = true;
             }
-            if(exercises.get(i) instanceof BalanceExercise){
+            if (exercise instanceof BalanceExercise) {
                 flagBalance = true;
             }
         }
