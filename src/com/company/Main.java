@@ -280,6 +280,23 @@ public class Main {
         exerciseManager();
     }
     public static void recommendProgram(){
+        System.out.println("Here we will reccomend a program for you. Which person do you want reccomendations for?");
+        for(int i =0; i<personer.size(); i++){
+            System.out.println(i+1+". "+personer.get(i).name);
+        }
+        int valg = scan.nextInt()+1;
+        scan.nextLine();
+        System.out.println("Now choose the program");
+        for(int i=0; i<programs.size(); i++){
+            System.out.println(i+1+". "+programs.get(i).name);
+        }
+        int valg2 = scan.nextInt()+1;
+        scan.nextLine();
 
+        if(personer.get(valg-1).acceptableIntensity>programs.get(valg2-1).intensityLevel*1.1 || personer.get(valg-1).acceptableIntensity<programs.get(valg2-1).intensityLevel*0.9){
+            System.out.println("The program is not suited for this person");
+        } else{
+            System.out.println("The program is well suited for this person");
+        }
     }
 }
