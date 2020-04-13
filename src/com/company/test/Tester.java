@@ -9,7 +9,7 @@ import static org.junit.Assert.*;
 
 public class Tester {
     @Test
-    public void test1_1 (){
+    public void test1_1() {
 
         //Taking in some data to test, one from each type of exercise
         Exercise squats = new StrenghtExercise("Squats", 20, 20,3,1, 0,"None");
@@ -39,5 +39,28 @@ public class Tester {
         assertEquals(test_progam.isBalanced, true);
         assertEquals(test_progam.intensityLevel, 1.0, 0);
         assertEquals(ExerciseManager.acceptableProgam(person, test_progam), true);
+    }
+
+    @Test
+    public void test1_2() {
+
+        Exercise treePoseEyesClosed = new BalanceExercise("Tree pose eyes closed", 10,6,3,12,"");
+        Exercise balanceStarEyesClosed = new BalanceExercise("Balance star eyes closed",10,3,2,90,"");
+        Exercise warriorEyesClosed = new BalanceExercise("Warrior eyes closed", 15,5,3,45,"");
+        Exercise skaterHops = new BalanceExercise("Skater hops with reach", 15,15,3,80,"");
+
+        ArrayList<Exercise> exercises = new ArrayList<>();
+        exercises.add(treePoseEyesClosed);
+        exercises.add(balanceStarEyesClosed);
+        exercises.add(warriorEyesClosed);
+        exercises.add(skaterHops);
+
+        Program program = new Program(exercises, "Test 2");
+
+        assertEquals(program.exercises.get(0), treePoseEyesClosed);
+        assertEquals(program.exercises.get(1), warriorEyesClosed);
+        assertEquals(program.exercises.get(2), skaterHops);
+        assertEquals(program.exercises.get(3), balanceStarEyesClosed);
+
     }
 }

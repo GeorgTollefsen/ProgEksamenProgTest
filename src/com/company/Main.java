@@ -2,6 +2,7 @@ package com.company;
 
 import javax.swing.*;
 import javax.xml.namespace.QName;
+import java.security.spec.ECField;
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -11,8 +12,11 @@ public class Main {
     public static ArrayList<Person> personer = new ArrayList<>();
     public static Person selectedPerson;
     public static ArrayList<Program> programs = new ArrayList<Program>();
+    public static ArrayList<Exercise> exercises = new ArrayList<>();
 
     public static void main(String[] args) {
+
+
         System.out.println("Good day to you! Check out our awesome menu for home workout");
         Exercise spinning = new EnduranceExercise("Spinning", 20, 1, 1, 3, "Spinning Cycle");
 
@@ -164,6 +168,7 @@ public class Main {
         }
     }
     public static void exerciseManager(){
+        System.out.println(("This is the exercise manager"));
 
     }
 }
