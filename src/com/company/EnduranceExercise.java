@@ -7,4 +7,5 @@ public class EnduranceExercise extends Exercise {
         super(name, duration, repetitions, sets, intensity);
         this.equipment = equipment;
     }
+
 }
