@@ -363,7 +363,7 @@ public class Main {
     public static int searchFunctionExercises(String find){
         int indexnumber=-1;
         for(int i=0; i<exercises.size(); i++){
-            if(exercises.get(i).name.equals(find)){
+            if(exercises.get(i).name.equalsIgnoreCase(find)){
                 indexnumber = i;
             }
         }
