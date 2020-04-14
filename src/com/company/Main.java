@@ -11,12 +11,7 @@ public class Main {
     public static ArrayList<Program> programs = new ArrayList<Program>();
     public static Program selectedProgram;
     public static ArrayList<Exercise> exercises = new ArrayList<>();
-    public static ArrayList<Exercise> supermanprogramExercise = new ArrayList<>();
-    public static ArrayList<Exercise> thorprogramExercise = new ArrayList<>();
-    public static ArrayList<Exercise> batmanprogramExercise = new ArrayList<>();
-    public static ArrayList<Exercise> flashprogramExercise = new ArrayList<>();
-    public static ArrayList<Exercise> spidermanprogramExercise = new ArrayList<>();
-    public static ArrayList<Exercise> wonderwomanprogramExercise = new ArrayList<>();
+
 
     public static void main(String[] args) {
         intitializeExercises();
@@ -304,6 +299,30 @@ public class Main {
         Program spinningProgram = new Program(spinningprogramExercise, "Spinning Program");
         programs.add(spinningProgram);
 
+        //The superman Program
+        ArrayList<Exercise> supermanprogramExercise = new ArrayList<Exercise>();
+        supermanprogramExercise.add(exercises.get(searchFunctionExercises("Jumping Jacks")));
+        supermanprogramExercise.add(exercises.get(searchFunctionExercises("Squats")));
+        supermanprogramExercise.add(exercises.get(searchFunctionExercises("Cat-cow")));
+        supermanprogramExercise.add(exercises.get(searchFunctionExercises("Quadruped elbow to knee")));
+        supermanprogramExercise.add(exercises.get(searchFunctionExercises("Plank with leg to the side")));
+        Program supermanProgram = new Program(supermanprogramExercise,"The superman Program");
+        programs.add(supermanProgram);
+
+        //The Thor Program
+        ArrayList<Exercise> thorprogramExercise = new ArrayList<>();
+
+        //The Batman Program
+        ArrayList<Exercise> batmanprogramExercise = new ArrayList<>();
+
+        //The Flash Program - Be fast as Flash
+        ArrayList<Exercise> flashprogramExercise = new ArrayList<>();
+
+        // Be Flexible as Spiderman -
+        ArrayList<Exercise> spidermanprogramExercise = new ArrayList<>();
+
+        //Be a wonderwoman
+        ArrayList<Exercise> wonderwomanprogramExercise = new ArrayList<>();
     }
 
     public static void initializePersons(){
