@@ -148,14 +148,14 @@ public class Main {
         Program spinningProgram = new Program(spinningprogramExercise, "Spinning Program");
         programs.add(spinningProgram);
 
-        Person georg = new Person("Georg", spinning, 1.5, spinningProgram);
-        Person pernille = new Person("Pernille", spinning, 2, spinningProgram);
-        Person mia = new Person("Mia", spinning, 3, spinningProgram);
-        Person thea = new Person("Thea", spinning, 1, spinningProgram);
-        Person aina = new Person("Aina" ,spinning, 4, spinningProgram);
-        Person andrea = new Person("Andrea" ,spinning, 1, spinningProgram);
-        Person rick = new Person("Rick" ,spinning, 4, spinningProgram);
-        Person david = new Person("David" ,spinning, 1, spinningProgram);
+        Person georg = new Person("Georg", spinning, 5, spinningProgram);
+        Person pernille = new Person("Pernille", spinning, 7, spinningProgram);
+        Person mia = new Person("Mia", spinning, 10, spinningProgram);
+        Person thea = new Person("Thea", spinning, 3, spinningProgram);
+        Person aina = new Person("Aina" ,spinning, 6, spinningProgram);
+        Person andrea = new Person("Andrea" ,spinning, 7, spinningProgram);
+        Person rick = new Person("Rick" ,spinning, 8, spinningProgram);
+        Person david = new Person("David" ,spinning, 6, spinningProgram);
 
 
         personer.add(georg);
