@@ -16,7 +16,7 @@ public class Main {
 
 
         System.out.println("Good day to you! Check out our awesome menu for home workout");
-        Exercise spinning = new EnduranceExercise("Spinning", 20, 1, 1, 3, "Spinning Cycle");
+        Exercise spinning = new EnduranceExercise("Spinning", 20, 1, 1, 7, "Spinning Cycle");
 
         //Level 1 - Easy Endurance Exercise
         Exercise jumpingJack = new EnduranceExercise("Jumping Jacks", 10, 20, 3, 10, "None");
@@ -241,17 +241,17 @@ public class Main {
         for (int i=0; i<personer.size(); i++) {
             System.out.println(1+i+". "+personer.get(i).name);
         }
-        int valg = scan.nextInt()+1;
+        int valg = scan.nextInt()-1;
         scan.nextLine();
         System.out.println("Choose Program");
         for(int i=0; i<programs.size(); i++){
             System.out.println(i+1+". "+programs.get(i).name);
         }
-        int valg2 = scan.nextInt();
+        int valg2 = scan.nextInt()-1;
         scan.nextLine();
         // her skal funksjonen som avgjør om et program er akseptabelt eller ikke
 
-        if(personer.get(valg-1).acceptableIntensity>programs.get(valg2-1).intensityLevel*1.1 || personer.get(valg-1).acceptableIntensity<programs.get(valg2-1).intensityLevel*0.9){
+        if(personer.get(valg).acceptableIntensity>programs.get(valg2).intensityLevel*1.1 || personer.get(valg).acceptableIntensity<programs.get(valg2).intensityLevel*0.9){
             System.out.println("The program is not suited for this person");
         } else{
             System.out.println("The program is well suited for this person");
