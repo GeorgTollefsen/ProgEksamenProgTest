@@ -68,4 +68,5 @@ public class Tester {
         assertEquals(program.exercises.get(3), balanceStarEyesClosed);
 
     }
+
 }

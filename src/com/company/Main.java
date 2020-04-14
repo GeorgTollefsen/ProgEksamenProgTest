@@ -197,7 +197,7 @@ public class Main {
 
         //Level 1 - Easy Flexibility Exercises
         Exercise catCow = new FlexibilityExercise("Cat-cow", 10,10,3,10,"None");
-        Exercise standingHamstring = new FlexibilityExercise("Standing handstring Stretch", 10,10,3,45,"None");
+        Exercise standingHamstring = new FlexibilityExercise("Standing hamstring Stretch", 10,10,3,45,"None");
         Exercise shoulderCircles = new FlexibilityExercise("Shoulder Circles",5,5,2,50,"None");
         Exercise butterflyStretch = new FlexibilityExercise("Butterfly Stretch", 10, 5,2,20,"");
 
@@ -327,7 +327,7 @@ public class Main {
         ArrayList<Exercise> batmanprogramExercise = new ArrayList<Exercise>();
         batmanprogramExercise.add(exercises.get(searchFunctionExercises("Squats Jump")));
         batmanprogramExercise.add(exercises.get(searchFunctionExercises("Lunges with jump")));
-        batmanprogramExercise.add(exercises.get(searchFunctionExercises("Warrior eyes")));
+        batmanprogramExercise.add(exercises.get(searchFunctionExercises("Warrior eyes closed")));
         batmanprogramExercise.add(exercises.get(searchFunctionExercises("Piriformis Stretch")));
         batmanprogramExercise.add(exercises.get(searchFunctionExercises("Shoulder Circles")));
         Program batmanProgram = new Program(batmanprogramExercise,"The batman Program");
@@ -345,9 +345,9 @@ public class Main {
 
         // Be Flexible as Spiderman -
         ArrayList<Exercise> spidermanprogramExercise = new ArrayList<Exercise>();
-        spidermanprogramExercise.add(exercises.get(searchFunctionExercises("Lung with spinal twist")));
+        spidermanprogramExercise.add(exercises.get(searchFunctionExercises("Lunge with spinal twist")));
         spidermanprogramExercise.add(exercises.get(searchFunctionExercises("Piegon stretch")));
-        spidermanprogramExercise.add(exercises.get(searchFunctionExercises("Skater hopes with reach")));
+        spidermanprogramExercise.add(exercises.get(searchFunctionExercises("Skater hops with reach")));
         spidermanprogramExercise.add(exercises.get(searchFunctionExercises("Sit-ups")));
         spidermanprogramExercise.add(exercises.get(searchFunctionExercises("Jump rope")));
         Program spidermanProgram = new Program(spidermanprogramExercise,"The Spiderman Program");
