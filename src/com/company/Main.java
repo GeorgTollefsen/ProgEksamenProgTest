@@ -11,6 +11,12 @@ public class Main {
     public static ArrayList<Program> programs = new ArrayList<Program>();
     public static Program selectedProgram;
     public static ArrayList<Exercise> exercises = new ArrayList<>();
+    public static ArrayList<Exercise> supermanprogramExercise = new ArrayList<>();
+    public static ArrayList<Exercise> thorprogramExercise = new ArrayList<>();
+    public static ArrayList<Exercise> batmanprogramExercise = new ArrayList<>();
+    public static ArrayList<Exercise> flashprogramExercise = new ArrayList<>();
+    public static ArrayList<Exercise> spidermanprogramExercise = new ArrayList<>();
+    public static ArrayList<Exercise> wonderwomanprogramExercise = new ArrayList<>();
 
     public static void main(String[] args) {
 
