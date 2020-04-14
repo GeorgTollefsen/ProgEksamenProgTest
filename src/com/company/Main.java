@@ -325,11 +325,11 @@ public class Main {
 
         //The Batman Program
         ArrayList<Exercise> batmanprogramExercise = new ArrayList<Exercise>();
-        batmanprogramExercise.add(exercises.get(searchFunctionExercises("")));
-        batmanprogramExercise.add(exercises.get(searchFunctionExercises("")));
-        batmanprogramExercise.add(exercises.get(searchFunctionExercises("")));
-        batmanprogramExercise.add(exercises.get(searchFunctionExercises("")));
-        batmanprogramExercise.add(exercises.get(searchFunctionExercises("")));
+        batmanprogramExercise.add(exercises.get(searchFunctionExercises("Squats Jump")));
+        batmanprogramExercise.add(exercises.get(searchFunctionExercises("Lunges with jump")));
+        batmanprogramExercise.add(exercises.get(searchFunctionExercises("Warrior eyes")));
+        batmanprogramExercise.add(exercises.get(searchFunctionExercises("Piriformis Stretch")));
+        batmanprogramExercise.add(exercises.get(searchFunctionExercises("Shoulder Circles")));
         Program batmanProgram = new Program(batmanprogramExercise,"The batman Program");
         programs.add(batmanProgram);
 
