@@ -83,4 +83,8 @@ public class Program {
             return false;
         }
     }
+
+    public String getName() {
+        return name;
+    }
 }
