@@ -190,7 +190,7 @@ public class Main {
         Exercise plank = new StrenghtExercise("Plank with leg to the side", 10,15,3,20,0,"None");
 
         //Level 3 - Hard Strenght Exercises
-        Exercise pistolSquats = new StrenghtExercise("Pistol squats", 20,10,3,30,0,"None");
+        Exercise pistolSquats = new StrenghtExercise("Pistol squats", 20,10,3,90,0,"None");
         Exercise supermann = new StrenghtExercise("Supermann", 20,10,3,55,0,"Woolen sock");
         Exercise pushUps = new StrenghtExercise("Push ups",15,12,3,80,0,"None");
         Exercise boat = new StrenghtExercise("Boat",10,30,3,45,0,"Water bottle");
@@ -313,27 +313,56 @@ public class Main {
         programs.add(supermanProgram);
 
         //The Thor Program
-        ArrayList<Exercise> thorprogramExercise = new ArrayList<>();
-        thorprogramExercise.add(exercises.get(searchFunctionExercises("")));
-        thorprogramExercise.add(exercises.get(searchFunctionExercises("")));
-        thorprogramExercise.add(exercises.get(searchFunctionExercises("")));
-        thorprogramExercise.add(exercises.get(searchFunctionExercises("")));
-        thorprogramExercise.add(exercises.get(searchFunctionExercises("")));
-        thorprogramExercise.add(exercises.get(searchFunctionExercises("")));
+        ArrayList<Exercise> thorprogramExercise = new ArrayList<Exercise>();
+        thorprogramExercise.add(exercises.get(searchFunctionExercises("Pistol Squats")));
+        thorprogramExercise.add(exercises.get(searchFunctionExercises("Mountain Climber")));
+        thorprogramExercise.add(exercises.get(searchFunctionExercises("Back bridge")));
+        thorprogramExercise.add(exercises.get(searchFunctionExercises("Push ups")));
+        thorprogramExercise.add(exercises.get(searchFunctionExercises("Tree pose")));
+        thorprogramExercise.add(exercises.get(searchFunctionExercises("Jump to the side")));
         Program thorProgram = new Program(thorprogramExercise, "The Thor Program");
         programs.add(thorProgram);
 
         //The Batman Program
-        ArrayList<Exercise> batmanprogramExercise = new ArrayList<>();
+        ArrayList<Exercise> batmanprogramExercise = new ArrayList<Exercise>();
+        batmanprogramExercise.add(exercises.get(searchFunctionExercises("")));
+        batmanprogramExercise.add(exercises.get(searchFunctionExercises("")));
+        batmanprogramExercise.add(exercises.get(searchFunctionExercises("")));
+        batmanprogramExercise.add(exercises.get(searchFunctionExercises("")));
+        batmanprogramExercise.add(exercises.get(searchFunctionExercises("")));
+        Program batmanProgram = new Program(batmanprogramExercise,"The batman Program");
+        programs.add(batmanProgram);
 
         //The Flash Program - Be fast as Flash
-        ArrayList<Exercise> flashprogramExercise = new ArrayList<>();
+        ArrayList<Exercise> flashprogramExercise = new ArrayList<Exercise>();
+        flashprogramExercise.add(exercises.get(searchFunctionExercises("")));
+        flashprogramExercise.add(exercises.get(searchFunctionExercises("")));
+        flashprogramExercise.add(exercises.get(searchFunctionExercises("")));
+        flashprogramExercise.add(exercises.get(searchFunctionExercises("")));
+        flashprogramExercise.add(exercises.get(searchFunctionExercises("")));
+        Program flashProgram = new Program(flashprogramExercise,"The Flash Program");
+        programs.add(flashProgram);
 
         // Be Flexible as Spiderman -
-        ArrayList<Exercise> spidermanprogramExercise = new ArrayList<>();
+        ArrayList<Exercise> spidermanprogramExercise = new ArrayList<Exercise>();
+        spidermanprogramExercise.add(exercises.get(searchFunctionExercises("")));
+        spidermanprogramExercise.add(exercises.get(searchFunctionExercises("")));
+        spidermanprogramExercise.add(exercises.get(searchFunctionExercises("")));
+        spidermanprogramExercise.add(exercises.get(searchFunctionExercises("")));
+        spidermanprogramExercise.add(exercises.get(searchFunctionExercises("")));
+        spidermanprogramExercise.add(exercises.get(searchFunctionExercises("")));
+        Program spidermanProgram = new Program(spidermanprogramExercise,"The Spiderman Program");
+        programs.add(spidermanProgram);
 
         //Be a wonderwoman
-        ArrayList<Exercise> wonderwomanprogramExercise = new ArrayList<>();
+        ArrayList<Exercise> wonderwomanprogramExercise = new ArrayList<Exercise>();
+        wonderwomanprogramExercise.add(exercises.get(searchFunctionExercises("")));
+        wonderwomanprogramExercise.add(exercises.get(searchFunctionExercises("")));
+        wonderwomanprogramExercise.add(exercises.get(searchFunctionExercises("")));
+        wonderwomanprogramExercise.add(exercises.get(searchFunctionExercises("")));
+        wonderwomanprogramExercise.add(exercises.get(searchFunctionExercises("")));
+        Program wonderwomanProgram = new Program(wonderwomanprogramExercise, "The wonder woman Program");
+        programs.add(wonderwomanProgram);
     }
 
     public static void initializePersons(){
