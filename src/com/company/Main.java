@@ -70,10 +70,15 @@ public class Main {
         scan.nextLine();
     }
     public static void listPrograms(){
-        System.out.println("This is the collections of programs");
         for(int i=0; i<programs.size(); i++){
             System.out.println(i+1+". "+programs.get(i).name.toString());
         }
+        System.out.println("\nThis is the collections of programs \n");
+        int valg = scan.nextInt()-1;
+        scan.nextLine();
+        selectedProgram = programs.get(valg);
+        System.out.println("\n You have choosen: "+selectedProgram.name.toString());
+        scan.nextLine();
     }
     public static void exerciseManager(){
         System.out.println("Welcome to the Exercise Manager. Theese are your options:\n" +
