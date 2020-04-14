@@ -14,9 +14,14 @@ public class Main {
     public static ArrayList<Program> programs = new ArrayList<Program>();
     public static Program selectedProgram;
     public static ArrayList<Exercise> exercises = new ArrayList<>();
+    public static ArrayList<Exercise> supermanprogramExercise = new ArrayList<>();
+    public static ArrayList<Exercise> thorprogramExercise = new ArrayList<>();
+    public static ArrayList<Exercise> batmanprogramExercise = new ArrayList<>();
+    public static ArrayList<Exercise> flashprogramExercise = new ArrayList<>();
+    public static ArrayList<Exercise> spidermanprogramExercise = new ArrayList<>();
+    public static ArrayList<Exercise> wonderwomanprogramExercise = new ArrayList<>();
 
     public static void main(String[] args) {
-
 
         System.out.println("Good day to you! Check out our awesome menu for home workout");
         Exercise spinning = new EnduranceExercise("Spinning", 20, 1, 1, 3, "Spinning Cycle");
@@ -145,16 +150,32 @@ public class Main {
         spinningprogramExercise.add(spinning);
         spinningprogramExercise.add(spinning);
 
+        supermanprogramExercise.add(treePoseWithArmsUps);
+        supermanprogramExercise.add(skaterHops);
+
         Program spinningProgram = new Program(spinningprogramExercise, "Spinning Program");
         programs.add(spinningProgram);
 
+        Program supermanProgram = new Program(supermanprogramExercise, "The Superman Program");
+        programs.add(supermanProgram);
+        Program thorProgram = new Program(thorprogramExercise, "The Thor Program");
+        programs.add(thorProgram);
+        Program batmanProgram = new Program(batmanprogramExercise,"The Batman Program");
+        programs.add(batmanProgram);
+        Program flashProgram = new Program(flashprogramExercise,"Flash Program");
+        programs.add(flashProgram);
+        Program spidermanProgram = new Program(spidermanprogramExercise,"Spiderman Program");
+        programs.add(spidermanProgram);
+        Program wonderwomanProgram = new Program(wonderwomanprogramExercise,"Become wonder woman");
+        programs.add(wonderwomanProgram);
+
         Person georg = new Person("Georg", spinning, 5, spinningProgram);
-        Person pernille = new Person("Pernille", spinning, 7, spinningProgram);
-        Person mia = new Person("Mia", spinning, 10, spinningProgram);
-        Person thea = new Person("Thea", spinning, 3, spinningProgram);
-        Person aina = new Person("Aina" ,spinning, 6, spinningProgram);
-        Person andrea = new Person("Andrea" ,spinning, 7, spinningProgram);
-        Person rick = new Person("Rick" ,spinning, 8, spinningProgram);
+        Person pernille = new Person("Pernille", spinning, 7, thorProgram);
+        Person mia = new Person("Mia", spinning, 10, batmanProgram);
+        Person thea = new Person("Thea", spinning, 3, flashProgram);
+        Person aina = new Person("Aina" ,spinning, 6, spidermanProgram);
+        Person andrea = new Person("Andrea" ,spinning, 7, wonderwomanProgram);
+        Person rick = new Person("Rick" ,skaterHops, 8, supermanProgram);
         Person david = new Person("David" ,spinning, 6, spinningProgram);
 
 
