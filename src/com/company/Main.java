@@ -330,7 +330,7 @@ public class Main {
         batmanprogramExercise.add(exercises.get(searchFunctionExercises("Warrior eyes closed")));
         batmanprogramExercise.add(exercises.get(searchFunctionExercises("Piriformis Stretch")));
         batmanprogramExercise.add(exercises.get(searchFunctionExercises("Shoulder Circles")));
-        Program batmanProgram = new Program(batmanprogramExercise,"The batman Program");
+        Program batmanProgram = new Program(batmanprogramExercise,"The Batman Program");
         programs.add(batmanProgram);
 
         //The Flash Program - Be fast as Flash
@@ -361,7 +361,7 @@ public class Main {
         wonderwomanprogramExercise.add(exercises.get(searchFunctionExercises("Kickboxing")));
         wonderwomanprogramExercise.add(exercises.get(searchFunctionExercises("Low lungs over arms")));
         wonderwomanprogramExercise.add(exercises.get(searchFunctionExercises("Triceps Stretch")));
-        Program wonderwomanProgram = new Program(wonderwomanprogramExercise, "The wonder woman Program");
+        Program wonderwomanProgram = new Program(wonderwomanprogramExercise, "The Wonder woman Program");
         programs.add(wonderwomanProgram);
     }
 
