@@ -76,7 +76,7 @@ public class Program {
                 flagBalance = true;
             }
         }
-        if(flagStrength & flagEndurance & flagBalance & flagFlexibility){
+        if(flagStrength && flagEndurance && flagBalance && flagFlexibility){
             return true;
         }
         else {
