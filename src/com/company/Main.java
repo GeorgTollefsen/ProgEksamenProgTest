@@ -314,7 +314,14 @@ public class Main {
 
         //The Thor Program
         ArrayList<Exercise> thorprogramExercise = new ArrayList<>();
-
+        thorprogramExercise.add(exercises.get(searchFunctionExercises("")));
+        thorprogramExercise.add(exercises.get(searchFunctionExercises("")));
+        thorprogramExercise.add(exercises.get(searchFunctionExercises("")));
+        thorprogramExercise.add(exercises.get(searchFunctionExercises("")));
+        thorprogramExercise.add(exercises.get(searchFunctionExercises("")));
+        thorprogramExercise.add(exercises.get(searchFunctionExercises("")));
+        Program thorProgram = new Program(thorprogramExercise, "The Thor Program");
+        programs.add(thorProgram);
 
         //The Batman Program
         ArrayList<Exercise> batmanprogramExercise = new ArrayList<>();
