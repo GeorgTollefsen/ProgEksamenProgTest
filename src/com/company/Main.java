@@ -5,26 +5,24 @@ import java.util.Scanner;
 
 public class Main {
     public static Scanner scan = new Scanner(System.in);
-
     public static ArrayList<Person> personer = new ArrayList<>();
     public static Person selectedPerson;
     public static ArrayList<Program> programs = new ArrayList<Program>();
     public static Program selectedProgram;
     public static ArrayList<Exercise> exercises = new ArrayList<>();
-
+    public static ArrayList<Exercise> supermanprogramExercise = new ArrayList<>();
+    public static ArrayList<Exercise> thorprogramExercise = new ArrayList<>();
+    public static ArrayList<Exercise> batmanprogramExercise = new ArrayList<>();
+    public static ArrayList<Exercise> flashprogramExercise = new ArrayList<>();
+    public static ArrayList<Exercise> spidermanprogramExercise = new ArrayList<>();
+    public static ArrayList<Exercise> wonderwomanprogramExercise = new ArrayList<>();
 
     public static void main(String[] args) {
         intitializeExercises();
-        initializePersons();
+        System.out.println(exercises.get(searchFunctionExercises("spinning")));
         initializePrograms();
-
+        initializePersons();
         System.out.println("Good day to you! Check out our awesome menu for home workout");
-
-
-
-
-
-
 
         callMenu();
 
@@ -118,8 +116,11 @@ public class Main {
         } else{
             System.out.println("The program is well suited for this person");
         }
-        // her skal funksjonen som avgjør om et program er akseptabelt eller ikke
+        System.out.println("Press any key to continue");
+        scan.nextLine();
 
+        // her skal funksjonen som avgjør om et program er akseptabelt eller ikke
+        exerciseManager();
     }
     public static void buildProgram(){
         System.out.println("Welcome to the program builder\n What would you like to call your new program?");
@@ -140,6 +141,7 @@ public class Main {
                 default:
                     exercisesChosen.add(exercises.get(valg));
             }
+
 
         }
         Program selfMadeProgram = new Program(exercisesChosen, name);
@@ -172,7 +174,7 @@ public class Main {
         Exercise mountainClimber = new EnduranceExercise("Mountain climber", 10, 30, 3, 90,"None");
         Exercise beerCrawlPushUps = new EnduranceExercise("Bear crawl push ups", 15, 15,3,90,"Yoga mat");
         Exercise jumpToTheSide  = new EnduranceExercise("Jump to the side", 10,15,3,75,"None");
-        Exercise spinning = new EnduranceExercise("Spinning", 20, 1, 1, 7, "Spinning Cycle");
+        Exercise spinning = new EnduranceExercise("Spinning", 20, 1, 1, 70, "Spinning Cycle");
 
         //Level 1 - Easy Strenght Exercise
         Exercise squats = new StrenghtExercise("Squats", 20, 20,3,90, 0,"None");
@@ -299,41 +301,17 @@ public class Main {
         Program spinningProgram = new Program(spinningprogramExercise, "Spinning Program");
         programs.add(spinningProgram);
 
-        //The superman Program
-        ArrayList<Exercise> supermanprogramExercise = new ArrayList<Exercise>();
-        supermanprogramExercise.add(exercises.get(searchFunctionExercises("Jumping Jacks")));
-        supermanprogramExercise.add(exercises.get(searchFunctionExercises("Squats")));
-        supermanprogramExercise.add(exercises.get(searchFunctionExercises("Cat-cow")));
-        supermanprogramExercise.add(exercises.get(searchFunctionExercises("Quadruped elbow to knee")));
-        supermanprogramExercise.add(exercises.get(searchFunctionExercises("Plank with leg to the side")));
-        Program supermanProgram = new Program(supermanprogramExercise,"The superman Program");
-        programs.add(supermanProgram);
-
-        //The Thor Program
-        ArrayList<Exercise> thorprogramExercise = new ArrayList<>();
-
-        //The Batman Program
-        ArrayList<Exercise> batmanprogramExercise = new ArrayList<>();
-
-        //The Flash Program - Be fast as Flash
-        ArrayList<Exercise> flashprogramExercise = new ArrayList<>();
-
-        // Be Flexible as Spiderman -
-        ArrayList<Exercise> spidermanprogramExercise = new ArrayList<>();
-
-        //Be a wonderwoman
-        ArrayList<Exercise> wonderwomanprogramExercise = new ArrayList<>();
     }
 
     public static void initializePersons(){
-        Person georg = new Person("Georg", exercises.get(searchFunctionExercises("Spinning")), 50, spinningProgram);
-        Person pernille = new Person("Pernille", exercises.get(searchFunctionExercises("Spinning")), 70, spinningProgram);
-        Person mia = new Person("Mia", exercises.get(searchFunctionExercises("Spinning")), 95, spinningProgram);
-        Person thea = new Person("Thea", exercises.get(searchFunctionExercises("Spinning")), 34, spinningProgram);
-        Person aina = new Person("Aina" ,exercises.get(searchFunctionExercises("Spinning")), 66, spinningProgram);
-        Person andrea = new Person("Andrea" ,exercises.get(searchFunctionExercises("Spinning")), 71, spinningProgram);
-        Person rick = new Person("Rick" ,exercises.get(searchFunctionExercises("Spinning")), 88, spinningProgram);
-        Person david = new Person("David" ,exercises.get(searchFunctionExercises("Spinning")), 62, spinningProgram);
+        Person georg = new Person("Georg", exercises.get(searchFunctionExercises("spinning")), 50, programs.get(searchFunctionPrograms("spinning program")));
+        Person pernille = new Person("Pernille", exercises.get(searchFunctionExercises("Spinning")), 70, programs.get(searchFunctionPrograms("Spinning Program")));
+        Person mia = new Person("Mia", exercises.get(searchFunctionExercises("Spinning")), 95, programs.get(searchFunctionPrograms("Spinning Program")));
+        Person thea = new Person("Thea", exercises.get(searchFunctionExercises("Spinning")), 34, programs.get(searchFunctionPrograms("Spinning Program")));
+        Person aina = new Person("Aina" ,exercises.get(searchFunctionExercises("Spinning")), 66, programs.get(searchFunctionPrograms("Spinning Program")));
+        Person andrea = new Person("Andrea" ,exercises.get(searchFunctionExercises("Spinning")), 71, programs.get(searchFunctionPrograms("Spinning Program")));
+        Person rick = new Person("Rick" ,exercises.get(searchFunctionExercises("Spinning")), 88, programs.get(searchFunctionPrograms("Spinning Program")));
+        Person david = new Person("David" ,exercises.get(searchFunctionExercises("Spinning")), 62, programs.get(searchFunctionPrograms("Spinning Program")));
 
 
         personer.add(georg);
@@ -346,10 +324,20 @@ public class Main {
         personer.add(rick);
     }
 
+    public static int searchFunctionPrograms(String find){
+        int indexnumber=-1;
+        for(int i=0; i<programs.size(); i++){
+            if(programs.get(i).name.equalsIgnoreCase(find)){
+                indexnumber = i;
+            }
+        }
+        return indexnumber;
+    }
+
     public static int searchFunctionExercises(String find){
         int indexnumber=-1;
         for(int i=0; i<exercises.size(); i++){
-            if(exercises.get(i).name.equals(find)){
+            if(exercises.get(i).name.equalsIgnoreCase(find)){
                 indexnumber = i;
             }
         }
