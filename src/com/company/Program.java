@@ -16,9 +16,13 @@ public class Program {
         this.duration = calculateDuration()*2;
         this.intensityLevel = calculateIntensity();
         this.isBalanced = checkBalance();
+        this.sortProgram();
     }
 
-    //sorts the program in intensity levels
+    /* Sorts the exercises based on intensity, where e1 and e2 are values and can be any two exercises
+       the first if retruns 0 if e1 and e2 are the same
+       the second (else) if returns -1 if e1 is lesser than e2
+       and the third if returns 1 if the e1 is larger than e2 */
     public void sortProgram(){
         this.exercises.sort((e1, e2) -> {
             if (e1.intensity == e2.intensity) {
@@ -32,7 +36,7 @@ public class Program {
 
     }
 
-    //calculates the duration of the whole exercise
+    //Calculates the duration of the whole exercise
     public int calculateDuration(){
         int result = 0;
         for(int i=0; i<exercises.size(); i++){
@@ -52,7 +56,7 @@ public class Program {
         return result;
     }
 
-    //checks if the program is balanced by turning the flags true, if all flags are true, the program is balanced.
+    //Checks if the program is balanced by turning the flags true, if all flags are true, the program is balanced.
     public boolean checkBalance(){
         boolean flagStrength = false;
         boolean flagEndurance = false;
