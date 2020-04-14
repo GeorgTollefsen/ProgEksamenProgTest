@@ -1,8 +1,5 @@
 package com.company;
 
-import javax.swing.*;
-import javax.xml.namespace.QName;
-import java.security.spec.ECField;
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -241,18 +238,24 @@ public class Main {
     }
     public static void checkProgramPerson(){
         System.out.println("Choose person");
-        for (Person person : personer) {
-            System.out.println(person.name);
+        for (int i=0; i<personer.size(); i++) {
+            System.out.println(1+i+". "+personer.get(i).name);
         }
         int valg = scan.nextInt()+1;
         scan.nextLine();
-        selectedPerson = personer.get(valg);
         System.out.println("Choose Program");
         for(int i=0; i<programs.size(); i++){
             System.out.println(i+1+". "+programs.get(i).name);
         }
-        valg = scan.nextInt();
+        int valg2 = scan.nextInt();
         scan.nextLine();
+        // her skal funksjonen som avgjør om et program er akseptabelt eller ikke
+
+        if(personer.get(valg-1).acceptableIntensity>programs.get(valg2-1).intensityLevel*1.1 || personer.get(valg-1).acceptableIntensity<programs.get(valg2-1).intensityLevel*0.9){
+            System.out.println("The program is not suited for this person");
+        } else{
+            System.out.println("The program is well suited for this person");
+        }
         // her skal funksjonen som avgjør om et program er akseptabelt eller ikke
 
     }
@@ -286,19 +289,6 @@ public class Main {
         for(int i =0; i<personer.size(); i++){
             System.out.println(i+1+". "+personer.get(i).name);
         }
-        int valg = scan.nextInt()+1;
-        scan.nextLine();
-        System.out.println("Now choose the program");
-        for(int i=0; i<programs.size(); i++){
-            System.out.println(i+1+". "+programs.get(i).name);
-        }
-        int valg2 = scan.nextInt()+1;
-        scan.nextLine();
-
-        if(personer.get(valg-1).acceptableIntensity>programs.get(valg2-1).intensityLevel*1.1 || personer.get(valg-1).acceptableIntensity<programs.get(valg2-1).intensityLevel*0.9){
-            System.out.println("The program is not suited for this person");
-        } else{
-            System.out.println("The program is well suited for this person");
-        }
+        // her kommer det mer kode for å finne riktige programmer til personen du velger
     }
 }
