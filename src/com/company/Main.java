@@ -335,32 +335,32 @@ public class Main {
 
         //The Flash Program - Be fast as Flash
         ArrayList<Exercise> flashprogramExercise = new ArrayList<Exercise>();
-        flashprogramExercise.add(exercises.get(searchFunctionExercises("")));
-        flashprogramExercise.add(exercises.get(searchFunctionExercises("")));
-        flashprogramExercise.add(exercises.get(searchFunctionExercises("")));
-        flashprogramExercise.add(exercises.get(searchFunctionExercises("")));
-        flashprogramExercise.add(exercises.get(searchFunctionExercises("")));
+        flashprogramExercise.add(exercises.get(searchFunctionExercises("High knees")));
+        flashprogramExercise.add(exercises.get(searchFunctionExercises("Jog in Place")));
+        flashprogramExercise.add(exercises.get(searchFunctionExercises("Push ups on knees")));
+        flashprogramExercise.add(exercises.get(searchFunctionExercises("Standing hamstring Stretch")));
+        flashprogramExercise.add(exercises.get(searchFunctionExercises("Step down")));
         Program flashProgram = new Program(flashprogramExercise,"The Flash Program");
         programs.add(flashProgram);
 
         // Be Flexible as Spiderman -
         ArrayList<Exercise> spidermanprogramExercise = new ArrayList<Exercise>();
-        spidermanprogramExercise.add(exercises.get(searchFunctionExercises("")));
-        spidermanprogramExercise.add(exercises.get(searchFunctionExercises("")));
-        spidermanprogramExercise.add(exercises.get(searchFunctionExercises("")));
-        spidermanprogramExercise.add(exercises.get(searchFunctionExercises("")));
-        spidermanprogramExercise.add(exercises.get(searchFunctionExercises("")));
-        spidermanprogramExercise.add(exercises.get(searchFunctionExercises("")));
+        spidermanprogramExercise.add(exercises.get(searchFunctionExercises("Lung with spinal twist")));
+        spidermanprogramExercise.add(exercises.get(searchFunctionExercises("Piegon stretch")));
+        spidermanprogramExercise.add(exercises.get(searchFunctionExercises("Skater hopes with reach")));
+        spidermanprogramExercise.add(exercises.get(searchFunctionExercises("Sit-ups")));
+        spidermanprogramExercise.add(exercises.get(searchFunctionExercises("Jump rope")));
         Program spidermanProgram = new Program(spidermanprogramExercise,"The Spiderman Program");
         programs.add(spidermanProgram);
 
         //Be a wonderwoman
         ArrayList<Exercise> wonderwomanprogramExercise = new ArrayList<Exercise>();
-        wonderwomanprogramExercise.add(exercises.get(searchFunctionExercises("")));
-        wonderwomanprogramExercise.add(exercises.get(searchFunctionExercises("")));
-        wonderwomanprogramExercise.add(exercises.get(searchFunctionExercises("")));
-        wonderwomanprogramExercise.add(exercises.get(searchFunctionExercises("")));
-        wonderwomanprogramExercise.add(exercises.get(searchFunctionExercises("")));
+        wonderwomanprogramExercise.add(exercises.get(searchFunctionExercises("Tree pose eyes closed")));
+        wonderwomanprogramExercise.add(exercises.get(searchFunctionExercises("Balance star eyes closed")));
+        wonderwomanprogramExercise.add(exercises.get(searchFunctionExercises("Lunges")));
+        wonderwomanprogramExercise.add(exercises.get(searchFunctionExercises("Kickboxing")));
+        wonderwomanprogramExercise.add(exercises.get(searchFunctionExercises("Low lungs over arms")));
+        wonderwomanprogramExercise.add(exercises.get(searchFunctionExercises("Triceps Stretch")));
         Program wonderwomanProgram = new Program(wonderwomanprogramExercise, "The wonder woman Program");
         programs.add(wonderwomanProgram);
     }
