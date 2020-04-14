@@ -14,4 +14,8 @@ public class Exercise {
         this.sets = sets;
         this.intensity = intensity;
     }
+
+    public String getName() {
+        return name;
+    }
 }
