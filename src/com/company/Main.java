@@ -5,17 +5,13 @@ import java.util.Scanner;
 
 public class Main {
     public static Scanner scan = new Scanner(System.in);
+
     public static ArrayList<Person> personer = new ArrayList<>();
     public static Person selectedPerson;
     public static ArrayList<Program> programs = new ArrayList<Program>();
     public static Program selectedProgram;
     public static ArrayList<Exercise> exercises = new ArrayList<>();
-    public static ArrayList<Exercise> supermanprogramExercise = new ArrayList<>();
-    public static ArrayList<Exercise> thorprogramExercise = new ArrayList<>();
-    public static ArrayList<Exercise> batmanprogramExercise = new ArrayList<>();
-    public static ArrayList<Exercise> flashprogramExercise = new ArrayList<>();
-    public static ArrayList<Exercise> spidermanprogramExercise = new ArrayList<>();
-    public static ArrayList<Exercise> wonderwomanprogramExercise = new ArrayList<>();
+
 
     public static void main(String[] args) {
         intitializeExercises();
@@ -23,6 +19,12 @@ public class Main {
         initializePrograms();
         initializePersons();
         System.out.println("Good day to you! Check out our awesome menu for home workout");
+
+
+
+
+
+
 
         callMenu();
 
@@ -120,7 +122,7 @@ public class Main {
         scan.nextLine();
 
         // her skal funksjonen som avgjør om et program er akseptabelt eller ikke
-        exerciseManager();
+
     }
     public static void buildProgram(){
         System.out.println("Welcome to the program builder\n What would you like to call your new program?");
@@ -141,7 +143,6 @@ public class Main {
                 default:
                     exercisesChosen.add(exercises.get(valg));
             }
-
 
         }
         Program selfMadeProgram = new Program(exercisesChosen, name);
@@ -174,7 +175,7 @@ public class Main {
         Exercise mountainClimber = new EnduranceExercise("Mountain climber", 10, 30, 3, 90,"None");
         Exercise beerCrawlPushUps = new EnduranceExercise("Bear crawl push ups", 15, 15,3,90,"Yoga mat");
         Exercise jumpToTheSide  = new EnduranceExercise("Jump to the side", 10,15,3,75,"None");
-        Exercise spinning = new EnduranceExercise("Spinning", 20, 1, 1, 70, "Spinning Cycle");
+        Exercise spinning = new EnduranceExercise("Spinning", 20, 1, 1, 7, "Spinning Cycle");
 
         //Level 1 - Easy Strenght Exercise
         Exercise squats = new StrenghtExercise("Squats", 20, 20,3,90, 0,"None");
@@ -301,6 +302,31 @@ public class Main {
         Program spinningProgram = new Program(spinningprogramExercise, "Spinning Program");
         programs.add(spinningProgram);
 
+        //The superman Program
+        ArrayList<Exercise> supermanprogramExercise = new ArrayList<Exercise>();
+        supermanprogramExercise.add(exercises.get(searchFunctionExercises("Jumping Jacks")));
+        supermanprogramExercise.add(exercises.get(searchFunctionExercises("Squats")));
+        supermanprogramExercise.add(exercises.get(searchFunctionExercises("Cat-cow")));
+        supermanprogramExercise.add(exercises.get(searchFunctionExercises("Quadruped elbow to knee")));
+        supermanprogramExercise.add(exercises.get(searchFunctionExercises("Plank with leg to the side")));
+        Program supermanProgram = new Program(supermanprogramExercise,"The superman Program");
+        programs.add(supermanProgram);
+
+        //The Thor Program
+        ArrayList<Exercise> thorprogramExercise = new ArrayList<>();
+
+
+        //The Batman Program
+        ArrayList<Exercise> batmanprogramExercise = new ArrayList<>();
+
+        //The Flash Program - Be fast as Flash
+        ArrayList<Exercise> flashprogramExercise = new ArrayList<>();
+
+        // Be Flexible as Spiderman -
+        ArrayList<Exercise> spidermanprogramExercise = new ArrayList<>();
+
+        //Be a wonderwoman
+        ArrayList<Exercise> wonderwomanprogramExercise = new ArrayList<>();
     }
 
     public static void initializePersons(){
@@ -337,7 +363,7 @@ public class Main {
     public static int searchFunctionExercises(String find){
         int indexnumber=-1;
         for(int i=0; i<exercises.size(); i++){
-            if(exercises.get(i).name.equalsIgnoreCase(find)){
+            if(exercises.get(i).name.equals(find)){
                 indexnumber = i;
             }
         }
