@@ -12,7 +12,7 @@ public class Tester {
     public void test1_1() {
 
         //Taking in some data to test, one from each type of exercise
-        Exercise squats = new StrenghtExercise("Squats", 20, 20,3,1, 0,"None");
+        Exercise squats = new StrengthExercise("Squats", 20, 20,3,1, 0,"None");
 
         Exercise jumpingJack = new EnduranceExercise("Jumping Jacks", 20, 10, 3, 1, "None");
 
@@ -35,7 +35,8 @@ public class Tester {
         Program test_progam = exerciseManager.generateProgram(person, "Test program");
 
         /* assertEquals tests if the test program is balanced, has an acceptable intensityLevel
-         and is an acceptable program for a person by asserting it as true for that given person */
+         and is an acceptable program for a person by asserting it as true for that given person and
+         the comparing variable delta is 0  */
         assertEquals(test_progam.isBalanced, true);
         assertEquals(test_progam.intensityLevel, 1.0, 0);
         assertEquals(ExerciseManager.acceptableProgam(person, test_progam), true);
@@ -66,6 +67,27 @@ public class Tester {
         assertEquals(program.exercises.get(1), warriorEyesClosed);
         assertEquals(program.exercises.get(2), skaterHops);
         assertEquals(program.exercises.get(3), balanceStarEyesClosed);
+
+    }
+    @Test
+    public void test_3() {
+
+        // Unit test for balance class
+        BalanceExercise balanceExercise = new BalanceExercise("Test name", 30, 2, 2, 50, "None");
+        assertEquals(balanceExercise.equipment, "None");
+
+        // Unit test for endurance class
+        EnduranceExercise enduranceExercise = new EnduranceExercise("Test name", 20, 2, 3, 10, "Mat");
+        assertEquals(enduranceExercise.equipment, "Mat");
+
+        // Unit test for flexibility class
+        FlexibilityExercise flexibilityExercise = new FlexibilityExercise("Test name", 45, 1, 1, 40, "Water bottle");
+        assertEquals(flexibilityExercise.requirement, "Water bottle");
+
+        // Unit test for strength class
+        StrengthExercise strengthExercise = new StrengthExercise("Test name", 10, 10, 1, 70, 10, "Table");
+        assertEquals(strengthExercise.equipment, "Table");
+
 
     }
 

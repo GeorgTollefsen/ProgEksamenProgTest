@@ -187,22 +187,22 @@ public class Main {
         Exercise spinning = new EnduranceExercise("Spinning", 20, 1, 1, 7, "Spinning Cycle");
 
         //Level 1 - Easy Strength Exercise
-        Exercise squats = new StrenghtExercise("Squats", 20, 20,3,90, 0,"None");
-        Exercise sitUps = new StrenghtExercise("Sit-ups", 0, 20, 3,20, 0, "None");
-        Exercise backExtention = new StrenghtExercise("Back Extention", 0, 20,3,10,0, "None");
-        Exercise pushUpsOnKnees = new StrenghtExercise("Push ups on knees",0,10,3,35,0, "none");
+        Exercise squats = new StrengthExercise("Squats", 20, 20,3,90, 0,"None");
+        Exercise sitUps = new StrengthExercise("Sit-ups", 0, 20, 3,20, 0, "None");
+        Exercise backExtention = new StrengthExercise("Back Extention", 0, 20,3,10,0, "None");
+        Exercise pushUpsOnKnees = new StrengthExercise("Push ups on knees",0,10,3,35,0, "none");
 
         // Level 2 - Medium Strength Exercise
-        Exercise dips = new StrenghtExercise("Dips", 20, 10, 3, 20,0,"Chair");
-        Exercise lunges = new StrenghtExercise("Lunges", 10,12,3,80,1,"Water bottles");
-        Exercise facePull = new StrenghtExercise("Face Pull", 10, 10,3,60,0,"Rubber band");
-        Exercise plank = new StrenghtExercise("Plank with leg to the side", 10,15,3,20,0,"None");
+        Exercise dips = new StrengthExercise("Dips", 20, 10, 3, 20,0,"Chair");
+        Exercise lunges = new StrengthExercise("Lunges", 10,12,3,80,1,"Water bottles");
+        Exercise facePull = new StrengthExercise("Face Pull", 10, 10,3,60,0,"Rubber band");
+        Exercise plank = new StrengthExercise("Plank with leg to the side", 10,15,3,20,0,"None");
 
         //Level 3 - Hard Strength Exercises
-        Exercise pistolSquats = new StrenghtExercise("Pistol squats", 20,10,3,90,0,"None");
-        Exercise supermann = new StrenghtExercise("Supermann", 20,10,3,55,0,"Woolen sock");
-        Exercise pushUps = new StrenghtExercise("Push ups",15,12,3,80,0,"None");
-        Exercise boat = new StrenghtExercise("Boat",10,30,3,45,0,"Water bottle");
+        Exercise pistolSquats = new StrengthExercise("Pistol squats", 20,10,3,90,0,"None");
+        Exercise supermann = new StrengthExercise("Supermann", 20,10,3,55,0,"Woolen sock");
+        Exercise pushUps = new StrengthExercise("Push ups",15,12,3,80,0,"None");
+        Exercise boat = new StrengthExercise("Boat",10,30,3,45,0,"Water bottle");
 
         //Level 1 - Easy Flexibility Exercises
         Exercise catCow = new FlexibilityExercise("Cat-cow", 10,10,3,10,"None");

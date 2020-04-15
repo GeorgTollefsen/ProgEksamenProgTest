@@ -3,8 +3,6 @@ package com.company;
 import java.util.ArrayList;
 import java.util.List;
 
-import static java.lang.Double.compare;
-
 public class ExerciseManager {
     ArrayList<Exercise> exercises;
 
@@ -20,7 +18,7 @@ public class ExerciseManager {
     //Generates suitable program for given person, including all the exercise types (3.b)
     public Program generateProgram(Person person, String projectName) {
         ArrayList<Exercise> exercisesForProgram = new ArrayList<>();
-        exercisesForProgram.add(findExerciseByType(person, StrenghtExercise.class));
+        exercisesForProgram.add(findExerciseByType(person, StrengthExercise.class));
         exercisesForProgram.add(findExerciseByType(person, BalanceExercise.class));
         exercisesForProgram.add(findExerciseByType(person, FlexibilityExercise.class));
         exercisesForProgram.add(findExerciseByType(person, EnduranceExercise.class));

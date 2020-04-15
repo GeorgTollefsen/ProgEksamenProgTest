@@ -63,7 +63,7 @@ public class Program {
         boolean flagBalance = false;
         boolean flagFlexibility = false;
         for (Exercise exercise : exercises) {
-            if (exercise instanceof StrenghtExercise) {
+            if (exercise instanceof StrengthExercise) {
                 flagStrength = true;
             }
             if (exercise instanceof EnduranceExercise) {
