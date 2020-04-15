@@ -21,24 +21,25 @@ public class Person {
 
     }
 
-    //alle programmer lastes inn her og man ser om et program er bra for en person eller ikke
-    public boolean selectPreferred(ArrayList<Program> programs){
-        boolean flagIntensity = false;
-        boolean flagPreferredExercise = false;
+    //alle programmer lastes inn her og man ser om et program er bra for en person eller ikke. Den tar hensyn til
+    //intensity og til om programmet inneholder en øvelse personen liker eller ikke.
+    //om den ikke inneholder noe en person liker, eller er for lavt/høyt på intensity så får du en false tilbake.
+    public Program selectPreferred(ArrayList<Program> programs){
+
         for(int i=0; i<programs.size(); i++){
+            boolean flagIntensity = false;
             if (programs.get(i).intensityLevel < this.acceptableIntensity *1.1
                     && programs.get(i).intensityLevel>this.acceptableIntensity*0.9){
                 flagIntensity = true;
             }
             for (int j =0; j<programs.get(i).exercises.size(); j++){
                 if(programs.get(i).exercises.get(j).name.equalsIgnoreCase(this.preferredExercise.name)){
-                    flagPreferredExercise = true;
+                    if (flagIntensity){
+                        return programs.get(i);
+                    }
                 }
             }
-        }
-        if (flagIntensity&&flagPreferredExercise){
-            return true;
-        }
-        return false;
+
     }
+        return null;
 }
