@@ -1,6 +1,9 @@
 package com.company;
 
 import java.util.ArrayList;
+import java.util.List;
+
+import static java.lang.Double.compare;
 
 public class ExerciseManager {
     ArrayList<Exercise> exercises;
@@ -48,6 +51,21 @@ public class ExerciseManager {
     public boolean withinIntensityLevelForPerson(Exercise exercise, Person person) {
         return exercise.intensity <= person.acceptableIntensity * 0.9
             || exercise.intensity <= person.acceptableIntensity * 1.1;
+    }
+
+    // Denne er ikke ferdig ennå!
+    public static Program recommendProgram(List<Program> programs, Person person) {
+        programs.sort((p1, p2) -> {
+
+            double p1IntensityDifference = p1.intensityLevel - person.acceptableIntensity;
+            double p2IntensityDifference = p2.intensityLevel - person.acceptableIntensity;
+
+
+            int intensityLevelCompare = Double.compare(p1.intensityLevel, p2.intensityLevel);
+            return 0;
+        });
+
+            return programs.get(0);
     }
 
 }

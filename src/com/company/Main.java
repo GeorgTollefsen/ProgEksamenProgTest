@@ -33,6 +33,9 @@ public class Main {
     public static void callMenu(){
         while(true){
             System.out.println("This is our menu:\n 1. Select person.\n 2. See programs.\n 3. Exercise Manager.\n 4. Show the menu again");
+            if (selectedPerson != null) {
+                System.out.println("You have selected: " + selectedPerson.name);
+            }
 
             int selection = scan.nextInt();
             scan.nextLine();
@@ -50,7 +53,7 @@ public class Main {
                     callMenu();
                     break;
                 default:
-                    System.out.println("Wrong input please try again");
+                    System.out.println("Wrong input, please try again");
                     callMenu();
                     break;
 
@@ -60,31 +63,31 @@ public class Main {
     }
     public static void listPersons(){
     for(int i=0; i<personer.size(); i++){
-        System.out.println(i+1+". "+personer.get(i).name.toString());
+        System.out.println((i+1) + ". " + personer.get(i).name);
     }
-        System.out.println("Velg person for å se informasjon om den enkelte:");
+        System.out.println("Select a person to see information:");
         int valg = scan.nextInt()-1;
         scan.nextLine();
         selectedPerson = personer.get(valg);
-        System.out.println("Du har valgt: "+selectedPerson.name.toString());
+        System.out.println("You have selected: " + selectedPerson.name);
         scan.nextLine();
     }
     public static void listPrograms(){
         for(int i=0; i<programs.size(); i++){
-            System.out.println(i+1+". "+programs.get(i).name.toString());
+            System.out.println(i+1+". " + programs.get(i).name);
         }
         System.out.println("\nThis is the collections of programs \n");
         int valg = scan.nextInt()-1;
         scan.nextLine();
         selectedProgram = programs.get(valg);
-        System.out.println("\n You have choosen: "+selectedProgram.name.toString());
+        System.out.println("\n You have selected: " + selectedProgram.name);
         scan.nextLine();
     }
     public static void exerciseManager(){
-        System.out.println("Welcome to the Exercise Manager. Theese are your options:\n" +
-                "1. Check if a program is appropiate for a person\n" +
+        System.out.println("Welcome to the Exercise Manager. These are your options:\n" +
+                "1. Check if a program is appropriate for a person\n" +
                 "2. Build a new program\n" +
-                "3. Recommend a program for a sepcific person\n" +
+                "3. Recommend a program for a specific person\n" +
                 "4. Back to main menu");
         int valg = scan.nextInt();
         scan.nextLine();
@@ -98,25 +101,26 @@ public class Main {
             case 4:
                 callMenu();
             default:
-                System.out.println("wrong answer try again");
+                System.out.println("Wrong answer, try again");
                 exerciseManager();
                 break;
         }
     }
     public static void checkProgramPerson(){
-        System.out.println("Choose person");
+        System.out.println("Select person");
         for (int i=0; i<personer.size(); i++) {
             System.out.println(1+i+". "+personer.get(i).name);
         }
         int valg = scan.nextInt()-1;
         scan.nextLine();
-        System.out.println("Choose Program");
+        System.out.println("Select Program");
         for(int i=0; i<programs.size(); i++){
             System.out.println(i+1+". "+programs.get(i).name);
         }
         int valg2 = scan.nextInt()-1;
         scan.nextLine();
-        // her skal funksjonen som avgjør om et program er akseptabelt eller ikke
+
+        // Her skal funksjonen som avgjør om et program er akseptabelt eller ikke
 
         if(personer.get(valg).acceptableIntensity>programs.get(valg2).intensityLevel*1.1 || personer.get(valg).acceptableIntensity<programs.get(valg2).intensityLevel*0.9){
             System.out.println("The program is not suited for this person");
@@ -155,11 +159,11 @@ public class Main {
         exerciseManager();
     }
     public static void recommendProgram(){
-        System.out.println("Here we will reccomend a program for you. Which person do you want reccomendations for?");
+        System.out.println("Here we will reccomend a program for you. Which person do you want recomendations for?");
         for(int i =0; i<personer.size(); i++){
             System.out.println(i+1+". "+personer.get(i).name);
         }
-        // her kommer det mer kode for å finne riktige programmer til personen du velger
+        // Her kommer det mer kode for å finne riktige programmer til personen du velger
     }
 
     public static void intitializeExercises(){
@@ -182,19 +186,19 @@ public class Main {
         Exercise jumpToTheSide  = new EnduranceExercise("Jump to the side", 10,15,3,75,"None");
         Exercise spinning = new EnduranceExercise("Spinning", 20, 1, 1, 7, "Spinning Cycle");
 
-        //Level 1 - Easy Strenght Exercise
+        //Level 1 - Easy Strength Exercise
         Exercise squats = new StrenghtExercise("Squats", 20, 20,3,90, 0,"None");
         Exercise sitUps = new StrenghtExercise("Sit-ups", 0, 20, 3,20, 0, "None");
         Exercise backExtention = new StrenghtExercise("Back Extention", 0, 20,3,10,0, "None");
         Exercise pushUpsOnKnees = new StrenghtExercise("Push ups on knees",0,10,3,35,0, "none");
 
-        // Level 2 - Medium Strenght Exercise
+        // Level 2 - Medium Strength Exercise
         Exercise dips = new StrenghtExercise("Dips", 20, 10, 3, 20,0,"Chair");
         Exercise lunges = new StrenghtExercise("Lunges", 10,12,3,80,1,"Water bottles");
         Exercise facePull = new StrenghtExercise("Face Pull", 10, 10,3,60,0,"Rubber band");
         Exercise plank = new StrenghtExercise("Plank with leg to the side", 10,15,3,20,0,"None");
 
-        //Level 3 - Hard Strenght Exercises
+        //Level 3 - Hard Strength Exercises
         Exercise pistolSquats = new StrenghtExercise("Pistol squats", 20,10,3,90,0,"None");
         Exercise supermann = new StrenghtExercise("Supermann", 20,10,3,55,0,"Woolen sock");
         Exercise pushUps = new StrenghtExercise("Push ups",15,12,3,80,0,"None");
@@ -299,7 +303,7 @@ public class Main {
     }
 
     public static void initializePrograms(){
-       //spinningprogram
+       //Spinning program
         ArrayList<Exercise> spinningprogramExercise = new ArrayList<Exercise>();
         spinningprogramExercise.add(exercises.get(searchFunctionExercises("Spinning")));
         spinningprogramExercise.add(exercises.get(searchFunctionExercises("Spinning")));
@@ -307,7 +311,7 @@ public class Main {
         Program spinningProgram = new Program(spinningprogramExercise, "Spinning Program");
         programs.add(spinningProgram);
 
-        //The superman Program
+        //The Superman Program
         ArrayList<Exercise> supermanprogramExercise = new ArrayList<Exercise>();
         supermanprogramExercise.add(exercises.get(searchFunctionExercises("Jumping Jacks")));
         supermanprogramExercise.add(exercises.get(searchFunctionExercises("Squats")));
@@ -358,7 +362,7 @@ public class Main {
         Program spidermanProgram = new Program(spidermanprogramExercise,"The Spiderman Program");
         programs.add(spidermanProgram);
 
-        //Be a wonderwoman
+        //Be a Wonderwoman
         ArrayList<Exercise> wonderwomanprogramExercise = new ArrayList<Exercise>();
         wonderwomanprogramExercise.add(exercises.get(searchFunctionExercises("Tree pose eyes closed")));
         wonderwomanprogramExercise.add(exercises.get(searchFunctionExercises("Balance star eyes closed")));
