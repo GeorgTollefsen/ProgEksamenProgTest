@@ -88,7 +88,46 @@ public class Tester {
         StrengthExercise strengthExercise = new StrengthExercise("Test name", 10, 10, 1, 70, 10, "Table");
         assertEquals(strengthExercise.equipment, "Table");
 
+    }
+    @Test
+    public void test_4() {
+
+        // Unit test for Exercise class
+        Exercise exercise = new Exercise("Test name", 30, 2, 2, 60);
+        assertEquals(exercise.intensity, 60);
+        assertEquals(exercise.sets, 2);
+        assertEquals(exercise.repetitions, 2);
+        assertEquals(exercise.duration, 30);
+        assertEquals(exercise.name, "Test name");
+    }
+    @Test
+    public void test_5() {
+
+        // Unit test for Person class
+
+        // Taking in some data
+        Exercise treePoseEyesClosed = new BalanceExercise("Tree pose eyes closed", 10,6,3,12,"");
+
+        // Taking in an ArrayList
+        ArrayList<Exercise> thorprogramExercise = new ArrayList<Exercise>();
+        thorprogramExercise.add(treePoseEyesClosed);
+        Program thorProgram = new Program(thorprogramExercise, "The Thor Program");
+
+
+        Person person = new Person("Test name", treePoseEyesClosed, 40, thorProgram);
+        assertEquals(person.name, "Test name");
+        assertEquals(person.preferredExercise, treePoseEyesClosed);
+        assertEquals(person.acceptableIntensity, 40, 0.0);
+        assertEquals(person.currentProgram, thorProgram);
 
     }
+    @Test
+    public void test_6() {
 
+        // Unit test for Program class
+        ArrayList<Exercise> exercises = new ArrayList<>();
+        Program program = new Program( exercises, "Test name");
+        assertEquals(program.name, "Test name");
+        assertEquals(program.exercises.size(), 0);
+    }
 }
