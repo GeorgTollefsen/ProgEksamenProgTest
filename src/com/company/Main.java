@@ -120,9 +120,6 @@ public class Main {
         int valg2 = scan.nextInt()-1;
         scan.nextLine();
 
-        if(personer.get(valg).selectPreferred(programs).getName().equalsIgnoreCase("null")){
-            System.out.println("There are no programs in our database suitable for this person. Why not create one?");
-        }
         if(personer.get(valg).selectPreferred(programs).getName().equalsIgnoreCase(programs.get(valg2).name)){
             System.out.println("The program you have chosen are great for the selected person");
         } else{
