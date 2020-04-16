@@ -114,17 +114,19 @@ public class Main {
         int valg2 = scan.nextInt()-1;
         scan.nextLine();
 
-        // Her skal funksjonen som avgjør om et program er akseptabelt eller ikke
-
-        if(personer.get(valg).acceptableIntensity>programs.get(valg2).intensityLevel*1.1 || personer.get(valg).acceptableIntensity<programs.get(valg2).intensityLevel*0.9){
-            System.out.println("The program is not suited for this person");
-        } else{
-            System.out.println("The program is well suited for this person");
+        if(personer.get(valg).selectPreferred(programs).getName().equalsIgnoreCase("null")){
+            System.out.println("There are no programs in our database suitable for this person. Why not create one?");
         }
+        if(personer.get(valg).selectPreferred(programs).getName().equalsIgnoreCase(programs.get(valg2).name)){
+            System.out.println("The program you have chosen are great for the selected person");
+        } else{
+            System.out.println("We found programs that are suited for this person in our database, but not the one you selected");
+        }
+
+
         System.out.println("Press any key to continue");
         scan.nextLine();
-
-        // her skal funksjonen som avgjør om et program er akseptabelt eller ikke
+        exerciseManager();
 
     }
     public static void buildProgram(){
