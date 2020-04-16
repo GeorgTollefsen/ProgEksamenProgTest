@@ -26,7 +26,7 @@ public class Main {
 
     public static void callMenu(){
         while(true){
-            System.out.println("This is our menu:\n 1. Select person.\n 2. See programs.\n 3. Exercise Manager.\n 4. Show the menu again");
+            System.out.println("This is our menu:\n 1. Show information about a person.\n 2. See programs and exercises they contain.\n 3. Exercise Manager.\n 4. Show the menu again");
             if (selectedPerson != null) {
                 System.out.println("You have selected: " + selectedPerson.name);
             }
@@ -64,7 +64,9 @@ public class Main {
         scan.nextLine();
         selectedPerson = personer.get(valg);
         System.out.println("You have selected: " + selectedPerson.name);
+        System.out.println("Name: "+selectedPerson.name+"\nPreferred Intensity: "+selectedPerson.acceptableIntensity+"\nPreferred Exercise: "+selectedPerson.preferredExercise.name);
         scan.nextLine();
+        callMenu();
     }
     public static void listPrograms(){
         for(int i=0; i<programs.size(); i++){
@@ -74,8 +76,12 @@ public class Main {
         int valg = scan.nextInt()-1;
         scan.nextLine();
         selectedProgram = programs.get(valg);
-        System.out.println("\n You have selected: " + selectedProgram.name);
+        System.out.println("Name: "+programs.get(valg).name+"\nDuration: "+programs.get(valg).duration+" min\nBalanced: "+programs.get(valg).isBalanced);
+        for (int i=0; i<programs.get(valg).exercises.size(); i++){
+            System.out.println("Exercise "+(i+1)+". "+programs.get(valg).exercises.get(i).name);
+        }
         scan.nextLine();
+        callMenu();
     }
     public static void exerciseManager(){
         System.out.println("Welcome to the Exercise Manager. These are your options:\n" +
