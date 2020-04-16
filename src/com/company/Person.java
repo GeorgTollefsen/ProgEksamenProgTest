@@ -25,7 +25,7 @@ public class Person {
     //intensity og til om programmet inneholder en øvelse personen liker eller ikke.
     //om den ikke inneholder noe en person liker, eller er for lavt/høyt på intensity så får du en false tilbake.
     public Program selectPreferred(ArrayList<Program> programs){
-
+        Program placementProgram = new Program(null, "null");
         for(int i=0; i<programs.size(); i++){
             boolean flagIntensity = false;
             if (programs.get(i).intensityLevel < this.acceptableIntensity *1.1
@@ -33,13 +33,13 @@ public class Person {
                 flagIntensity = true;
             }
             for (int j =0; j<programs.get(i).exercises.size(); j++){
-                if(programs.get(i).exercises.get(j).name.equalsIgnoreCase(this.preferredExercise.name)){
-                    if (flagIntensity){
-                        return programs.get(i);
-                    }
+                if(programs.get(i).exercises.get(j).name.equalsIgnoreCase(this.preferredExercise.name) && flagIntensity){
+                    placementProgram = programs.get(i);
+                    return placementProgram;
                 }
             }
 
     }
-        return null;
+        return placementProgram;
+}
 }

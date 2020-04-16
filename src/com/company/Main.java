@@ -20,12 +20,6 @@ public class Main {
         initializePersons();
         System.out.println("Good day to you! Check out our awesome menu for home workout");
 
-
-
-
-
-
-
         callMenu();
 
     }
