@@ -19,7 +19,7 @@ the sum of the durations of all the exercises it includes (to account for rest).
 
 **2. Each person has a level of intensity they find appropriate, and a type of exercise they
 prefer. For each person, suggest an exercise program that is of the type they prefer,
-and has a level of intensity +/- 10% of the person’s preferred intensity level. **
+and has a level of intensity +/- 10% of the person’s preferred intensity level.**
 
 **3. The ExerciseManager should have**
 
