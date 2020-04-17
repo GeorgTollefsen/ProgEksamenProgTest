@@ -5,15 +5,15 @@ This is system for managing exercises for a home workout program.
 
 1. Exercises are grouped into Programs
 
-a. Each program keeps an account of the overall intensity (the highest intensity
+- Each program keeps an account of the overall intensity (the highest intensity
 among the included exercises).
 
-b. Each program keeps account of whether or not it is balanced. A balanced
+- Each program keeps account of whether or not it is balanced. A balanced
 program has at least one exercise of each type.
 
-c.  Each program has the exercises sorted in order of increasing intensity. 
+-  Each program has the exercises sorted in order of increasing intensity. 
 
-d. Each program has an overall duration. The duration of an exercise is the twice
+-  Each program has an overall duration. The duration of an exercise is the twice
 the sum of the durations of all the exercises it includes (to account for rest).
 
 
@@ -23,9 +23,9 @@ and has a level of intensity +/- 10% of the person’s preferred intensity level
 
 3. The ExerciseManager should have
 
-a. Methods for deciding if a Program is appropriate for a given Person
+-  Methods for deciding if a Program is appropriate for a given Person
 
-b. Methods for building new Programs
+-  Methods for building new Programs
 
-c. A method for recommending, from a given collection of Programs, which is
+- method for recommending, from a given collection of Programs, which is
 most appropriate for a given Person. 
