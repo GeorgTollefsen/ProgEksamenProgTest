@@ -103,7 +103,7 @@ public class Main {
             default:
                 System.out.println("Wrong answer, try again");
                 exerciseManager();
-                break;
+
         }
     }
     public static void checkProgramPerson(){

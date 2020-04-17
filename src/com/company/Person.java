@@ -25,6 +25,10 @@ public class Person {
     //intensity og til om programmet inneholder en øvelse personen liker eller ikke.
     //om den ikke inneholder noe en person liker, eller er for lavt/høyt på intensity så får du en false tilbake.
     public Program selectPreferred(ArrayList<Program> programs){
+        ArrayList<Exercise> dummy = new ArrayList<>();
+        Exercise dummyExercise = new StrengthExercise("Null",0,0,0,0,0,"Null");
+        dummy.add(dummyExercise);
+        Program dummyProg = new Program(dummy,"name");
         for(int i=0; i<programs.size(); i++){
             boolean flagIntensity = false;
             if (programs.get(i).intensityLevel < this.acceptableIntensity *1.1
@@ -38,6 +42,6 @@ public class Person {
             }
 
     }
-        return null;
+        return dummyProg;
 }
 }
