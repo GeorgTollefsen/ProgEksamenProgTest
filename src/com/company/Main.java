@@ -126,14 +126,10 @@ public class Main {
             System.out.println("The program you have chosen are great for the selected person");
         } else{
             System.out.println("The program you selected are not suited for this person");
-
-
-
+        }
         System.out.println("Press any key to continue");
         scan.nextLine();
         exerciseManager();
-
-    }
         }
     public static void buildProgram(){
         System.out.println("Welcome to the program builder\n What would you like to call your new program?");
@@ -165,7 +161,15 @@ public class Main {
         for(int i =0; i<personer.size(); i++){
             System.out.println(i+1+". "+personer.get(i).name);
         }
-        // Her kommer det mer kode for å finne riktige programmer til personen du velger
+        int valg = scan.nextInt()-1;
+        scan.nextLine();
+        if(personer.get(valg).selectPreferred(programs).getName().equalsIgnoreCase("null")){
+            System.out.println("We are sorry, but this persons preferences does not match any of our programs");
+        } else {
+            System.out.println("We think "+personer.get(valg).selectPreferred(programs).name+" will be a great choice");
+        }
+        scan.nextLine();
+        exerciseManager();
     }
 
     public static void intitializeExercises(){
