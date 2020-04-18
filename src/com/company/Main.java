@@ -113,18 +113,20 @@ public class Main {
         }
         int valg = scan.nextInt()-1;
         scan.nextLine();
+        System.out.println("You chose "+personer.get(valg).name);
         System.out.println("Select Program");
         for(int i=0; i<programs.size(); i++){
             System.out.println(i+1+". "+programs.get(i).name);
         }
         int valg2 = scan.nextInt()-1;
+        System.out.println("You chose "+programs.get(valg2).name);
         scan.nextLine();
 
         if(personer.get(valg).selectPreferred(programs).getName().equalsIgnoreCase(programs.get(valg2).name)){
             System.out.println("The program you have chosen are great for the selected person");
         } else{
-            System.out.println("We found programs that are suited for this person in our database, but not the one you selected");
-        }
+            System.out.println("The program you selected are not suited for this person");
+
 
 
         System.out.println("Press any key to continue");
@@ -132,6 +134,7 @@ public class Main {
         exerciseManager();
 
     }
+        }
     public static void buildProgram(){
         System.out.println("Welcome to the program builder\n What would you like to call your new program?");
         String name = scan.nextLine();
@@ -376,7 +379,7 @@ public class Main {
     public static void initializePersons(){
         Person georg = new Person("Georg", exercises.get(searchFunctionExercises("spinning")), 50, programs.get(searchFunctionPrograms("spinning program")));
         Person pernille = new Person("Pernille", exercises.get(searchFunctionExercises("Spinning")), 70, programs.get(searchFunctionPrograms("Spinning Program")));
-        Person mia = new Person("Mia", exercises.get(searchFunctionExercises("Spinning")), 95, programs.get(searchFunctionPrograms("Spinning Program")));
+        Person mia = new Person("Mia", exercises.get(searchFunctionExercises("squats")), 95, programs.get(searchFunctionPrograms("Spinning Program")));
         Person thea = new Person("Thea", exercises.get(searchFunctionExercises("Spinning")), 34, programs.get(searchFunctionPrograms("Spinning Program")));
         Person aina = new Person("Aina" ,exercises.get(searchFunctionExercises("Spinning")), 66, programs.get(searchFunctionPrograms("Spinning Program")));
         Person andrea = new Person("Andrea" ,exercises.get(searchFunctionExercises("Spinning")), 71, programs.get(searchFunctionPrograms("Spinning Program")));

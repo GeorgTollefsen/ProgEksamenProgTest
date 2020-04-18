@@ -29,10 +29,11 @@ public class Person {
         Exercise dummyExercise = new StrengthExercise("Null",0,0,0,0,0,"Null");
         dummy.add(dummyExercise);
         Program dummyProg = new Program(dummy,"name");
+
+
         for(int i=0; i<programs.size(); i++){
             boolean flagIntensity = false;
-            if (programs.get(i).intensityLevel < this.acceptableIntensity *1.1
-                    && programs.get(i).intensityLevel>this.acceptableIntensity*0.9){
+            if (programs.get(i).intensityLevel < (this.acceptableIntensity *1.1) && programs.get(i).intensityLevel > (this.acceptableIntensity*0.9)){
                 flagIntensity = true;
             }
             for (int j =0; j<programs.get(i).exercises.size(); j++){
