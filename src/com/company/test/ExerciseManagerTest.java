@@ -41,7 +41,7 @@ public class ExerciseManagerTest {
         the comparing variable delta is 0  */
         assertEquals(test_progam.isBalanced, true);
         assertEquals(test_progam.intensityLevel, 1.0, 0);
-        assertEquals(ExerciseManager.acceptableProgam(person, test_progam), true);
+        assertEquals(ExerciseManager.acceptableProgram(person, test_progam), true);
     }
 
     @Test
