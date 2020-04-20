@@ -14,7 +14,11 @@ public class BalanceExerciseTest {
     public void test1_1() {
 
         // Unit test for balance class
+
+        // Takes in data
         BalanceExercise balanceExercise = new BalanceExercise("Test name", 30, 2, 2, 50, "None");
+
+        // Checks if assert equals of balanceExercise.equipment is the same as what it is in the data, which is "None"
         assertEquals(balanceExercise.equipment, "None");
     }
 

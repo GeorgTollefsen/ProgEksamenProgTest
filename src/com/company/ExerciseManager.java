@@ -11,7 +11,7 @@ public class ExerciseManager {
     }
 
     //acceptableProgram is testing which program is acceptable for a person (3.a)
-    public static boolean acceptableProgam(Person person, Program program) {
+    public static boolean acceptableProgram(Person person, Program program) {
         return person.acceptableProgram(program);
     }
 
