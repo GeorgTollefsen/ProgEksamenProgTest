@@ -59,7 +59,7 @@ public class Main {
         scan.nextLine();
         selectedPerson = Initialize.personer.get(valg);
         System.out.println("You have selected: " + selectedPerson.name);
-        System.out.println("Name: "+selectedPerson.name+"\nPreferred Intensity: "+selectedPerson.acceptableIntensity+"\nPreferred Exercise: "+selectedPerson.preferredExercise.name);
+        System.out.println("Name: "+selectedPerson.name+"\nPreferred Intensity: "+selectedPerson.acceptableIntensity+"\nPreferred Exercise Type1: "+selectedPerson.preferredExerciseType.toString());
         scan.nextLine();
         callMenu();
     }

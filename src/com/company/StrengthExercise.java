@@ -9,4 +9,9 @@ public class StrengthExercise extends Exercise {
         this.weights = weights;
         this.equipment = equipment;
     }
+
+    @Override
+    public ExerciseType getType() {
+        return ExerciseType.STRENGTH;
+    }
 }

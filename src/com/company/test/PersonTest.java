@@ -23,9 +23,9 @@ public class PersonTest {
         Program thorProgram = new Program(thorprogramExercise, "The Thor Program");
 
 
-        Person person = new Person("Test name", treePoseEyesClosed, 40, thorProgram);
+        Person person = new Person("Test name", ExerciseType.BALANCE, 40, thorProgram);
         assertEquals(person.name, "Test name");
-        assertEquals(person.preferredExercise, treePoseEyesClosed);
+        assertEquals(person.preferredExerciseType, ExerciseType.BALANCE);
         assertEquals(person.acceptableIntensity, 40, 0.0);
         assertEquals(person.currentProgram, thorProgram);
 

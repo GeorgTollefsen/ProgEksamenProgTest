@@ -3,16 +3,16 @@ package com.company;
 import java.util.ArrayList;
 
 public class Person {
-    public String name; //we needed a name to sort them out
-    public Exercise preferredExercise;
+    public String name;
     public double acceptableIntensity;
     public Program currentProgram;
+    public ExerciseType preferredExerciseType;
 
-    public Person(String name, Exercise preferredExercise, double acceptableIntensity, Program currentProgram) {
+    public Person(String name, ExerciseType preferredExerciseType, double acceptableIntensity, Program currentProgram) {
         this.name = name;
-        this.preferredExercise = preferredExercise;
         this.acceptableIntensity = acceptableIntensity;
         this.currentProgram = currentProgram;
+        this.preferredExerciseType = preferredExerciseType;
     }
 
     public boolean acceptableProgram(Program program){
@@ -21,24 +21,25 @@ public class Person {
 
     }
 
-    //alle programmer lastes inn her og man ser om et program er bra for en person eller ikke. Den tar hensyn til
-    //intensity og til om programmet inneholder en øvelse personen liker eller ikke.
-    //om den ikke inneholder noe en person liker, eller er for lavt/høyt på intensity så får du en false tilbake.
+    // All programs will load here and we will see if the program is a match or not
+    // It consideres intensity and if the program includes a an exercise the person preferres
+    // If the program does not have one such exercise or the intensity is to high/low, you get a false
     public Program selectPreferred(ArrayList<Program> programs){
         ArrayList<Exercise> dummy = new ArrayList<>();
         Exercise dummyExercise = new StrengthExercise("Null",0,0,0,0,0,"Null");
         dummy.add(dummyExercise);
-        Program dummyProg = new Program(dummy,"null");
+        Program dummyProg = new Program(dummy,"Null");
 
 
         for(int i=0; i<programs.size(); i++){
             boolean flagIntensity = false;
-            if (programs.get(i).intensityLevel < (this.acceptableIntensity *1.1) && programs.get(i).intensityLevel > (this.acceptableIntensity*0.9)){
+            Program program = programs.get(i);
+            if (program.intensityLevel < (this.acceptableIntensity * 1.1) && program.intensityLevel > (this.acceptableIntensity * 0.9)){
                 flagIntensity = true;
             }
-            for (int j =0; j<programs.get(i).exercises.size(); j++){
-                if(programs.get(i).exercises.get(j).name.equalsIgnoreCase(this.preferredExercise.name) && flagIntensity){
-                    return programs.get(i);
+            for (int j = 0; j< program.exercises.size(); j++){
+                if(program.exercises.get(j).getType().equals(this.preferredExerciseType) && flagIntensity){
+                    return program;
                 }
             }
 

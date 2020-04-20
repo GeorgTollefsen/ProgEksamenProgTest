@@ -8,4 +8,8 @@ public class EnduranceExercise extends Exercise {
         this.equipment = equipment;
     }
 
+    @Override
+    public ExerciseType getType() {
+        return ExerciseType.ENDURANCE;
+    }
 }

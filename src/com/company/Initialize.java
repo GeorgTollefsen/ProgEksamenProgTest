@@ -194,7 +194,7 @@ public class Initialize {
         Program flashProgram = new Program(flashprogramExercise,"The Flash Program");
         programs.add(flashProgram);
 
-        // Be Flexible as Spiderman -
+        // Be Flexible as Spiderman
         ArrayList<Exercise> spidermanprogramExercise = new ArrayList<Exercise>();
         spidermanprogramExercise.add(exercises.get(searchFunctionExercises("Lunge with spinal twist")));
         spidermanprogramExercise.add(exercises.get(searchFunctionExercises("Piegon stretch")));
@@ -204,7 +204,7 @@ public class Initialize {
         Program spidermanProgram = new Program(spidermanprogramExercise,"The Spiderman Program");
         programs.add(spidermanProgram);
 
-        //Be a Wonderwoman
+        // Be a Wonderwoman
         ArrayList<Exercise> wonderwomanprogramExercise = new ArrayList<Exercise>();
         wonderwomanprogramExercise.add(exercises.get(searchFunctionExercises("Tree pose eyes closed")));
         wonderwomanprogramExercise.add(exercises.get(searchFunctionExercises("Balance star eyes closed")));
@@ -217,14 +217,14 @@ public class Initialize {
     }
 
     public static void initializePersons(){
-        Person georg = new Person("Georg", exercises.get(searchFunctionExercises("spinning")), 50, programs.get(searchFunctionPrograms("spinning program")));
-        Person pernille = new Person("Pernille", exercises.get(searchFunctionExercises("Spinning")), 70, programs.get(searchFunctionPrograms("Spinning Program")));
-        Person mia = new Person("Mia", exercises.get(searchFunctionExercises("squats")), 95, programs.get(searchFunctionPrograms("Spinning Program")));
-        Person thea = new Person("Thea", exercises.get(searchFunctionExercises("Spinning")), 34, programs.get(searchFunctionPrograms("Spinning Program")));
-        Person aina = new Person("Aina" ,exercises.get(searchFunctionExercises("Spinning")), 66, programs.get(searchFunctionPrograms("Spinning Program")));
-        Person andrea = new Person("Andrea" ,exercises.get(searchFunctionExercises("Spinning")), 71, programs.get(searchFunctionPrograms("Spinning Program")));
-        Person rick = new Person("Rick" ,exercises.get(searchFunctionExercises("Spinning")), 88, programs.get(searchFunctionPrograms("Spinning Program")));
-        Person david = new Person("David" ,exercises.get(searchFunctionExercises("Spinning")), 62, programs.get(searchFunctionPrograms("Spinning Program")));
+        Person georg = new Person("Georg", ExerciseType.ENDURANCE, 50, programs.get(searchFunctionPrograms("Spinning program")));
+        Person pernille = new Person("Pernille", ExerciseType.STRENGTH, 70, programs.get(searchFunctionPrograms("Spinning Program")));
+        Person mia = new Person("Mia", ExerciseType.BALANCE, 95, programs.get(searchFunctionPrograms("Spinning Program")));
+        Person thea = new Person("Thea", ExerciseType.FLEXIBILITY, 34, programs.get(searchFunctionPrograms("Spinning Program")));
+        Person aina = new Person("Aina", ExerciseType.BALANCE, 66, programs.get(searchFunctionPrograms("Spinning Program")));
+        Person andrea = new Person("Andrea", ExerciseType.STRENGTH, 71, programs.get(searchFunctionPrograms("Spinning Program")));
+        Person rick = new Person("Rick", ExerciseType.ENDURANCE, 88, programs.get(searchFunctionPrograms("Spinning Program")));
+        Person david = new Person("David",ExerciseType.STRENGTH, 62, programs.get(searchFunctionPrograms("Spinning Program")));
 
 
         personer.add(georg);

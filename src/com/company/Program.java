@@ -36,7 +36,7 @@ public class Program {
 
     }
 
-    //Calculates the duration of the whole exercise
+    // Calculates the duration of the whole exercise
     public int calculateDuration(){
         int result = 0;
         for(int i=0; i<exercises.size(); i++){
@@ -45,7 +45,7 @@ public class Program {
         return result;
     }
 
-    //Sets the program intensity based on the highest intensity among the exercises in the program
+    // Sets the program intensity based on the highest intensity among the exercises in the program
     public double calculateIntensity(){
         double result = 0;
         for(int i=0; i<exercises.size(); i++){
@@ -56,7 +56,7 @@ public class Program {
         return result;
     }
 
-    //Checks if the program is balanced by turning the flags true, if all flags are true, the program is balanced.
+    // Checks if the program is balanced by turning the flags true, if all flags are true, the program is balanced
     public boolean checkBalance(){
         boolean flagStrength = false;
         boolean flagEndurance = false;

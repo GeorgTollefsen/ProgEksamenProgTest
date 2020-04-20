@@ -7,4 +7,9 @@ public class BalanceExercise extends Exercise {
         super(name, duration, repetitions, sets, intensity);
         this.equipment = equipment;
     }
+
+    @Override
+    public ExerciseType getType() {
+        return ExerciseType.BALANCE;
+    }
 }

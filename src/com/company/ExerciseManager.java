@@ -107,9 +107,9 @@ public class ExerciseManager {
         Main.scan.nextLine();
 
         if(Initialize.personer.get(valg).selectPreferred(Initialize.programs).getName().equalsIgnoreCase(Initialize.programs.get(valg2).name)){
-            System.out.println("The program you have chosen are great for "+Initialize.personer.get(valg).name);
+            System.out.println("The program you have chosen is great for "+Initialize.personer.get(valg).name);
         } else{
-            System.out.println("The program you selected are not suited for "+Initialize.personer.get(valg).name);
+            System.out.println("The program you selected is not suited for "+Initialize.personer.get(valg).name);
         }
         System.out.println("Press any key to continue");
         Main.scan.nextLine();
@@ -141,7 +141,7 @@ public class ExerciseManager {
         exerciseManager();
     }
     public static void recommendProgram(){
-        System.out.println("Here we will reccomend a program for you. Which person do you want recomendations for?");
+        System.out.println("Here we will recommend a program for you. Which person do you want recommendations for?");
         for(int i =0; i<Initialize.personer.size(); i++){
             System.out.println(i+1+". "+Initialize.personer.get(i).name);
         }

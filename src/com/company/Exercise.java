@@ -1,7 +1,7 @@
 package com.company;
 
 public abstract class Exercise {
-    public String name; //we needed a name to sort them out
+    public String name;
     public int duration;
     public int repetitions;
     public int sets;
@@ -18,4 +18,6 @@ public abstract class Exercise {
     public String getName() {
         return name;
     }
+
+    public abstract ExerciseType getType();
 }
