@@ -41,7 +41,7 @@ public class Main {
                     listPrograms();
                     break;
                 case 3:
-                    exerciseManager();
+                    ExerciseManager.exerciseManager();
                     break;
                 case 4:
                     callMenu();
@@ -83,94 +83,7 @@ public class Main {
         scan.nextLine();
         callMenu();
     }
-    public static void exerciseManager(){
-        System.out.println("Welcome to the Exercise Manager. These are your options:\n" +
-                "1. Check if a program is appropriate for a person\n" +
-                "2. Build a new program\n" +
-                "3. Recommend a program for a specific person\n" +
-                "4. Back to main menu");
-        int valg = scan.nextInt();
-        scan.nextLine();
-        switch (valg){
-            case 1:
-                checkProgramPerson();
-            case 2:
-                buildProgram();
-            case 3:
-                recommendProgram();
-            case 4:
-                callMenu();
-            default:
-                System.out.println("Wrong answer, try again");
-                exerciseManager();
 
-        }
-    }
-    public static void checkProgramPerson(){
-        System.out.println("Select person");
-        for (int i=0; i<personer.size(); i++) {
-            System.out.println(1+i+". "+personer.get(i).name);
-        }
-        int valg = scan.nextInt()-1;
-        scan.nextLine();
-        System.out.println("You chose "+personer.get(valg).name);
-        System.out.println("Select Program");
-        for(int i=0; i<programs.size(); i++){
-            System.out.println(i+1+". "+programs.get(i).name);
-        }
-        int valg2 = scan.nextInt()-1;
-        System.out.println("You chose "+programs.get(valg2).name);
-        scan.nextLine();
-
-        if(personer.get(valg).selectPreferred(programs).getName().equalsIgnoreCase(programs.get(valg2).name)){
-            System.out.println("The program you have chosen are great for the selected person");
-        } else{
-            System.out.println("The program you selected are not suited for this person");
-        }
-        System.out.println("Press any key to continue");
-        scan.nextLine();
-        exerciseManager();
-        }
-    public static void buildProgram(){
-        System.out.println("Welcome to the program builder\n What would you like to call your new program?");
-        String name = scan.nextLine();
-        System.out.println("Here is a list of the exercises you can add. Enter 99 to quit");
-        ArrayList<Exercise> exercisesChosen = new ArrayList<Exercise>();
-        for(int i=0; i<exercises.size(); i++){
-            System.out.println(i+1+". "+exercises.get(i).name+". Intensity: "+exercises.get(i).intensity+". Duration: "+exercises.get(i).duration+" min");
-        }
-        boolean flag = true;
-        while(flag){
-            int valg = scan.nextInt()+1;
-            scan.nextLine();
-            switch (valg){
-                case 100:
-                    flag=false;
-                    break;
-                default:
-                    exercisesChosen.add(exercises.get(valg));
-            }
-
-        }
-        Program selfMadeProgram = new Program(exercisesChosen, name);
-        programs.add(selfMadeProgram);
-        exerciseManager();
-    }
-    public static void recommendProgram(){
-        System.out.println("Here we will reccomend a program for you. Which person do you want recomendations for?");
-        for(int i =0; i<personer.size(); i++){
-            System.out.println(i+1+". "+personer.get(i).name);
-        }
-        int valg = scan.nextInt()-1;
-        scan.nextLine();
-        if(personer.get(valg).selectPreferred(programs).getName().equalsIgnoreCase("null")){
-            System.out.println("We are sorry, but this persons preferences does not match any of our programs");
-        } else {
-            System.out.println("We think "+personer.get(valg).selectPreferred(programs).name+" will be a great choice");
-        }
-        scan.nextLine();
-        exerciseManager();
-    }
 
     public static void intitializeExercises(){
         //Level 1 - Easy Endurance Exercise

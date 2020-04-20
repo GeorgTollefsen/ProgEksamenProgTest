@@ -28,7 +28,7 @@ public class Person {
         ArrayList<Exercise> dummy = new ArrayList<>();
         Exercise dummyExercise = new StrengthExercise("Null",0,0,0,0,0,"Null");
         dummy.add(dummyExercise);
-        Program dummyProg = new Program(dummy,"name");
+        Program dummyProg = new Program(dummy,"null");
 
 
         for(int i=0; i<programs.size(); i++){

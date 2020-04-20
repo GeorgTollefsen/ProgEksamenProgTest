@@ -1,6 +1,6 @@
 package com.company;
 
-public class Exercise {
+public abstract class Exercise {
     public String name; //we needed a name to sort them out
     public int duration;
     public int repetitions;
