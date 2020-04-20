@@ -92,24 +92,24 @@ public class ExerciseManager {
     }
     public static void checkProgramPerson(){
         System.out.println("Select person");
-        for (int i=0; i<Main.personer.size(); i++) {
-            System.out.println(1+i+". "+Main.personer.get(i).name);
+        for (int i=0; i<Initialize.personer.size(); i++) {
+            System.out.println(1+i+". "+Initialize.personer.get(i).name);
         }
         int valg = Main.scan.nextInt()-1;
         Main.scan.nextLine();
-        System.out.println("You chose "+Main.personer.get(valg).name);
+        System.out.println("You chose "+Initialize.personer.get(valg).name);
         System.out.println("Select Program");
-        for(int i=0; i<Main.programs.size(); i++){
-            System.out.println(i+1+". "+Main.programs.get(i).name);
+        for(int i=0; i<Initialize.programs.size(); i++){
+            System.out.println(i+1+". "+Initialize.programs.get(i).name);
         }
         int valg2 = Main.scan.nextInt()-1;
-        System.out.println("You chose "+Main.programs.get(valg2).name);
+        System.out.println("You chose "+Initialize.programs.get(valg2).name);
         Main.scan.nextLine();
 
-        if(Main.personer.get(valg).selectPreferred(Main.programs).getName().equalsIgnoreCase(Main.programs.get(valg2).name)){
-            System.out.println("The program you have chosen are great for the selected person");
+        if(Initialize.personer.get(valg).selectPreferred(Initialize.programs).getName().equalsIgnoreCase(Initialize.programs.get(valg2).name)){
+            System.out.println("The program you have chosen are great for "+Initialize.personer.get(valg).name);
         } else{
-            System.out.println("The program you selected are not suited for this person");
+            System.out.println("The program you selected are not suited for "+Initialize.personer.get(valg).name);
         }
         System.out.println("Press any key to continue");
         Main.scan.nextLine();
@@ -120,8 +120,8 @@ public class ExerciseManager {
         String name = Main.scan.nextLine();
         System.out.println("Here is a list of the exercises you can add. Enter 99 to quit");
         ArrayList<Exercise> exercisesChosen = new ArrayList<Exercise>();
-        for(int i=0; i<Main.exercises.size(); i++){
-            System.out.println(i+1+". "+Main.exercises.get(i).name+". Intensity: "+Main.exercises.get(i).intensity+". Duration: "+Main.exercises.get(i).duration+" min");
+        for(int i=0; i<Initialize.exercises.size(); i++){
+            System.out.println(i+1+". "+Initialize.exercises.get(i).name+". Intensity: "+Initialize.exercises.get(i).intensity+". Duration: "+Initialize.exercises.get(i).duration+" min");
         }
         boolean flag = true;
         while(flag){
@@ -132,25 +132,25 @@ public class ExerciseManager {
                     flag=false;
                     break;
                 default:
-                    exercisesChosen.add(Main.exercises.get(valg));
+                    exercisesChosen.add(Initialize.exercises.get(valg));
             }
 
         }
         Program selfMadeProgram = new Program(exercisesChosen, name);
-        Main.programs.add(selfMadeProgram);
+        Initialize.programs.add(selfMadeProgram);
         exerciseManager();
     }
     public static void recommendProgram(){
         System.out.println("Here we will reccomend a program for you. Which person do you want recomendations for?");
-        for(int i =0; i<Main.personer.size(); i++){
-            System.out.println(i+1+". "+Main.personer.get(i).name);
+        for(int i =0; i<Initialize.personer.size(); i++){
+            System.out.println(i+1+". "+Initialize.personer.get(i).name);
         }
         int valg = Main.scan.nextInt()-1;
         Main.scan.nextLine();
-        if(Main.personer.get(valg).selectPreferred(Main.programs).getName().equalsIgnoreCase("null")){
+        if(Initialize.personer.get(valg).selectPreferred(Initialize.programs).getName().equalsIgnoreCase("null")){
             System.out.println("We are sorry, but this persons preferences does not match any of our programs");
         } else {
-            System.out.println("We think "+Main.personer.get(valg).selectPreferred(Main.programs).name+" will be a great choice");
+            System.out.println("We think "+Initialize.personer.get(valg).selectPreferred(Initialize.programs).name+" will be a great choice");
         }
         Main.scan.nextLine();
         exerciseManager();
