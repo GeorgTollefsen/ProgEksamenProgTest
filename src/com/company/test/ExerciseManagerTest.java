@@ -74,4 +74,11 @@ public class ExerciseManagerTest {
         assertEquals(program.exercises.get(3), balanceStarEyesClosed);
 
     }
+
+//    @Test
+//    public void test3_3_buildProgram(){
+//        ExerciseManager.input = "testbuild";
+//        ExerciseManager.choice1 = 12;
+//
+//    }
 }

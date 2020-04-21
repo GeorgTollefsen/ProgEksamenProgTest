@@ -66,30 +66,9 @@ public class ExerciseManager {
 //    }
 
     //-------------------------------------------------------------------------------------------------------------
-    public static void exerciseManager() {
-        System.out.println("Welcome to the Exercise Manager. These are your options:\n" +
-                "1. Check if a program is appropriate for a person\n" +
-                "2. Build a new program\n" +
-                "3. Recommend a program for a specific person\n" +
-                "4. Back to main menu");
-        int valg = Main.scan.nextInt();
-        Main.scan.nextLine();
-        switch (valg) {
-            case 1:
-                checkProgramPerson();
-            case 2:
-                buildProgram();
-            case 3:
-                recommendProgram();
-            case 4:
-                Main.callMenu();
-            default:
-                System.out.println("Wrong answer, try again");
-                exerciseManager();
 
-        }
 
-    }
+
     public static void checkProgramPerson(){
         System.out.println("Select person");
         for (int i=0; i<Initialize.personer.size(); i++) {
@@ -113,11 +92,13 @@ public class ExerciseManager {
         }
         System.out.println("Press any key to continue");
         Main.scan.nextLine();
-        exerciseManager();
+        Main.exerciseManager();
     }
     public static void buildProgram(){
         System.out.println("Welcome to the program builder\n What would you like to call your new program?");
         String name = Main.scan.nextLine();
+
+
         System.out.println("Here is a list of the exercises you can add. Enter 99 to quit");
         ArrayList<Exercise> exercisesChosen = new ArrayList<Exercise>();
         for(int i=0; i<Initialize.exercises.size(); i++){
@@ -138,7 +119,7 @@ public class ExerciseManager {
         }
         Program selfMadeProgram = new Program(exercisesChosen, name);
         Initialize.programs.add(selfMadeProgram);
-        exerciseManager();
+        Main.exerciseManager();
     }
     public static void recommendProgram(){
         System.out.println("Here we will recommend a program for you. Which person do you want recommendations for?");
@@ -153,6 +134,6 @@ public class ExerciseManager {
             System.out.println("We think "+Initialize.personer.get(valg).selectPreferred(Initialize.programs).name+" will be a great choice");
         }
         Main.scan.nextLine();
-        exerciseManager();
+        Main.exerciseManager();
     }
 }

@@ -36,7 +36,7 @@ public class Main {
                     listPrograms();
                     break;
                 case 3:
-                    ExerciseManager.exerciseManager();
+                    exerciseManager();
                     break;
                 case 4:
                     callMenu();
@@ -50,6 +50,31 @@ public class Main {
         }
 
     }
+
+    public static void exerciseManager() {
+        System.out.println("Welcome to the Exercise Manager. These are your options:\n" +
+                "1. Check if a program is appropriate for a person\n" +
+                "2. Build a new program\n" +
+                "3. Recommend a program for a specific person\n" +
+                "4. Back to main menu");
+        int valg = Main.scan.nextInt();
+        Main.scan.nextLine();
+        switch (valg) {
+            case 1:
+                ExerciseManager.checkProgramPerson();
+            case 2:
+                ExerciseManager.buildProgram();
+            case 3:
+                ExerciseManager.recommendProgram();
+            case 4:
+                Main.callMenu();
+            default:
+                System.out.println("Wrong answer, try again");
+                exerciseManager();
+
+        }
+    }
+
     public static void listPersons(){
     for(int i=0; i<Initialize.personer.size(); i++){
         System.out.println((i+1) + ". " + Initialize.personer.get(i).name);
