@@ -69,11 +69,11 @@ public class ExerciseManager {
 
 
 
-    public static void checkProgramPerson(int choice, int choice2){
-        if(Initialize.persons.get(choice).selectPreferred(Initialize.programs).getName().equalsIgnoreCase(Initialize.programs.get(choice2).name)){
-            System.out.println("The program you have chosen is great for "+Initialize.persons.get(choice).name);
+    public static void checkProgramPerson(Person person, Program program){
+        if(person.selectPreferred(Initialize.programs).getName().equalsIgnoreCase(program.name)){
+            System.out.println("The program you have chosen is great for "+person.name);
         } else{
-            System.out.println("The program you selected is not suited for "+Initialize.persons.get(choice).name);
+            System.out.println("The program you selected is not suited for "+person.name);
         }
         System.out.println("Press any key to continue");
         Main.scan.nextLine();

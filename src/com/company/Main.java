@@ -73,7 +73,7 @@ public class Main {
                 System.out.println("You chose " + Initialize.programs.get(valgcheckProgramPerson2).name);
                 Main.scan.nextLine();
 
-                ExerciseManager.checkProgramPerson(choiceCheckProgramPerson, valgcheckProgramPerson2);
+                ExerciseManager.checkProgramPerson(Initialize.persons.get(choiceCheckProgramPerson), Initialize.programs.get(valgcheckProgramPerson2));
             case 2:
                 System.out.println("Welcome to the program builder\n What would you like to call your new program?");
                 String name = Main.scan.nextLine();
