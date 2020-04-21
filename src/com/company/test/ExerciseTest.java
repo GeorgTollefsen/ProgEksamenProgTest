@@ -22,4 +22,10 @@ public class ExerciseTest {
         assertEquals(exercise.name, "Test name");
 
     }
+
+    @Test
+    public void test4_2() throws Exception {
+        Exercise exercise = new BalanceExercise("Test", 45, 2, 3, 4, "None");
+        assertEquals("Test", exercise.getName());
+    }
 }
