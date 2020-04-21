@@ -106,7 +106,7 @@ public class Main {
                 }
                 int valgRecommendProgram = Main.scan.nextInt() - 1;
                 Main.scan.nextLine();
-                ExerciseManager.recommendProgram(valgRecommendProgram);
+                ExerciseManager.recommendProgram(Initialize.personer.get(valgRecommendProgram));
             case 4:
                 Main.callMenu();
             default:
