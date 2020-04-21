@@ -3,10 +3,8 @@ package com.company;
 import java.util.ArrayList;
 
 public class Initialize {
-    public static ArrayList<Person> personer = new ArrayList<>();
-    public static Person selectedPerson;
+    public static ArrayList<Person> persons = new ArrayList<>();
     public static ArrayList<Program> programs = new ArrayList<Program>();
-    public static Program selectedProgram;
     public static ArrayList<Exercise> exercises = new ArrayList<>();
 
     public static void intitializeExercises(){
@@ -227,14 +225,14 @@ public class Initialize {
         Person david = new Person("David",ExerciseType.STRENGTH, 62, programs.get(searchFunctionPrograms("Spinning Program")));
 
 
-        personer.add(georg);
-        personer.add(pernille);
-        personer.add(mia);
-        personer.add(thea);
-        personer.add(aina);
-        personer.add(andrea);
-        personer.add(david);
-        personer.add(rick);
+        persons.add(georg);
+        persons.add(pernille);
+        persons.add(mia);
+        persons.add(thea);
+        persons.add(aina);
+        persons.add(andrea);
+        persons.add(david);
+        persons.add(rick);
     }
     public static int searchFunctionPrograms(String find){
         int indexnumber=-1;
