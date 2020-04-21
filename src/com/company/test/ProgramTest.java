@@ -19,4 +19,12 @@ public class ProgramTest {
         assertEquals(program.name, "Test name");
         assertEquals(program.exercises.size(), 0);
     }
+
+    @Test
+
+    public void test8_2(){
+        ArrayList<Exercise> exercises = new ArrayList<>();
+        Program program = new Program(exercises, "test");
+        assertEquals("test", program.getName());
+    }
 }
