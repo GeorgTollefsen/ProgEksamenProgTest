@@ -69,22 +69,7 @@ public class ExerciseManager {
 
 
 
-    public static void checkProgramPerson(){
-        System.out.println("Select person");
-        for (int i=0; i<Initialize.personer.size(); i++) {
-            System.out.println(1+i+". "+Initialize.personer.get(i).name);
-        }
-        int valg = Main.scan.nextInt()-1;
-        Main.scan.nextLine();
-        System.out.println("You chose "+Initialize.personer.get(valg).name);
-        System.out.println("Select Program");
-        for(int i=0; i<Initialize.programs.size(); i++){
-            System.out.println(i+1+". "+Initialize.programs.get(i).name);
-        }
-        int valg2 = Main.scan.nextInt()-1;
-        System.out.println("You chose "+Initialize.programs.get(valg2).name);
-        Main.scan.nextLine();
-
+    public static void checkProgramPerson(int valg, int valg2){
         if(Initialize.personer.get(valg).selectPreferred(Initialize.programs).getName().equalsIgnoreCase(Initialize.programs.get(valg2).name)){
             System.out.println("The program you have chosen is great for "+Initialize.personer.get(valg).name);
         } else{
@@ -94,40 +79,13 @@ public class ExerciseManager {
         Main.scan.nextLine();
         Main.exerciseManager();
     }
-    public static void buildProgram(){
-        System.out.println("Welcome to the program builder\n What would you like to call your new program?");
-        String name = Main.scan.nextLine();
-
-
-        System.out.println("Here is a list of the exercises you can add. Enter 99 to quit");
-        ArrayList<Exercise> exercisesChosen = new ArrayList<Exercise>();
-        for(int i=0; i<Initialize.exercises.size(); i++){
-            System.out.println(i+1+". "+Initialize.exercises.get(i).name+". Intensity: "+Initialize.exercises.get(i).intensity+". Duration: "+Initialize.exercises.get(i).duration+" min");
-        }
-        boolean flag = true;
-        while(flag){
-            int valg = Main.scan.nextInt()+1;
-            Main.scan.nextLine();
-            switch (valg){
-                case 100:
-                    flag=false;
-                    break;
-                default:
-                    exercisesChosen.add(Initialize.exercises.get(valg));
-            }
-
-        }
+    public static void buildProgram(ArrayList<Exercise> exercisesChosen, String name){
         Program selfMadeProgram = new Program(exercisesChosen, name);
         Initialize.programs.add(selfMadeProgram);
         Main.exerciseManager();
     }
-    public static void recommendProgram(){
-        System.out.println("Here we will recommend a program for you. Which person do you want recommendations for?");
-        for(int i =0; i<Initialize.personer.size(); i++){
-            System.out.println(i+1+". "+Initialize.personer.get(i).name);
-        }
-        int valg = Main.scan.nextInt()-1;
-        Main.scan.nextLine();
+    public static void recommendProgram(int valg){
+
         if(Initialize.personer.get(valg).selectPreferred(Initialize.programs).getName().equalsIgnoreCase("null")){
             System.out.println("We are sorry, but this persons preferences does not match any of our programs");
         } else {
