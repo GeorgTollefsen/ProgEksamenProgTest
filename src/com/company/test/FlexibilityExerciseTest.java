@@ -17,4 +17,11 @@ public class FlexibilityExerciseTest {
         FlexibilityExercise flexibilityExercise = new FlexibilityExercise("Test name", 45, 1, 1, 40, "Water bottle");
         assertEquals(flexibilityExercise.requirement, "Water bottle");
     }
+
+    @Test
+
+    public void test5_2() {
+        FlexibilityExercise flexibilityExercise = new FlexibilityExercise("name", 55, 4, 3, 50, "String");
+        assertEquals(flexibilityExercise.getType(), ExerciseType.FLEXIBILITY);
+    }
 }
