@@ -17,4 +17,10 @@ public class EnduranceExerciseTest {
         EnduranceExercise enduranceExercise = new EnduranceExercise("Test name", 20, 2, 3, 10, "Mat");
         assertEquals(enduranceExercise.equipment, "Mat");
     }
+
+    @Test
+    public void test2_2() {
+        EnduranceExercise enduranceExercise = new EnduranceExercise("Test name", 30, 4, 2, 2, "String");
+        assertEquals(enduranceExercise.getType(), ExerciseType.ENDURANCE);
+    }
 }
