@@ -18,4 +18,10 @@ public class StrengthExerciseTest {
         assertEquals(strengthExercise.equipment, "Table");
 
     }
+
+    @Test
+    public void test9_2(){
+        StrengthExercise strengthExercise = new StrengthExercise("Test", 10,15,3,3, 10, "chair");
+        assertEquals(strengthExercise.getType(), ExerciseType.STRENGTH);
+    }
 }
