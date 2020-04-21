@@ -15,6 +15,7 @@ public class Main {
         Initialize.initializePersons();
         System.out.println("Good day to you! Check out our awesome menu for home workout");
 
+
         callMenu();
 
     }
@@ -73,7 +74,10 @@ public class Main {
                 System.out.println("You chose " + Initialize.programs.get(valgcheckProgramPerson2).name);
                 Main.scan.nextLine();
 
-                ExerciseManager.checkProgramPerson(Initialize.persons.get(choiceCheckProgramPerson), Initialize.programs.get(valgcheckProgramPerson2));
+                System.out.println(ExerciseManager.checkProgramPerson(Initialize.persons.get(choiceCheckProgramPerson), Initialize.programs.get(valgcheckProgramPerson2)));
+                System.out.println("Press any key to continue");
+                Main.scan.nextLine();
+                Main.exerciseManager();
             case 2:
                 System.out.println("Welcome to the program builder\n What would you like to call your new program?");
                 String name = Main.scan.nextLine();

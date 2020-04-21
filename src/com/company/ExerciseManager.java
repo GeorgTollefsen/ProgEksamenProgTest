@@ -69,15 +69,13 @@ public class ExerciseManager {
 
 
 
-    public static void checkProgramPerson(Person person, Program program){
+    public static String checkProgramPerson(Person person, Program program){
         if(person.selectPreferred(Initialize.programs).getName().equalsIgnoreCase(program.name)){
-            System.out.println("The program you have chosen is great for "+person.name);
+            return "The program you have chosen is great for "+person.name;
         } else{
-            System.out.println("The program you selected is not suited for "+person.name);
+            return "The program you selected is not suited for "+person.name;
         }
-        System.out.println("Press any key to continue");
-        Main.scan.nextLine();
-        Main.exerciseManager();
+
     }
     public static void buildProgram(ArrayList<Exercise> exercisesChosen, String name){
         Program selfMadeProgram = new Program(exercisesChosen, name);

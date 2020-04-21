@@ -77,17 +77,22 @@ public class ExerciseManagerTest {
 
     @Test
     public void test3_3_checkProgramPerson(){
-        Person testPerson1 = new Person("Testperson1",ExerciseType.BALANCE, 77, Initialize.programs.get(Initialize.searchFunctionPrograms("Spinning program")));
-        Person testPerson2 = new Person("Testperson1",ExerciseType.STRENGTH, 77, Initialize.programs.get(Initialize.searchFunctionPrograms("Spinning program")));
-        Person testPerson3 = new Person("Testperson1",ExerciseType.FLEXIBILITY, 77, Initialize.programs.get(Initialize.searchFunctionPrograms("Spinning program")));
-        Person testPerson4 = new Person("Testperson1",ExerciseType.ENDURANCE, 77, Initialize.programs.get(Initialize.searchFunctionPrograms("Spinning program")));
+
         ArrayList<Exercise> exercises = new ArrayList<>();
         Exercise treePoseEyesClosed = new BalanceExercise("Tree pose eyes closed", 10,6,3,12,"");
         Exercise balanceStarEyesClosed = new BalanceExercise("Balance star eyes closed",10,3,2,90,"");
         Exercise warriorEyesClosed = new BalanceExercise("Warrior eyes closed", 15,5,3,45,"");
         Exercise skaterHops = new BalanceExercise("Skater hops with reach", 15,15,3,80,"");
         Program program = new Program(exercises, "Test checkProgramPerson");
-//        assertEquals(ExerciseManager.checkProgramPerson(););
+        Person testPerson1 = new Person("Testperson1",ExerciseType.BALANCE, 77, program);
+        Person testPerson2 = new Person("Testperson1",ExerciseType.STRENGTH, 77, program);
+        Person testPerson3 = new Person("Testperson1",ExerciseType.FLEXIBILITY, 77, program);
+        Person testPerson4 = new Person("Testperson1",ExerciseType.ENDURANCE, 77, program);
 
+
+        String whatHappens = ExerciseManager.checkProgramPerson(testPerson1, program);
+        String expectedValue= "The program you selected is not suited for Testperson1";
+
+        assertTrue(whatHappens.equalsIgnoreCase(expectedValue));
     }
 }
