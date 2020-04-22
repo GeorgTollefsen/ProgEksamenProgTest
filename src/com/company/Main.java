@@ -14,10 +14,7 @@ public class Main {
         Initialize.initializePrograms();
         Initialize.initializePersons();
         System.out.println("Good day to you! Check out our awesome menu for home workout");
-
-
         callMenu();
-
     }
 
     public static void callMenu() {
@@ -145,5 +142,4 @@ public class Main {
         scan.nextLine();
         callMenu();
     }
-
 }

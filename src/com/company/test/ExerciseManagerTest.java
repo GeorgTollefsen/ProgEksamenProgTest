@@ -100,28 +100,57 @@ public class ExerciseManagerTest {
 
         Program programTestIntensityBalance = new Program(exercises, "IntensityBalance");
         Program programTestStrength = new Program(exercises2,"strength");
+        Program programTestFlexibility = new Program(exercises3, "Flexibility");
+        Program programTestEndurance = new Program(exercises4,"Endurance");
 
         Person testPerson1 = new Person("Testperson1",ExerciseType.BALANCE, 80, programTestIntensityBalance);
         Person testPerson2 = new Person("Testperson1",ExerciseType.STRENGTH, 80, programTestIntensityBalance);
         Person testPerson3 = new Person("Testperson1",ExerciseType.FLEXIBILITY, 80, programTestIntensityBalance);
         Person testPerson4 = new Person("Testperson1",ExerciseType.ENDURANCE, 80, programTestIntensityBalance);
-        Person testPerson5 = new Person("Testperson1",ExerciseType.BALANCE, 0, programTestIntensityBalance);
+        Person testPerson5 = new Person("Testperson1",ExerciseType.BALANCE, 0, programTestIntensityBalance);//used for testing wrong intensity levels
+        Person testPerson6 = new Person("Testperson1",ExerciseType.STRENGTH, 0, programTestIntensityBalance);//used for testing wrong intensity levels
+        Person testPerson7 = new Person("Testperson1",ExerciseType.FLEXIBILITY, 0, programTestIntensityBalance);//used for testing wrong intensity levels
+        Person testPerson8 = new Person("Testperson1",ExerciseType.ENDURANCE, 0, programTestIntensityBalance);//used for testing wrong intensity levels
+
 //      below is the outcome strings from intensity and balance
         String whatHappens = ExerciseManager.checkProgramPerson(testPerson1, programTestIntensityBalance); // balance with intensity correct tested against balance only program
         String whatHappens2 = ExerciseManager.checkProgramPerson(testPerson2, programTestIntensityBalance); //strengt with intensity correct tested against balance only program
         String whatHappens3 = ExerciseManager.checkProgramPerson(testPerson3, programTestIntensityBalance); //flexibility with intensity correct tested against balance only program
         String whatHappens4 = ExerciseManager.checkProgramPerson(testPerson4, programTestIntensityBalance); //endurance with intensity correct tested against balance only program
         String whatHappens5 = ExerciseManager.checkProgramPerson(testPerson5, programTestIntensityBalance); // balance with intensity false tested against balance only program
+        //strength outcomes comes here
+        String whatHappens6 = ExerciseManager.checkProgramPerson(testPerson2, programTestStrength);//strength with intensity correct tested against strenght only program
+        String whatHappens7 = ExerciseManager.checkProgramPerson(testPerson6, programTestStrength);//strength with intensity wrong tested against strenght only program
+        String whatHappens8 = ExerciseManager.checkProgramPerson(testPerson1, programTestStrength);//balance with intensity correct tested against strenght only program
+        //flexibility tests come here
+        String whatHappens9 = ExerciseManager.checkProgramPerson(testPerson3, programTestFlexibility);//Flexibility with intensity correct, tested against flexibility only program
+        String whatHappens10 = ExerciseManager.checkProgramPerson(testPerson7, programTestFlexibility);//Flexibility with intensity wrong, tested against flexibility only
+        String whatHappens11 = ExerciseManager.checkProgramPerson(testPerson1, programTestFlexibility);//Balance with intensity correct tested against flexibility only program
+        //endurance tests come here
+        String whatHappens12 = ExerciseManager.checkProgramPerson(testPerson4, programTestEndurance);
+        String whatHappens13 = ExerciseManager.checkProgramPerson(testPerson8, programTestEndurance);
+        String whatHappens14 = ExerciseManager.checkProgramPerson(testPerson1, programTestEndurance);
 
+        String expectedValue= "The program you have chosen is great for Testperson1"; //this is the String provided when a program is accepted and is good for the person
 
-        String expectedValue= "The program you have chosen is great for Testperson1";
-
+        //balance and intensity are being tested below
         assertTrue(whatHappens.equalsIgnoreCase(expectedValue)); //checking with 4 balance when he prefers balance, and with intensity to correct level
-        assertFalse(whatHappens2.equalsIgnoreCase(expectedValue)); //checking with 0 Strenghtexercises when he needs strength to be true
-        assertFalse(whatHappens3.equalsIgnoreCase(expectedValue)); //checking with 0 felxibilityexercises when he needs felxibility to be true
-        assertFalse(whatHappens4.equalsIgnoreCase(expectedValue)); //checking with 0 enduranceexercises when he needs endurance to be true
-        assertFalse(whatHappens5.equalsIgnoreCase(expectedValue)); //testing if the acceptableIntensity is taken into account
-        //balance and intensity is now fully tested for this function
+        assertFalse(whatHappens2.equalsIgnoreCase(expectedValue)); //checking with 4 balanceExercises when he needs strength to be true
+        assertFalse(whatHappens3.equalsIgnoreCase(expectedValue)); //checking with 4 balanceExercises when he needs felxibility to be true
+        assertFalse(whatHappens4.equalsIgnoreCase(expectedValue)); //checking with 4 balanceExercises when he needs endurance to be true
+        assertFalse(whatHappens5.equalsIgnoreCase(expectedValue)); //checking with 4 balanceExercises when the person needs balance to be true with wrong intensity settings
+        //strength and intensity is tested below
+        assertTrue(whatHappens6.equalsIgnoreCase(expectedValue)); //checking with 1 strengthexercise where the person needs strength and the intensity correct
+        assertFalse(whatHappens7.equalsIgnoreCase(expectedValue)); //cheking with 1 strengthexercise where the person needs strength and wrong intensity settings
+        assertFalse(whatHappens8.equalsIgnoreCase(expectedValue)); //checking with 1 strenghtexercise where the person needs Balance and intensity correct
+        //flexibility and intensity is tested below
+        assertTrue(whatHappens9.equalsIgnoreCase(expectedValue));// checking with 1 flexibility eercise where the person needs flexibility and the intensity set correct.
+        assertFalse(whatHappens10.equalsIgnoreCase(expectedValue));//cheking with 1 flexibility where the person needs flexibility and wrong intensity settings
+        assertFalse(whatHappens11.equalsIgnoreCase(expectedValue));// checking with 1 flexibility exercise where the person needs strength and correct intensity set
+        //Endurance and intensity is tested below
+        assertTrue(whatHappens12.equalsIgnoreCase(expectedValue));// checking with 1 enduranceExercise where the person needs endurance and the intensity set correct
+        assertFalse(whatHappens13.equalsIgnoreCase(expectedValue));// checking with 1 enduranceExercise where the person needs endurance and the intensity set wrong
+        assertFalse(whatHappens14.equalsIgnoreCase(expectedValue));// checking with 1 enduranceExercise where the person needs strength and the intensity set correct
 
     }
 }
