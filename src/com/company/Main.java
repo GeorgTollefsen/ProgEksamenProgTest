@@ -105,7 +105,9 @@ public class Main {
                 }
                 int choiceRecommendProgram = Main.scan.nextInt() - 1;
                 Main.scan.nextLine();
-                ExerciseManager.recommendProgram(Initialize.persons.get(choiceRecommendProgram));
+                System.out.println(ExerciseManager.recommendProgram(Initialize.persons.get(choiceRecommendProgram)));
+                break;
+
             case 4:
                 Main.callMenu();
             default:
