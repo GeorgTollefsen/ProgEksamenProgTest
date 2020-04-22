@@ -2,6 +2,7 @@ package com.company.test;
 
 import com.company.*;
 
+import org.junit.BeforeClass;
 import org.junit.Test;
 
 import java.util.ArrayList;
@@ -9,6 +10,8 @@ import java.util.ArrayList;
 import static org.junit.Assert.*;
 
 public class PersonTest {
+
+
     @Test
 
     public void test7_1() {
@@ -30,5 +33,16 @@ public class PersonTest {
         assertEquals(person.currentProgram, thorProgram);
 
     }
-}
+
+    // unit test for selectPreferred
+
+    // All programs will load here and we will see if the program is a match or not
+    // It consideres intensity and if the program includes a an exercise the person preferres
+    // If the program does not have one such exercise or the intensity is to high/low, you get a false
+    @Test
+    public void test7_2() {
+
+    }
+    }
+
 
