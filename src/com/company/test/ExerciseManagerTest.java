@@ -98,15 +98,15 @@ public class ExerciseManagerTest {
         exercises.add(warriorEyesClosed);
         exercises.add(skaterHops);
 
-        Program programTestIntensityBalance = new Program(exercises, "IntensityBalance");
-        Program programTestStrength = new Program(exercises2,"strength");
-        Program programTestFlexibility = new Program(exercises3, "Flexibility");
-        Program programTestEndurance = new Program(exercises4,"Endurance");
+        Program programTestIntensityBalance = new Program(exercises, "IntensityBalance");//used for testing the BalanceExercises and to see if there is nothing wrong with it being passed to the function
+        Program programTestStrength = new Program(exercises2,"strength");//used for testing the StrengthExercises and to see if there is nothing wrong with it being passed to the function
+        Program programTestFlexibility = new Program(exercises3, "Flexibility");//used for testing the FlexibilityExercises and to see if there is nothing wrong with it being passed to the function
+        Program programTestEndurance = new Program(exercises4,"Endurance");//used for testing the EnduranceExercises and to see if there is nothing wrong with it being passed to the function
 
-        Person testPerson1 = new Person("Testperson1",ExerciseType.BALANCE, 80, programTestIntensityBalance);
-        Person testPerson2 = new Person("Testperson1",ExerciseType.STRENGTH, 80, programTestIntensityBalance);
-        Person testPerson3 = new Person("Testperson1",ExerciseType.FLEXIBILITY, 80, programTestIntensityBalance);
-        Person testPerson4 = new Person("Testperson1",ExerciseType.ENDURANCE, 80, programTestIntensityBalance);
+        Person testPerson1 = new Person("Testperson1",ExerciseType.BALANCE, 80, programTestIntensityBalance);//used for testing correct cases. intensity and exercisetype are correct
+        Person testPerson2 = new Person("Testperson1",ExerciseType.STRENGTH, 80, programTestIntensityBalance);//used for testing correct cases. intensity and exercisetype are correct
+        Person testPerson3 = new Person("Testperson1",ExerciseType.FLEXIBILITY, 80, programTestIntensityBalance);//used for testing correct cases. intensity and exercisetype are correct
+        Person testPerson4 = new Person("Testperson1",ExerciseType.ENDURANCE, 80, programTestIntensityBalance);//used for testing correct cases. intensity and exercisetype are correct
         Person testPerson5 = new Person("Testperson1",ExerciseType.BALANCE, 0, programTestIntensityBalance);//used for testing wrong intensity levels
         Person testPerson6 = new Person("Testperson1",ExerciseType.STRENGTH, 0, programTestIntensityBalance);//used for testing wrong intensity levels
         Person testPerson7 = new Person("Testperson1",ExerciseType.FLEXIBILITY, 0, programTestIntensityBalance);//used for testing wrong intensity levels
@@ -127,9 +127,9 @@ public class ExerciseManagerTest {
         String whatHappens10 = ExerciseManager.checkProgramPerson(testPerson7, programTestFlexibility);//Flexibility with intensity wrong, tested against flexibility only
         String whatHappens11 = ExerciseManager.checkProgramPerson(testPerson1, programTestFlexibility);//Balance with intensity correct tested against flexibility only program
         //endurance tests come here
-        String whatHappens12 = ExerciseManager.checkProgramPerson(testPerson4, programTestEndurance);
-        String whatHappens13 = ExerciseManager.checkProgramPerson(testPerson8, programTestEndurance);
-        String whatHappens14 = ExerciseManager.checkProgramPerson(testPerson1, programTestEndurance);
+        String whatHappens12 = ExerciseManager.checkProgramPerson(testPerson4, programTestEndurance); //Endurance with intensity correct tested against endurance only program
+        String whatHappens13 = ExerciseManager.checkProgramPerson(testPerson8, programTestEndurance); //Endurance with intensity wrong tested agianst endurance only program
+        String whatHappens14 = ExerciseManager.checkProgramPerson(testPerson1, programTestEndurance); //Balance with intensity correct tested against endruance only program
 
         String expectedValue= "The program you have chosen is great for Testperson1"; //this is the String provided when a program is accepted and is good for the person
 
