@@ -79,6 +79,16 @@ public class ExerciseManagerTest {
     public void test3_3_checkProgramPerson() {
 
         ArrayList<Exercise> exercises = new ArrayList<>();
+        ArrayList<Exercise> exercises2 = new ArrayList<>();
+        ArrayList<Exercise> exercises3 = new ArrayList<>();
+        ArrayList<Exercise> exercises4 = new ArrayList<>();
+        Exercise strengthTest = new StrengthExercise("test", 5,40,2,80,5,"");
+        exercises2.add(strengthTest);
+        Exercise flexibilityTest = new FlexibilityExercise("Test",3,3,3,80,"");
+        exercises3.add(flexibilityTest);
+        Exercise enduranceTest = new EnduranceExercise("test", 5,40,2,80, "");
+        exercises4.add(enduranceTest);
+
         Exercise treePoseEyesClosed = new BalanceExercise("Tree pose eyes closed", 10,6,3,12,"");
         Exercise balanceStarEyesClosed = new BalanceExercise("Balance star eyes closed",10,3,2,80,"");
         Exercise warriorEyesClosed = new BalanceExercise("Warrior eyes closed", 15,5,3,45,"");
@@ -88,18 +98,30 @@ public class ExerciseManagerTest {
         exercises.add(warriorEyesClosed);
         exercises.add(skaterHops);
 
-        Program program = new Program(exercises, "TestcheckProgramPerson");
+        Program programTestIntensityBalance = new Program(exercises, "IntensityBalance");
+        Program programTestStrength = new Program(exercises2,"strength");
+
+        Person testPerson1 = new Person("Testperson1",ExerciseType.BALANCE, 80, programTestIntensityBalance);
+        Person testPerson2 = new Person("Testperson1",ExerciseType.STRENGTH, 80, programTestIntensityBalance);
+        Person testPerson3 = new Person("Testperson1",ExerciseType.FLEXIBILITY, 80, programTestIntensityBalance);
+        Person testPerson4 = new Person("Testperson1",ExerciseType.ENDURANCE, 80, programTestIntensityBalance);
+        Person testPerson5 = new Person("Testperson1",ExerciseType.BALANCE, 0, programTestIntensityBalance);
+//      below is the outcome strings from intensity and balance
+        String whatHappens = ExerciseManager.checkProgramPerson(testPerson1, programTestIntensityBalance); // balance with intensity correct tested against balance only program
+        String whatHappens2 = ExerciseManager.checkProgramPerson(testPerson2, programTestIntensityBalance); //strengt with intensity correct tested against balance only program
+        String whatHappens3 = ExerciseManager.checkProgramPerson(testPerson3, programTestIntensityBalance); //flexibility with intensity correct tested against balance only program
+        String whatHappens4 = ExerciseManager.checkProgramPerson(testPerson4, programTestIntensityBalance); //endurance with intensity correct tested against balance only program
+        String whatHappens5 = ExerciseManager.checkProgramPerson(testPerson5, programTestIntensityBalance); // balance with intensity false tested against balance only program
 
 
-        Person testPerson1 = new Person("Testperson1",ExerciseType.BALANCE, 80, program);
-        Person testPerson2 = new Person("Testperson1",ExerciseType.STRENGTH, 77, program);
-        Person testPerson3 = new Person("Testperson1",ExerciseType.FLEXIBILITY, 77, program);
-        Person testPerson4 = new Person("Testperson1",ExerciseType.ENDURANCE, 77, program);
-
-
-        String whatHappens = ExerciseManager.checkProgramPerson(testPerson1, program);
         String expectedValue= "The program you have chosen is great for Testperson1";
 
-        assertTrue(whatHappens.equalsIgnoreCase(expectedValue));
+        assertTrue(whatHappens.equalsIgnoreCase(expectedValue)); //checking with 4 balance when he prefers balance, and with intensity to correct level
+        assertFalse(whatHappens2.equalsIgnoreCase(expectedValue)); //checking with 0 Strenghtexercises when he needs strength to be true
+        assertFalse(whatHappens3.equalsIgnoreCase(expectedValue)); //checking with 0 felxibilityexercises when he needs felxibility to be true
+        assertFalse(whatHappens4.equalsIgnoreCase(expectedValue)); //checking with 0 enduranceexercises when he needs endurance to be true
+        assertFalse(whatHappens5.equalsIgnoreCase(expectedValue)); //testing if the acceptableIntensity is taken into account
+        //balance and intensity is now fully tested for this function
+
     }
 }
