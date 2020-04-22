@@ -63,18 +63,18 @@ public class Main {
                 for (int i = 0; i < Initialize.persons.size(); i++) {
                     System.out.println(1 + i + ". " + Initialize.persons.get(i).name);
                 }
-                int choiceCheckProgramPerson = Main.scan.nextInt() - 1;
+                int choiceCheckProgramPerson = Main.scan.nextInt()-1;
                 Main.scan.nextLine();
-                System.out.println("You chose " + Initialize.persons.get(choiceExerciseManager).name);
+                System.out.println("You chose " + Initialize.persons.get(choiceCheckProgramPerson).name);
                 System.out.println("Select Program");
                 for (int i = 0; i < Initialize.programs.size(); i++) {
                     System.out.println(i + 1 + ". " + Initialize.programs.get(i).name);
                 }
-                int valgcheckProgramPerson2 = Main.scan.nextInt() - 1;
-                System.out.println("You chose " + Initialize.programs.get(valgcheckProgramPerson2).name);
+                int choiceCheckProgramPerson2 = Main.scan.nextInt() - 1;
+                System.out.println("You chose " + Initialize.programs.get(choiceCheckProgramPerson2).name);
                 Main.scan.nextLine();
 
-                System.out.println(ExerciseManager.checkProgramPerson(Initialize.persons.get(choiceCheckProgramPerson), Initialize.programs.get(valgcheckProgramPerson2)));
+                System.out.println(ExerciseManager.checkProgramPerson(Initialize.persons.get(choiceCheckProgramPerson), Initialize.programs.get(choiceCheckProgramPerson2)));
                 System.out.println("Press any key to continue");
                 Main.scan.nextLine();
                 Main.exerciseManager();

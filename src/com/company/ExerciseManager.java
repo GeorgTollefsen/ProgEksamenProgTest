@@ -70,7 +70,9 @@ public class ExerciseManager {
 
 
     public static String checkProgramPerson(Person person, Program program){
-        if(person.selectPreferred(Initialize.programs).getName().equalsIgnoreCase(program.name)){
+        ArrayList<Program> arrayWithOneProgram = new ArrayList<>();
+        arrayWithOneProgram.add(program);
+        if(person.selectPreferred(arrayWithOneProgram).name.equalsIgnoreCase(program.name)){
             return "The program you have chosen is great for "+person.name;
         } else{
             return "The program you selected is not suited for "+person.name;
