@@ -124,11 +124,11 @@ public class ExerciseManagerTest {
         assertFalse(whatHappens14.equalsIgnoreCase(expectedValue));// checking with 1 enduranceExercise where the person needs strength and the intensity set correct
 
     }
-//    @Test
-//    private void test3_4_buildProgram(){
-//        ArrayList<Exercise> exercisesToBePassed = new ArrayList<>();
-//        Exercise test = new StrengthExercise("testExercise", 50,1,1,50,3,"none");
-//        ExerciseManager.buildProgram(exercisesToBePassed, "test");
-//        assertTrue(Initialize.programs.get(7).name.equalsIgnoreCase("test"));
-//    }
+    @Test
+    public void test3_4_buildProgram(){
+        ArrayList<Exercise> exercisesToBePassed = new ArrayList<>();
+        Exercise test = new StrengthExercise("testExercise", 50,1,1,50,3,"none");
+        assertTrue(ExerciseManager.buildProgram(exercisesToBePassed, "test").name.equalsIgnoreCase("test"));
+        //asserting that when we send the exercises into this function that it builds a new program called test
+    }
 }
