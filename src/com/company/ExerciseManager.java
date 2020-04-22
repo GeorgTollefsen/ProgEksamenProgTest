@@ -79,10 +79,9 @@ public class ExerciseManager {
 
     }
 
-    public static void buildProgram(ArrayList<Exercise> exercisesChosen, String name) {
+    public static Program buildProgram(ArrayList<Exercise> exercisesChosen, String name) {
         Program selfMadeProgram = new Program(exercisesChosen, name);
-        Initialize.programs.add(selfMadeProgram);
-        Main.exerciseManager();
+        return selfMadeProgram;
     }
 
     public static void recommendProgram(Person person) {

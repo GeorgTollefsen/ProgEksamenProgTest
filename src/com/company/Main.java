@@ -95,7 +95,9 @@ public class Main {
                             exercisesChosen.add(Initialize.exercises.get(choiceBuildProgram));
                     }
                 }
-                ExerciseManager.buildProgram(exercisesChosen, name);
+                Initialize.programs.add(ExerciseManager.buildProgram(exercisesChosen, name));
+                break;
+
             case 3:
                 System.out.println("Here we will recommend a program for you. Which person do you want recommendations for?");
                 for (int i = 0; i < Initialize.persons.size(); i++) {

@@ -49,7 +49,6 @@ public class ExerciseManagerTest {
 
     @Test
     public void test3_3_checkProgramPerson() {
-
         ArrayList<Exercise> exercises = new ArrayList<>();
         ArrayList<Exercise> exercises2 = new ArrayList<>();
         ArrayList<Exercise> exercises3 = new ArrayList<>();
@@ -125,4 +124,11 @@ public class ExerciseManagerTest {
         assertFalse(whatHappens14.equalsIgnoreCase(expectedValue));// checking with 1 enduranceExercise where the person needs strength and the intensity set correct
 
     }
+//    @Test
+//    private void test3_4_buildProgram(){
+//        ArrayList<Exercise> exercisesToBePassed = new ArrayList<>();
+//        Exercise test = new StrengthExercise("testExercise", 50,1,1,50,3,"none");
+//        ExerciseManager.buildProgram(exercisesToBePassed, "test");
+//        assertTrue(Initialize.programs.get(7).name.equalsIgnoreCase("test"));
+//    }
 }
