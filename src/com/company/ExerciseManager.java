@@ -68,26 +68,27 @@ public class ExerciseManager {
     //-------------------------------------------------------------------------------------------------------------
 
 
-
-    public static String checkProgramPerson(Person person, Program program){
-        if(person.selectPreferred(Initialize.programs).getName().equalsIgnoreCase(program.name)){
-            return "The program you have chosen is great for "+person.name;
-        } else{
-            return "The program you selected is not suited for "+person.name;
+    public static String checkProgramPerson(Person person, Program program) {
+        if (person.selectPreferred(Initialize.programs).getName().equalsIgnoreCase(program.name)) {
+            return "The program you have chosen is great for " + person.name;
+        } else {
+            return "The program you selected is not suited for " + person.name;
         }
 
     }
-    public static void buildProgram(ArrayList<Exercise> exercisesChosen, String name){
+
+    public static void buildProgram(ArrayList<Exercise> exercisesChosen, String name) {
         Program selfMadeProgram = new Program(exercisesChosen, name);
         Initialize.programs.add(selfMadeProgram);
         Main.exerciseManager();
     }
-    public static void recommendProgram(Person person){
 
-        if(person.selectPreferred(Initialize.programs).getName().equalsIgnoreCase("null")){
+    public static void recommendProgram(Person person) {
+
+        if (person.selectPreferred(Initialize.programs).getName().equalsIgnoreCase("null")) {
             System.out.println("We are sorry, but this persons preferences does not match any of our programs");
         } else {
-            System.out.println("We think "+person.selectPreferred(Initialize.programs).name+" will be a great choice for "+person.name);
+            System.out.println("We think " + person.selectPreferred(Initialize.programs).name + " will be a great choice for " + person.name);
         }
         Main.scan.nextLine();
         Main.exerciseManager();

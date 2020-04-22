@@ -125,7 +125,7 @@ public class Main {
         scan.nextLine();
         selectedPerson = Initialize.persons.get(choice);
         System.out.println("You have selected: " + selectedPerson.name);
-        System.out.println("Name: " + selectedPerson.name + "\nPreferred Intensity: " + selectedPerson.acceptableIntensity + "\nPreferred Exercise Type1: " + selectedPerson.preferredExerciseType.toString());
+        System.out.println("Name: " + selectedPerson.name + "\nPreferred Intensity: " + selectedPerson.acceptableIntensity + "\nPreferred Exercise Type: " + selectedPerson.preferredExerciseType.toString());
         scan.nextLine();
         callMenu();
     }

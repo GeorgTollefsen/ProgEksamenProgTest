@@ -20,8 +20,8 @@ public class StrengthExerciseTest {
     }
 
     @Test
-    public void test9_2(){
-        StrengthExercise strengthExercise = new StrengthExercise("Test", 10,15,3,3, 10, "chair");
+    public void test9_2() {
+        StrengthExercise strengthExercise = new StrengthExercise("Test", 10, 15, 3, 3, 10, "chair");
         assertEquals(strengthExercise.getType(), ExerciseType.STRENGTH);
     }
 }

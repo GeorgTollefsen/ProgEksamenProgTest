@@ -15,14 +15,14 @@ public class ProgramTest {
 
         // Unit test for Program class
         ArrayList<Exercise> exercises = new ArrayList<>();
-        Program program = new Program( exercises, "Test name");
+        Program program = new Program(exercises, "Test name");
         assertEquals(program.name, "Test name");
         assertEquals(program.exercises.size(), 0);
     }
 
     @Test
 
-    public void test8_2(){
+    public void test8_2() {
         ArrayList<Exercise> exercises = new ArrayList<>();
         Program program = new Program(exercises, "test");
         assertEquals("test", program.getName());

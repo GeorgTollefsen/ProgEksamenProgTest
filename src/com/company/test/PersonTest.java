@@ -15,7 +15,7 @@ public class PersonTest {
 
         // Unit test for Person class
         // Taking in some data
-        Exercise treePoseEyesClosed = new BalanceExercise("Tree pose eyes closed", 10,6,3,12,"");
+        Exercise treePoseEyesClosed = new BalanceExercise("Tree pose eyes closed", 10, 6, 3, 12, "");
 
         // Taking in an ArrayList
         ArrayList<Exercise> thorprogramExercise = new ArrayList<Exercise>();

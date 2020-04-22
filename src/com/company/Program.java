@@ -13,7 +13,7 @@ public class Program {
         this.exercises = exercises;
         this.name = name;
         sortProgram();
-        this.duration = calculateDuration()*2;
+        this.duration = calculateDuration() * 2;
         this.intensityLevel = calculateIntensity();
         this.isBalanced = checkBalance();
         this.sortProgram();
@@ -23,7 +23,7 @@ public class Program {
        the first if retruns 0 if e1 and e2 are the same
        the second (else) if returns -1 if e1 is lesser than e2
        and the third if returns 1 if the e1 is larger than e2 */
-    public void sortProgram(){
+    public void sortProgram() {
         this.exercises.sort((e1, e2) -> {
             if (e1.intensity == e2.intensity) {
                 return 0;
@@ -37,19 +37,19 @@ public class Program {
     }
 
     // Calculates the duration of the whole exercise
-    public int calculateDuration(){
+    public int calculateDuration() {
         int result = 0;
-        for(int i=0; i<exercises.size(); i++){
+        for (int i = 0; i < exercises.size(); i++) {
             result += exercises.get(i).duration;
         }
         return result;
     }
 
     // Sets the program intensity based on the highest intensity among the exercises in the program
-    public double calculateIntensity(){
+    public double calculateIntensity() {
         double result = 0;
-        for(int i=0; i<exercises.size(); i++){
-            if(exercises.get(i).intensity >= result){
+        for (int i = 0; i < exercises.size(); i++) {
+            if (exercises.get(i).intensity >= result) {
                 result = exercises.get(i).intensity;
             }
         }
@@ -57,7 +57,7 @@ public class Program {
     }
 
     // Checks if the program is balanced by turning the flags true, if all flags are true, the program is balanced
-    public boolean checkBalance(){
+    public boolean checkBalance() {
         boolean flagStrength = false;
         boolean flagEndurance = false;
         boolean flagBalance = false;
@@ -76,10 +76,9 @@ public class Program {
                 flagBalance = true;
             }
         }
-        if(flagStrength && flagEndurance && flagBalance && flagFlexibility){
+        if (flagStrength && flagEndurance && flagBalance && flagFlexibility) {
             return true;
-        }
-        else {
+        } else {
             return false;
         }
     }
