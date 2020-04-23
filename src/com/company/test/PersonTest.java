@@ -31,17 +31,39 @@ public class PersonTest {
         assertEquals(person.preferredExerciseType, ExerciseType.BALANCE);
         assertEquals(person.acceptableIntensity, 40, 0.0);
         assertEquals(person.currentProgram, thorProgram);
-
     }
 
     // unit test for selectPreferred
 
-    // All programs will load here and we will see if the program is a match or not
-    // It consideres intensity and if the program includes a an exercise the person preferres
-    // If the program does not have one such exercise or the intensity is to high/low, you get a false
     @Test
     public void test7_2() {
 
+        ArrayList<Exercise> testilini = new ArrayList<>();
+        ArrayList<Exercise> testilini2 = new ArrayList<>();
+        ArrayList<Program> programi = new ArrayList<>();
+        ArrayList<Program> programi2 = new ArrayList<>();
+
+        Exercise dance = new BalanceExercise("Dance",35,10,4,0,"Dance shoes" );
+        testilini.add(dance);
+
+        Exercise slowDance = new BalanceExercise("Slow dance", 30,2,3,50,"Dance socks");
+        testilini2.add(slowDance);
+
+        Program testProgram2 = new Program(testilini2,"Test program 2");
+        programi2.add(testProgram2);
+
+        Program testProgram = new Program(testilini, "Test program");
+        programi.add(testProgram);
+
+        Person p1 = new Person("Test1", ExerciseType.BALANCE, 55, testProgram);
+
+        // send programi inn to p1 to look for the arraylist has a acceptable program for p1
+        //  if the program in unacceptable then testCase1 will be "null".
+
+        String testCase1 =  p1.selectPreferred(programi).name;
+        String expectedFalseValue = "null";
+        assertTrue(testCase1.equalsIgnoreCase(expectedFalseValue));
+        
     }
     }
 
