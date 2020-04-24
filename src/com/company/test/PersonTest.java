@@ -39,18 +39,11 @@ public class PersonTest {
     public void test7_2() {
 
         ArrayList<Exercise> testilini = new ArrayList<>();
-        ArrayList<Exercise> testilini2 = new ArrayList<>();
         ArrayList<Program> programi = new ArrayList<>();
-        ArrayList<Program> programi2 = new ArrayList<>();
+
 
         Exercise dance = new BalanceExercise("Dance",35,10,4,0,"Dance shoes" );
         testilini.add(dance);
-
-        Exercise slowDance = new BalanceExercise("Slow dance", 30,2,3,50,"Dance socks");
-        testilini2.add(slowDance);
-
-        Program testProgram2 = new Program(testilini2,"Test program 2");
-        programi2.add(testProgram2);
 
         Program testProgram = new Program(testilini, "Test program");
         programi.add(testProgram);
@@ -65,6 +58,26 @@ public class PersonTest {
         assertTrue(testCase1.equalsIgnoreCase(expectedFalseValue));
         
     }
+    @Test
+    public void test7_3(){
+        // Testing selectPreferred to see if the program is acceptable for p2 with strength exercise
+        //If accepted outcome = "Test Program 2"
+
+        ArrayList<Exercise> testArrayE = new ArrayList<>();
+        ArrayList<Program> testArrayP = new ArrayList<>();
+
+        Exercise pushup = new StrengthExercise("pushup", 10, 10, 4, 30, 0, "");
+        testArrayE.add(pushup);
+
+        Program testProgram2 = new Program(testArrayE, "Test Program 2");
+        testArrayP.add(testProgram2);
+
+        Person p2 = new Person("Heidi", ExerciseType.STRENGTH, 28, testProgram2);
+
+        String testCase2 = p2.selectPreferred(testArrayP).name;
+        String expectedTrueValue = "Test Program 2";
+        assertTrue(testCase2.equalsIgnoreCase(expectedTrueValue));
+        }
     }
 
 
