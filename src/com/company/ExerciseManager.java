@@ -84,12 +84,12 @@ public class ExerciseManager {
         return selfMadeProgram;
     }
 
-    public static String recommendProgram(Person person) {
+    public static String recommendProgram(Person person, ArrayList programs) {
 
-        if (person.selectPreferred(Initialize.programs).getName().equalsIgnoreCase("null")) {
+        if (person.selectPreferred(programs).getName().equalsIgnoreCase("null")) {
            return "We are sorry, but this persons preferences does not match any of our programs";
         } else {
-            return "We think " + person.selectPreferred(Initialize.programs).name + " will be a great choice for " + person.name;
+            return "We think " + person.selectPreferred(programs).name + " will be a great choice for " + person.name;
         }
     }
 }

@@ -131,4 +131,40 @@ public class ExerciseManagerTest {
         assertTrue(ExerciseManager.buildProgram(exercisesToBePassed, "test").name.equalsIgnoreCase("test"));
         //asserting that when we send the exercises into this function that it builds a new program called test
     }
+    @Test
+    public void test3_5_recomendProgram(){
+
+
+
+        // here comes code that will be rejected by the program.
+        ArrayList<Program> arrayToBeTested = new ArrayList<>();
+        ArrayList<Exercise> exercises = new ArrayList<>();
+
+        Exercise balance1 = new BalanceExercise("testBalance", 3,3,3,50,"none");
+        exercises.add(balance1);
+        Program balanceProgram = new Program(exercises, "testProgramRejected");
+        arrayToBeTested.add(balanceProgram);
+        Person testPerson = new Person("Erna Solberg", ExerciseType.ENDURANCE, 22, balanceProgram);
+
+        String whatHappens = ExerciseManager.recommendProgram(testPerson, arrayToBeTested);
+        String whatShouldHappen = "We are sorry, but this persons preferences does not match any of our programs";
+
+        //here comes code that gets accepted by the program
+        ArrayList<Program> arrayTobeTested2 = new ArrayList<>();
+        ArrayList<Exercise> exercises2 = new ArrayList<>();
+
+        Exercise enduranceExercise = new EnduranceExercise("testEndurance", 3,3,50,22,"none");
+        exercises2.add(enduranceExercise);
+        Program enduranceProgram = new Program(exercises2, "enduranceTest");
+        arrayTobeTested2.add(enduranceProgram);
+
+        String whatHappens2 = ExerciseManager.recommendProgram(testPerson, arrayTobeTested2);
+        String whatShouldHappen2 = "We think enduranceTest will be a great choice for Erna Solberg";
+
+        //here is the asserts
+        assertTrue(whatHappens.equalsIgnoreCase(whatShouldHappen));
+        assertTrue(whatHappens2.equalsIgnoreCase(whatShouldHappen2));
+
+
+    }
 }

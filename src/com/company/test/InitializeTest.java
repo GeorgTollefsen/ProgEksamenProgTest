@@ -1,14 +1,12 @@
 package com.company.test;
 
-import com.company.*;
-
-import org.junit.Before;
+import com.company.Exercise;
+import com.company.Initialize;
+import com.company.Program;
 import org.junit.BeforeClass;
 import org.junit.Test;
 
-import java.util.ArrayList;
-
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
 
 public class InitializeTest {
 
@@ -63,4 +61,7 @@ public class InitializeTest {
         Program theBatmanProgram = Initialize.programs.get(batmanIndex);
         assertEquals(theBatmanProgram.getName(), "The Batman Program");
     }
+
+
+
 }
