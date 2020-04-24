@@ -9,8 +9,8 @@ import java.util.ArrayList;
 import static org.junit.Assert.*;
 
 public class FlexibilityExerciseTest {
-    @Test
 
+    @Test
     public void test5_1() {
 
         // Unit test for flexibility class
@@ -19,7 +19,6 @@ public class FlexibilityExerciseTest {
     }
 
     @Test
-
     public void test5_2() {
         FlexibilityExercise flexibilityExercise = new FlexibilityExercise("name", 55, 4, 3, 50, "String");
         assertEquals(flexibilityExercise.getType(), ExerciseType.FLEXIBILITY);

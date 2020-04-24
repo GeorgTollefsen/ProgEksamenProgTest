@@ -9,8 +9,8 @@ import java.util.ArrayList;
 import static org.junit.Assert.*;
 
 public class ExerciseTest {
-    @Test
 
+    @Test
     public void test4_1() {
 
         // Unit test for Exercise class, which is abstract

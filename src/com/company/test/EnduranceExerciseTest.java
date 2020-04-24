@@ -9,8 +9,8 @@ import java.util.ArrayList;
 import static org.junit.Assert.*;
 
 public class EnduranceExerciseTest {
-    @Test
 
+    @Test
     public void test2_1() {
 
         // Unit test for endurance class

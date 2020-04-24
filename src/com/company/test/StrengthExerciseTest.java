@@ -9,8 +9,8 @@ import java.util.ArrayList;
 import static org.junit.Assert.*;
 
 public class StrengthExerciseTest {
-    @Test
 
+    @Test
     public void test9_1() {
 
         // Unit test for strength class

@@ -9,8 +9,8 @@ import java.util.ArrayList;
 import static org.junit.Assert.*;
 
 public class ProgramTest {
-    @Test
 
+    @Test
     public void test8_1() {
 
         // Unit test for Program class
@@ -21,7 +21,6 @@ public class ProgramTest {
     }
 
     @Test
-
     public void test8_2() {
         ArrayList<Exercise> exercises = new ArrayList<>();
         Program program = new Program(exercises, "test");
@@ -29,7 +28,6 @@ public class ProgramTest {
     }
 
     @Test
-
     public void test8_3() {
 
         // Taking in some data to test if the sorting algorithm on intensity works

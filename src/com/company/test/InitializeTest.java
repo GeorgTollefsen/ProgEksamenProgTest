@@ -12,6 +12,10 @@ import static org.junit.Assert.*;
 
 public class InitializeTest {
 
+    /* The BeforeClass is run before the test of each method, in order to execute some preconditions
+       necessary for the test. The BeforeClass annotation indicates
+       that the static method to which is attached must be executed once and before all tests in the class */
+
     @BeforeClass
     public static void setUp() {
 

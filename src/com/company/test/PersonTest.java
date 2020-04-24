@@ -13,7 +13,6 @@ public class PersonTest {
 
 
     @Test
-
     public void test7_1() {
 
         // Unit test for Person class
@@ -33,7 +32,7 @@ public class PersonTest {
         assertEquals(person.currentProgram, thorProgram);
     }
 
-    // unit test for selectPreferred
+    // Unit test for selectPreferred
 
     @Test
     public void test7_2() {
@@ -50,8 +49,8 @@ public class PersonTest {
 
         Person p1 = new Person("Test1", ExerciseType.BALANCE, 55, testProgram);
 
-        // send programi inn to p1 to look for the arraylist has a acceptable program for p1
-        //  if the program in unacceptable then testCase1 will be "null".
+        // Send program in to p1 to look for the ArrayList has a acceptable program for p1
+        //  If the program in unacceptable then testCase1 will be "null".
 
         String testCase1 =  p1.selectPreferred(programi).name;
         String expectedFalseValue = "null";
@@ -61,7 +60,7 @@ public class PersonTest {
     @Test
     public void test7_3(){
         // Testing selectPreferred to see if the program is acceptable for p2 with strength exercise
-        //If accepted outcome = "Test Program 2"
+        // If accepted outcome = "Test Program 2"
 
         ArrayList<Exercise> testArrayE = new ArrayList<>();
         ArrayList<Program> testArrayP = new ArrayList<>();

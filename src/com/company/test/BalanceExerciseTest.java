@@ -9,6 +9,7 @@ import java.util.ArrayList;
 import static org.junit.Assert.*;
 
 public class BalanceExerciseTest {
+
     @Test
     public void test1_1() {
 
