@@ -62,12 +62,24 @@ public class Main {
                 }
                 int choiceCheckProgramPerson = Main.scan.nextInt()-1;
                 Main.scan.nextLine();
+                int checkArraySize = Initialize.persons.size();
+                while(choiceCheckProgramPerson<0 || choiceCheckProgramPerson>checkArraySize){
+                        System.out.println("Wrong choice please try again");
+                        choiceCheckProgramPerson = scan.nextInt()-1;
+                }
+
+
                 System.out.println("You chose " + Initialize.persons.get(choiceCheckProgramPerson).name);
                 System.out.println("Select Program");
                 for (int i = 0; i < Initialize.programs.size(); i++) {
                     System.out.println(i + 1 + ". " + Initialize.programs.get(i).name);
                 }
                 int choiceCheckProgramPerson2 = Main.scan.nextInt() - 1;
+                int checkArraySize2 = Initialize.programs.size();
+                while(choiceCheckProgramPerson2<0 || choiceCheckProgramPerson2>checkArraySize2){
+                    System.out.println("Wrong choice please try again");
+                    choiceCheckProgramPerson2 = scan.nextInt()-1;
+                }
                 System.out.println("You chose " + Initialize.programs.get(choiceCheckProgramPerson2).name);
                 Main.scan.nextLine();
 
@@ -79,14 +91,27 @@ public class Main {
                 System.out.println("Welcome to the program builder\n What would you like to call your new program?");
                 String name = Main.scan.nextLine();
                 System.out.println("Here is a list of the exercises you can add. Enter 99 to quit");
-                ArrayList<Exercise> exercisesChosen = new ArrayList<Exercise>();
+                ArrayList<Exercise> exercisesChosen = new ArrayList<>();
                 for (int i = 0; i < Initialize.exercises.size(); i++) {
                     System.out.println(i + 1 + ". " + Initialize.exercises.get(i).name + ". Intensity: " + Initialize.exercises.get(i).intensity + ". Duration: " + Initialize.exercises.get(i).duration + " min");
                 }
+
                 boolean flagBuildProgram = true;
                 while (flagBuildProgram) {
                     int choiceBuildProgram = Main.scan.nextInt() - 1;
-//                    Main.scan.nextLine();
+                    Main.scan.nextLine();
+                    int sizeOfExercises = Initialize.exercises.size();
+                    if(choiceBuildProgram != 98){
+                        while(choiceBuildProgram<0 || choiceBuildProgram>sizeOfExercises-1){
+                            if(choiceBuildProgram == 98){
+                                break;
+                            }
+                            System.out.println("Wrong input please try again");
+                            choiceBuildProgram = Main.scan.nextInt() - 1;
+                            scan.nextLine();
+                        }
+                    }
+
                     switch (choiceBuildProgram) {
                         case 98:
                             flagBuildProgram = false;
@@ -105,6 +130,12 @@ public class Main {
                 }
                 int choiceRecommendProgram = Main.scan.nextInt() - 1;
                 Main.scan.nextLine();
+                int checkArraySize3 = Initialize.persons.size();
+                while((choiceRecommendProgram<0) || (choiceRecommendProgram>checkArraySize3-1)){
+                    System.out.println("Wrong choice please try again");
+                    choiceRecommendProgram = scan.nextInt()-1;
+                    scan.nextLine();
+                }
                 System.out.println(ExerciseManager.recommendProgram(Initialize.persons.get(choiceRecommendProgram), Initialize.programs));
                 break;
 
