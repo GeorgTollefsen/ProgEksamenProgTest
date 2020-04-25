@@ -155,6 +155,12 @@ public class Main {
         System.out.println("Select a person to see information:");
         int choice = scan.nextInt() - 1;
         scan.nextLine();
+
+        while(choice<0 || choice>Initialize.persons.size()-1){
+            System.out.println("Wrong input please try again");
+            choice = scan.nextInt() - 1;
+        }
+
         selectedPerson = Initialize.persons.get(choice);
         System.out.println("You have selected: " + selectedPerson.name);
         System.out.println("Name: " + selectedPerson.name + "\nPreferred Intensity: " + selectedPerson.acceptableIntensity + "\nPreferred Exercise Type: " + selectedPerson.preferredExerciseType.toString());
@@ -163,12 +169,18 @@ public class Main {
     }
 
     public static void listPrograms() {
+        System.out.println("\nThis is the collections of programs \n");
         for (int i = 0; i < Initialize.programs.size(); i++) {
             System.out.println(i + 1 + ". " + Initialize.programs.get(i).name);
         }
-        System.out.println("\nThis is the collections of programs \n");
         int choice = scan.nextInt() - 1;
         scan.nextLine();
+
+        while(choice<0 || choice>Initialize.persons.size()-1){
+            System.out.println("Wrong input please try again");
+            choice = scan.nextInt() - 1;
+        }
+
         selectedProgram = Initialize.programs.get(choice);
         System.out.println("Name: " + Initialize.programs.get(choice).name + "\nDuration: " + Initialize.programs.get(choice).duration + " min\nBalanced: " + Initialize.programs.get(choice).isBalanced);
         for (int i = 0; i < Initialize.programs.get(choice).exercises.size(); i++) {
