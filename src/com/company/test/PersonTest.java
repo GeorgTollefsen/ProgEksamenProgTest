@@ -76,6 +76,60 @@ public class PersonTest {
         String testCase2 = p2.selectPreferred(testArrayP).name;
         String expectedTrueValue = "Test Program 2";
         assertTrue(testCase2.equalsIgnoreCase(expectedTrueValue));
+
+        }
+
+        @Test
+        public void test7_4() {
+
+        // Testing the acceptableProgram method, that takes the acceptableIntensity of a person +/- 10% and checks
+        // if it matches the method
+        ArrayList<Exercise> exercises = new ArrayList();
+        Exercise exercise = new EnduranceExercise("Test name", 30, 2, 2, 90, "None");
+        Exercise exercise1 = new EnduranceExercise("Test name2", 2, 2, 2, 110, "None");
+        exercises.add(exercise);
+        exercises.add(exercise1);
+
+        Program program = new Program(exercises, "Test Program");
+
+        Person personTest = new Person("Jane", ExerciseType.ENDURANCE, 100, program);
+
+        assertEquals(personTest.acceptableProgram(program), true);
+
+
+        }
+
+        @Test
+        public void test7_5() {
+
+        // Testing the acceptableProgram method, that takes the acceptableIntensity of a person +/- 10% and checks
+        // if it does not match the method, by being higher than +/- 10%
+        ArrayList<Exercise> exercises = new ArrayList();
+        Exercise exercise = new EnduranceExercise("Test name2", 2, 2, 2, 111, "None");
+        exercises.add(exercise);
+
+        Program program = new Program(exercises, "Test Program");
+
+        Person personTest = new Person("Tarzan", ExerciseType.ENDURANCE, 100, program);
+
+        assertEquals(personTest.acceptableProgram(program), false);
+        }
+
+        @Test
+        public void test7_6() {
+
+        // Testing the acceptableProgram method, that takes the acceptableIntensity of a person +/- 10% and checks
+        // if it does not match the method, by being lower than +/- 10%
+        ArrayList<Exercise> exercises = new ArrayList();
+        Exercise exercise = new EnduranceExercise("Test name", 30, 2, 2, 89, "None");
+        exercises.add(exercise);
+
+        Program program = new Program(exercises, "Test Program");
+
+        Person personTest = new Person("Hercules", ExerciseType.ENDURANCE, 100, program);
+
+        assertEquals(personTest.acceptableProgram(program), false);
+
         }
     }
 

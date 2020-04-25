@@ -16,8 +16,8 @@ public class Person {
     }
 
     public boolean acceptableProgram(Program program) {
-        return program.intensityLevel <= this.acceptableIntensity * 0.9
-                || program.intensityLevel <= this.acceptableIntensity * 1.1;
+        return program.intensityLevel >= this.acceptableIntensity * 0.9
+                && program.intensityLevel <= this.acceptableIntensity * 1.1;
 
     }
 
@@ -34,7 +34,7 @@ public class Person {
         for (int i = 0; i < programs.size(); i++) {
             boolean flagIntensity = false;
             Program program = programs.get(i);
-            if (program.intensityLevel < (this.acceptableIntensity * 1.1) && program.intensityLevel > (this.acceptableIntensity * 0.9)) {
+            if (acceptableProgram(program)) {
                 flagIntensity = true;
             }
             for (int j = 0; j < program.exercises.size(); j++) {

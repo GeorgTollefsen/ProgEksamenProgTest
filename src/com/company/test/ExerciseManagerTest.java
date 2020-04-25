@@ -10,45 +10,9 @@ import static org.junit.Assert.*;
 
 public class ExerciseManagerTest {
 
-   /* @Test
-
-    public void test3_1() {
-
-        Taking in some data to test, one from each type of exercise
-        Exercise squats = new StrengthExercise("Squats", 20, 20,3,1, 0,"None");
-
-        Exercise jumpingJack = new EnduranceExercise("Jumping Jacks", 20, 10, 3, 1, "None");
-
-        Exercise catCow = new FlexibilityExercise("Cat-cow", 10,10,3,1,"None");
-
-        Exercise quadrupedElbowToKnee = new BalanceExercise("Quadruped elbow to knee", 10,1, 1, 1, "None");
-
-                // Adding the exercises to an ArrayList
-                ArrayList<Exercise> exercises = new ArrayList<>();
-                exercises.add(squats);
-                exercises.add(jumpingJack);
-                exercises.add(catCow);
-                exercises.add(quadrupedElbowToKnee);
-
-        //Adds a new person with preferred exercise catCow, acceptable intensity 2, and cur
-        //ExerciseManager takes in the different exercises
-        //test_program takes in person and generates program
-        Person person = new Person("Test navn", catCow, 2, null);
-        ExerciseManager.buildProgram();
-        Program test_progam = exerciseManager.generateProgram(person, "Test program");
-
-        /* assertEquals tests if the test program is balanced, has an acceptable intensityL
-        and is an acceptable program for a person by asserting it as true for that given p
-        the comparing variable delta is 0
-        assertEquals(test_progam.isBalanced, true);
-        assertEquals(test_progam.intensityLevel, 1.0, 0);
-        assertEquals(ExerciseManager.acceptableProgram(person, test_progam), true);
-    }
-        */
-
 
     @Test
-    public void test3_3_checkProgramPerson() {
+    public void test3_1_checkProgramPerson() {
         ArrayList<Exercise> exercises = new ArrayList<>();
         ArrayList<Exercise> exercises2 = new ArrayList<>();
         ArrayList<Exercise> exercises3 = new ArrayList<>();
@@ -125,14 +89,14 @@ public class ExerciseManagerTest {
 
     }
     @Test
-    public void test3_4_buildProgram(){
+    public void test3_2_buildProgram(){
         ArrayList<Exercise> exercisesToBePassed = new ArrayList<>();
         Exercise test = new StrengthExercise("testExercise", 50,1,1,50,3,"none");
         assertTrue(ExerciseManager.buildProgram(exercisesToBePassed, "test").name.equalsIgnoreCase("test"));
         //asserting that when we send the exercises into this function that it builds a new program called test
     }
     @Test
-    public void test3_5_recomendProgram(){
+    public void test3_3_recomendProgram(){
 
 
 
