@@ -53,4 +53,58 @@ public class ProgramTest {
         assertEquals(program.exercises.get(2), skaterHops);
         assertEquals(program.exercises.get(3), balanceStarEyesClosed);
     }
+
+    @Test
+    public void test8_4() {
+
+        ArrayList<Exercise> exercises = new ArrayList();
+        BalanceExercise balanceExercise = new BalanceExercise("Test name", 30, 2, 2, 80, "Mat");
+        exercises.add(balanceExercise);
+        Program program = new Program(exercises, "Test program");
+        assertEquals(program.calculateDuration(), 30);
+
+
+    }
+
+    @Test
+    public void test8_5() {
+
+        // This tests adds one exercise of each type to show that the program is balanced
+        ArrayList<Exercise> exercises = new ArrayList();
+        StrengthExercise strengthExercise = new StrengthExercise("Test name1", 20, 3, 3, 30, 0, "Bar");
+        EnduranceExercise enduranceExercise = new EnduranceExercise("Test name2", 40, 2, 2, 50, "Null");
+        BalanceExercise balanceExercise = new BalanceExercise("Test name3", 10, 2, 2, 55, "Null");
+        FlexibilityExercise flexibilityExercise = new FlexibilityExercise("Test name4", 40, 3,3, 20, "Null");
+
+        exercises.add(strengthExercise);
+        exercises.add(enduranceExercise);
+        exercises.add(balanceExercise);
+        exercises.add(flexibilityExercise);
+
+        // checkBalance is asserted true because we expect the program to be balanced
+        Program program = new Program(exercises, "Test program");
+        assertEquals(program.checkBalance(), true);
+    }
+
+    @Test
+    public void test8_6() {
+
+        // This test adds one Strength, one, Endurance and two Balance exercises to show that it is not balanced unless
+        // it contains one exercise from each exercise type
+        ArrayList<Exercise> exercises = new ArrayList();
+        StrengthExercise strengthExercise = new StrengthExercise("Test name1", 20, 3, 3, 30, 0, "Bar");
+        EnduranceExercise enduranceExercise = new EnduranceExercise("Test name2", 40, 2, 2, 50, "Null");
+        BalanceExercise balanceExercise = new BalanceExercise("Test name3", 10, 2, 2, 55, "Null");
+        BalanceExercise balanceExercise1 = new BalanceExercise("Test name4", 40,2,2,50, "Null");
+
+        exercises.add(strengthExercise);
+        exercises.add(enduranceExercise);
+        exercises.add(balanceExercise);
+        exercises.add(balanceExercise1);
+
+        // checkBalance is asserted false because we expect the program not to be balanced
+        Program program = new Program(exercises, "Test program");
+        assertEquals(program.checkBalance(), false);
+
+    }
 }
