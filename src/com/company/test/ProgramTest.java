@@ -107,4 +107,16 @@ public class ProgramTest {
         assertEquals(program.checkBalance(), false);
 
     }
+
+    //testing if calculate intensity works or not
+    @Test
+    public void test8_7(){
+        ArrayList<Exercise> testData = new ArrayList<>();
+        testData.add(new StrengthExercise("",5,4,3,5,10,""));
+        testData.add(new StrengthExercise("",5,4,3,3,10,""));
+        testData.add(new StrengthExercise("",5,4,3,9,10,""));
+
+        var program = new Program(testData,"");
+        assertEquals(9.0, program.getIntensityLevel(),0);
+    }
 }

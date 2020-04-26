@@ -87,4 +87,8 @@ public class Program {
         return name;
     }
 
+    public double getIntensityLevel(){
+        return intensityLevel;
+    }
+
 }
