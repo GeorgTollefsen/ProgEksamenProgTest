@@ -52,6 +52,10 @@ public class Main {
                 "2. Build a new program\n" +
                 "3. Recommend a program for a specific person\n" +
                 "4. Back to main menu");
+        while (!scan.hasNextInt()){
+            scan.nextLine();
+            System.out.println("Wrong input try again");
+        }
         int choiceExerciseManager = Main.scan.nextInt();
         Main.scan.nextLine();
         switch (choiceExerciseManager) {
@@ -60,11 +64,19 @@ public class Main {
                 for (int i = 0; i < Initialize.persons.size(); i++) {
                     System.out.println(1 + i + ". " + Initialize.persons.get(i).name);
                 }
+                while (!scan.hasNextInt()){
+                    scan.nextLine();
+                    System.out.println("Wrong input try again");
+                }
                 int choiceCheckProgramPerson = Main.scan.nextInt()-1;
                 Main.scan.nextLine();
                 int checkArraySize = Initialize.persons.size();
                 while(choiceCheckProgramPerson<0 || choiceCheckProgramPerson>checkArraySize){
                         System.out.println("Wrong choice please try again");
+                    while (!scan.hasNextInt()){
+                        scan.nextLine();
+                        System.out.println("Wrong input try again");
+                    }
                         choiceCheckProgramPerson = scan.nextInt()-1;
                 }
 
@@ -74,10 +86,19 @@ public class Main {
                 for (int i = 0; i < Initialize.programs.size(); i++) {
                     System.out.println(i + 1 + ". " + Initialize.programs.get(i).name);
                 }
+                while (!scan.hasNextInt()){
+                    scan.nextLine();
+                    System.out.println("Wrong input try again");
+                }
                 int choiceCheckProgramPerson2 = Main.scan.nextInt() - 1;
+                scan.nextLine();
                 int checkArraySize2 = Initialize.programs.size();
                 while(choiceCheckProgramPerson2<0 || choiceCheckProgramPerson2>checkArraySize2){
                     System.out.println("Wrong choice please try again");
+                    while (!scan.hasNextInt()){
+                        scan.nextLine();
+                        System.out.println("Wrong input try again");
+                    }
                     choiceCheckProgramPerson2 = scan.nextInt()-1;
                 }
                 System.out.println("You chose " + Initialize.programs.get(choiceCheckProgramPerson2).name);
@@ -98,6 +119,10 @@ public class Main {
 
                 boolean flagBuildProgram = true;
                 while (flagBuildProgram) {
+                    while (!scan.hasNextInt()){
+                        scan.nextLine();
+                        System.out.println("Wrong input try again");
+                    }
                     int choiceBuildProgram = Main.scan.nextInt() - 1;
                     Main.scan.nextLine();
                     int sizeOfExercises = Initialize.exercises.size();
@@ -107,6 +132,10 @@ public class Main {
                                 break;
                             }
                             System.out.println("Wrong input please try again");
+                            while (!scan.hasNextInt()){
+                                scan.nextLine();
+                                System.out.println("Wrong input try again");
+                            }
                             choiceBuildProgram = Main.scan.nextInt() - 1;
                             scan.nextLine();
                         }
@@ -117,6 +146,7 @@ public class Main {
                             flagBuildProgram = false;
                             break;
                         default:
+                            System.out.println("You added "+Initialize.exercises.get(choiceBuildProgram).getName()+" enter another input, or press 99 to quit");
                             exercisesChosen.add(Initialize.exercises.get(choiceBuildProgram));
                     }
                 }
@@ -128,11 +158,19 @@ public class Main {
                 for (int i = 0; i < Initialize.persons.size(); i++) {
                     System.out.println(i + 1 + ". " + Initialize.persons.get(i).name);
                 }
+                while (!scan.hasNextInt()){
+                    scan.nextLine();
+                    System.out.println("Wrong input try again");
+                }
                 int choiceRecommendProgram = Main.scan.nextInt() - 1;
                 Main.scan.nextLine();
                 int checkArraySize3 = Initialize.persons.size();
                 while((choiceRecommendProgram<0) || (choiceRecommendProgram>checkArraySize3-1)){
                     System.out.println("Wrong choice please try again");
+                    while (!scan.hasNextInt()){
+                        scan.nextLine();
+                        System.out.println("Wrong input try again");
+                    }
                     choiceRecommendProgram = scan.nextInt()-1;
                     scan.nextLine();
                 }
@@ -153,11 +191,20 @@ public class Main {
             System.out.println((i + 1) + ". " + Initialize.persons.get(i).name);
         }
         System.out.println("Select a person to see information:");
+
+        while (!scan.hasNextInt()){
+            scan.nextLine();
+            System.out.println("Wrong input try again");
+        }
         int choice = scan.nextInt() - 1;
         scan.nextLine();
 
         while(choice<0 || choice>Initialize.persons.size()-1){
             System.out.println("Wrong input please try again");
+            while (!scan.hasNextInt()){
+                scan.nextLine();
+                System.out.println("Wrong input try again");
+            }
             choice = scan.nextInt() - 1;
         }
 
@@ -173,11 +220,19 @@ public class Main {
         for (int i = 0; i < Initialize.programs.size(); i++) {
             System.out.println(i + 1 + ". " + Initialize.programs.get(i).name);
         }
+        while (!scan.hasNextInt()){
+            scan.nextLine();
+            System.out.println("Wrong input try again");
+        }
         int choice = scan.nextInt() - 1;
         scan.nextLine();
 
         while(choice<0 || choice>Initialize.persons.size()-1){
             System.out.println("Wrong input please try again");
+            while (!scan.hasNextInt()){
+                scan.nextLine();
+                System.out.println("Wrong input try again");
+            }
             choice = scan.nextInt() - 1;
         }
 
