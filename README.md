@@ -1,7 +1,12 @@
-# ProgEksamenProgTest
-# Exam for ITP2200
-This is system for managing exercises for a home workout program. 
-# Requirements
+Home Workout Program
+
+
+# Description:
+This is a system for managing exercises for our home workout program. 
+This was our exam project in course ITP 2200 Introduction to software testing.
+
+
+Requirements:
 
 **1. Exercises are grouped into Programs**
 
@@ -30,22 +35,19 @@ and has a level of intensity +/- 10% of the person’s preferred intensity level
 - method for recommending, from a given collection of Programs, which is
 most appropriate for a given Person. 
 
-# Assignment
+# Installation:
+To run the program we recommend you to use IntelliJ. You also need to have JDK intalled. 
+Feel free to clone the source code.
 
-**1.** 
-Write a set of test criteria that evaluate if the requirements are met or not. If you feel
-that the requirements are not clear or specific enough, motivate why and make a
-justified assumption for your plan.
+# How to use:
+To run the home workout program you need to pick an option from our awesome meny.
+The home workout program contains of programs with exercises of types like strenght, endurance, balance and flexibility.
+You can look at all the programs to see which kind of exercises they contain, the duration and if it's a balanced program or not. 
+If you choose the option "show information about a person", you will get a list of persons, and on each person you will get information about preferred intensity and preferred exercise type.
 
-**2.** 
-Write a test plan for the system, and update it as needed.
+We also have an exercise manager where you can choose from the menu to check if a program is apropiate for a person, build a new program, or you can get a program recommended for a specific person. 
+On "build a new program" you will get an oportunety to make your own program. You give it a name and choose exercises from the list. 
 
-**3.**
-Implement the System Under Test (SUT) and the tests. Make sure to include unit
-tests, integration tests, acceptance tests. You can use TDD or any other techniques,
-but try to write the tests (especially unit tests) either before or as you are writing the
-code (rather than long after). 
 
-**4.**
-Pick a method (one that has interesting behavior) and discuss how the different tests
-you have written follow different paths through that method. 
+# Credits
+To all the once that contributed in this project.
