@@ -36,17 +36,17 @@ and has a level of intensity +/- 10% of the person’s preferred intensity level
 most appropriate for a given Person. 
 
 # Installation:
-To run the program we recommend you to use IntelliJ. You also need to have JDK intalled. 
+To run the program we recommend you to use IntelliJ. You also need to have JDK installed. 
 Feel free to clone the source code.
 
 # How to use:
-To run the home workout program you need to pick an option from our awesome meny.
-The home workout program contains of programs with exercises of types like strenght, endurance, balance and flexibility.
-You can look at all the programs to see which kind of exercises they contain, the duration and if it's a balanced program or not. 
-If you choose the option "show information about a person", you will get a list of persons, and on each person you will get information about preferred intensity and preferred exercise type.
+To run the home workout program you need to pick an option from our awesome meny. 
+The home workout program contains of programs with exercises of types like strength, endurance, balance and flexibility.
 
-We also have an exercise manager where you can choose from the menu to check if a program is apropiate for a person, build a new program, or you can get a program recommended for a specific person. 
-On "build a new program" you will get an oportunety to make your own program. You give it a name and choose exercises from the list. 
+You can look at all the programs to see which kind of exercises they contain, the duration and if it's a balanced program or not. If you choose the option "show information about a person", you will get a list of persons, and on each person you will get information about preferred intensity and preferred exercise type.
+
+We also have an exercise manager where you can choose from the menu to check if a program is appropriate for a person, build a new program, or you can get a program recommended for a specific person. On "build a new program" you will get an opportunity to make your own program. You give it a name and choose exercises from the list.
+
 
 
 # Credits
