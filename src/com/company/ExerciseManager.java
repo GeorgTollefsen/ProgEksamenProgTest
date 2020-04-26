@@ -3,7 +3,6 @@ package com.company;
 import java.util.ArrayList;
 
 public class ExerciseManager {
-
     public static String checkProgramPerson(Person person, Program program) {
         ArrayList<Program> arrayWithOneProgram = new ArrayList<>();
         arrayWithOneProgram.add(program);
