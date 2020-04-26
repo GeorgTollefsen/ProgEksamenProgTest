@@ -59,9 +59,18 @@ public class ProgramTest {
 
         ArrayList<Exercise> exercises = new ArrayList();
         BalanceExercise balanceExercise = new BalanceExercise("Test name", 30, 2, 2, 80, "Mat");
+        EnduranceExercise enduranceExercise = new EnduranceExercise("Test name2", 20, 2, 2, 20, "None");
+        StrengthExercise strengthExercise = new StrengthExercise("Test name3", 10, 10, 1, 30, 0, "None");
+        FlexibilityExercise flexibilityExercise = new FlexibilityExercise("Test name3", 40, 1, 1, 50, "None");
+
         exercises.add(balanceExercise);
+        exercises.add(enduranceExercise);
+        exercises.add(strengthExercise);
+        exercises.add(flexibilityExercise);
+
         Program program = new Program(exercises, "Test program");
-        assertEquals(program.calculateDuration(), 30);
+        assertEquals(program.calculateDuration(), 100);
+        assertEquals(program.duration, 200);
 
 
     }
