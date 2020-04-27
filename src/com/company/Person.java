@@ -22,7 +22,7 @@ public class Person {
     }
 
     // All programs will load here and we will see if the program is a match or not
-    // It consideres intensity and if the program includes a an exercise the person preferres
+    // It consideres intensity and if the program includes a an exercise type the person preferres
     // If the program does not have one such exercise or the intensity is to high/low, you get a false
     public Program selectPreferred(ArrayList<Program> programs) {
         ArrayList<Exercise> dummy = new ArrayList<>();
