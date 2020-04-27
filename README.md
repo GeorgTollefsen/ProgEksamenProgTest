@@ -36,7 +36,7 @@ and has a level of intensity +/- 10% of the person’s preferred intensity level
 most appropriate for a given Person. 
 
 # Installation:
-To run the program we recommend you to use IntelliJ. You also need to have JDK installed. 
+To run the program we recommend you to use IntelliJ. Once you have loaded the program you can select main from the top and press play. You will then get the output in the terminal window below. You also need to have JDK installed. 
 Feel free to clone the source code.
 
 # How to use:

@@ -1,13 +1,12 @@
 package com.company.test;
 
 import com.company.*;
-
-import org.junit.BeforeClass;
 import org.junit.Test;
 
 import java.util.ArrayList;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertTrue;
 
 public class PersonTest {
 
@@ -83,7 +82,7 @@ public class PersonTest {
         public void test7_4() {
 
         // Testing the acceptableProgram method, that takes the acceptableIntensity of a person +/- 10% and checks
-        // if it matches the method
+        // if it matches the programtype
         ArrayList<Exercise> exercises = new ArrayList();
         Exercise exercise = new EnduranceExercise("Test name", 30, 2, 2, 90, "None");
         Exercise exercise1 = new EnduranceExercise("Test name2", 2, 2, 2, 110, "None");
@@ -103,7 +102,7 @@ public class PersonTest {
         public void test7_5() {
 
         // Testing the acceptableProgram method, that takes the acceptableIntensity of a person +/- 10% and checks
-        // if it does not match the method, by being higher than +/- 10%
+        // if it does not match the programtype and, by being higher than +/- 10%
         ArrayList<Exercise> exercises = new ArrayList();
         Exercise exercise = new EnduranceExercise("Test name2", 2, 2, 2, 111, "None");
         exercises.add(exercise);
@@ -119,7 +118,7 @@ public class PersonTest {
         public void test7_6() {
 
         // Testing the acceptableProgram method, that takes the acceptableIntensity of a person +/- 10% and checks
-        // if it does not match the method, by being lower than +/- 10%
+        // if it does not match the programtype and, by being lower than +/- 10%
         ArrayList<Exercise> exercises = new ArrayList();
         Exercise exercise = new EnduranceExercise("Test name", 30, 2, 2, 89, "None");
         exercises.add(exercise);
